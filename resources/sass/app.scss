@@ -6,11 +6,18 @@
 @import 'variables';
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+//@import '~bootstrap/scss/bootstrap';
 
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
-@import 'theme/main';
+@import 'theme-web/main';
+
+
+#wrapper {
+    background-color: red;
+
+}
+

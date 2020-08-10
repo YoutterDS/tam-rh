@@ -56,8 +56,8 @@
         <span>Empleados</span>
       </a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="control-horario.html" >
+    <li class="nav-item @if( request()->route()->getName() === 'dashboard.timetable' ) active @endif">
+      <a class="nav-link" href="{{ route('dashboard.timetable', ['locale'=>app()->getLocale()]) }}" >
         <i class="fas fa-fw fa-clipboard-list"></i>
         <span>Control horario</span>
       </a>

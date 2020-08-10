@@ -24,6 +24,9 @@ Route::group(['prefix'=>"dashboard/{locale?}/"], function() {
     // Profile
     Route::get('perfil', 'DashboardController@profile')->name('dashboard.profile');
 
+
+    Route::get('timetable', 'DashboardController@timetable')->name('dashboard.timetable');
+
     // User
     Route::prefix("empleado/")->group(function() {
         // https://dominbio.com/admin/user/create-user

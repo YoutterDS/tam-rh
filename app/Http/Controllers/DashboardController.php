@@ -3,30 +3,28 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\App;
+use Illuminate\View\View;
 
 class DashboardController extends Controller
 {
     public function __construct(Request $request)
     {
-        if( $request->locale ) {
-            App::setLocale($request->locale);
-        }
+//        \var_dump($request);die;
     }
 
-    public function index(Request $request)
+    public function index(Request $request): View
     {
 
         return view('dashboard.index');
     }
 
-    public function settings()
+    public function settings(): View
     {
         return view('dashboard.settings.index');
     }
 
-    public function profile()
+    public function timetable(): View
     {
-        return view('dashboard.profile.index');
+        return view('dashboard.timetable.index');
     }
 }

@@ -1,0 +1,80 @@
+
+.employers-list {
+    .employers-detail {
+        .info-section {
+            width: 80%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .actions-section {
+            width: 19.5%;
+            display: inline-block;
+            vertical-align: top;
+            text-align: right;
+            height: 70px;
+
+            .employer-action {
+                padding-top: 15px;
+
+                .time-table-status {
+                    font-weight: 300;
+                    font-size: 12px;
+                    margin-right: 10px;
+
+                    &.status-ok {
+                        color: green;
+                    }
+
+                    &.status-pending {
+                        color: #ff7600cc;
+                        font-weight: bold;
+                    }
+
+                    i {
+                        font-size: 10px;
+                    }
+
+                }
+            }
+        }
+
+        .employer-img {
+            display: inline-block;
+            vertical-align: top;
+            padding: 15px;
+            height: 70px;
+
+            img {
+                max-width: 50px
+            }
+        }
+
+        .employer-info {
+            display: inline-flex;
+            vertical-align: top;
+            height: 70px;
+            flex-direction: column-reverse;
+
+            .employer-name {
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+
+            .employer-job {
+                margin: 0 10px;
+                font-weight: 200;
+            }
+
+            .employer-dpt {
+                text-transform: uppercase;
+                margin: 0 10px 0 0;
+                font-size: 12px;
+            }
+
+        }
+
+    }
+}
+
+

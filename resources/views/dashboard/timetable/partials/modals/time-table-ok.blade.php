@@ -17,8 +17,8 @@
                 <canvas id="timetableChart1"></canvas>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary"><i class="far fa-envelope"></i></button>
-                <button type="button" class="btn btn-primary text-uppercase"><i class="fas fa-file-excel"></i> Exportar registro</button>
+                <button type="button" class="btn btn-primary"><i class="far fa-envelope" onclick="alert('Compartir via email');"></i></button>
+                <button type="button" class="btn btn-primary text-uppercase"><i class="fas fa-file-excel" onclick="alert('Exportar registro');"></i> Exportar registro</button>
             </div>
         </div>
     </div>

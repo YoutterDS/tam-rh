@@ -1,3 +1,14 @@
 
+//@import 'generics/main';
+
 @import 'generics/filters';
+@import 'generics/forms-generics';
+
+
+/* SECTION - Employers */
 @import 'employers/list';
+
+/* SECTION - Config */
+@import 'config/oficinas';
+@import 'config/departamentos';
+@import 'config/documentos';

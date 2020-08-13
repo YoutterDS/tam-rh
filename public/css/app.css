@@ -12,6 +12,29 @@
     margin-bottom: 6px;
   }
 }
+/* line 3, ../../resources/sass/theme-web/generics/forms-generics.scss */
+.form-section {
+  border-left: 2px solid #338fda;
+  padding: 15px;
+  margin-bottom: 25px;
+  background-color: #f1f1f1;
+}
+/* line 9, ../../resources/sass/theme-web/generics/forms-generics.scss */
+.form-section .section-title {
+  color: #338fda;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+/* line 14, ../../resources/sass/theme-web/generics/forms-generics.scss */
+.form-section .section-title i {
+  margin-right: 10px;
+}
+/* line 19, ../../resources/sass/theme-web/generics/forms-generics.scss */
+.form-section .submit-zone {
+  text-align: right;
+}
+
+/* SECTION - Employers */
 /* line 4, ../../resources/sass/theme-web/employers/list.scss */
 .employers-list .employers-detail .info-section {
   width: 80%;
@@ -122,6 +145,67 @@
   /* line 120, ../../resources/sass/theme-web/employers/list.scss */
   .employers-list .employers-detail .actions-section .employer-action {
     padding: 0;
+  }
+}
+/* SECTION - Config */
+/* line 4, ../../resources/sass/theme-web/config/oficinas.scss */
+#offices-list-page .office-card.prop2 .card-body {
+  position: relative;
+}
+/* line 7, ../../resources/sass/theme-web/config/oficinas.scss */
+#offices-list-page .office-card.prop2 .card-body .card-title {
+  margin-bottom: 0;
+}
+/* line 13, ../../resources/sass/theme-web/config/oficinas.scss */
+#offices-list-page .office-card .main-office {
+  position: absolute;
+  right: 0;
+  background: #2f87d0;
+  padding: 5px 10px;
+  border-radius: 0 3px 0 15px;
+  color: #ffffff;
+}
+/* line 22, ../../resources/sass/theme-web/config/oficinas.scss */
+#offices-list-page .office-card .workers-office-count {
+  position: absolute;
+  left: 0;
+  background: #858796;
+  padding: 5px 10px;
+  border-radius: 3px 0 15px 0;
+  color: #ffffff;
+}
+/* line 31, ../../resources/sass/theme-web/config/oficinas.scss */
+#offices-list-page .office-card .office-status {
+  position: absolute;
+  padding: 3px 5px;
+  border-radius: 0;
+  color: #ffffff;
+  top: 0;
+  right: 0;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+/* line 41, ../../resources/sass/theme-web/config/oficinas.scss */
+#offices-list-page .office-card .office-status.status-open {
+  background: #50bb62;
+}
+/* line 45, ../../resources/sass/theme-web/config/oficinas.scss */
+#offices-list-page .office-card .office-status.status-closed {
+  background: #d63838;
+}
+
+@media (max-width: 600px) {
+  /* line 6, ../../resources/sass/theme-web/config/departamentos.scss */
+  .filter-button-section button {
+    width: 100%;
+    margin-bottom: 6px;
+  }
+}
+@media (max-width: 600px) {
+  /* line 6, ../../resources/sass/theme-web/config/documentos.scss */
+  .filter-button-section button {
+    width: 100%;
+    margin-bottom: 6px;
   }
 }
 /* line 19, ../../resources/sass/app.scss */

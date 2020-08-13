@@ -1,0 +1,50 @@
+#offices-list-page {
+    .office-card {
+        &.prop2 {
+            .card-body {
+                position: relative;
+
+                .card-title {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .main-office {
+            position: absolute;
+            right: 0;
+            background: #2f87d0;
+            padding: 5px 10px;
+            border-radius: 0 3px 0 15px;
+            color: #ffffff;
+        }
+
+        .workers-office-count {
+            position: absolute;
+            left: 0;
+            background: #858796;
+            padding: 5px 10px;
+            border-radius: 3px 0 15px 0;
+            color: #ffffff;
+        }
+
+        .office-status {
+            position: absolute;
+            padding: 3px 5px;
+            border-radius: 0;
+            color: #ffffff;
+            top: 0;
+            right: 0;
+            font-size: 10px;
+            text-transform: uppercase;
+
+            &.status-open {
+                background: #50bb62;
+            }
+
+            &.status-closed {
+                background: #d63838;
+            }
+        }
+    }
+}

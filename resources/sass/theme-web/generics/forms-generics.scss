@@ -1,0 +1,22 @@
+$main-color: #338fda;
+
+.form-section {
+    border-left: 2px solid $main-color;
+    padding: 15px;
+    margin-bottom: 25px;
+    background-color: #f1f1f1;
+
+    .section-title {
+        color: $main-color;
+        font-weight: 600;
+        margin-bottom: 25px;
+
+        i {
+            margin-right: 10px;
+        }
+    }
+
+    .submit-zone {
+        text-align: right;
+    }
+}

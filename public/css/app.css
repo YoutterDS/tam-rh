@@ -5,6 +5,13 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+@media (max-width: 600px) {
+  /* line 6, ../../resources/sass/theme-web/generics/filters.scss */
+  .filter-button-section button {
+    width: 100%;
+    margin-bottom: 6px;
+  }
+}
 /* line 4, ../../resources/sass/theme-web/employers/list.scss */
 .employers-list .employers-detail .info-section {
   width: 80%;
@@ -77,6 +84,46 @@
   font-size: 12px;
 }
 
+@media (max-width: 1020px) {
+  /* line 83, ../../resources/sass/theme-web/employers/list.scss */
+  .employers-list .employers-detail .info-section {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+  /* line 89, ../../resources/sass/theme-web/employers/list.scss */
+  .employers-list .employers-detail .actions-section {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+}
+@media (max-width: 600px) {
+  /* line 101, ../../resources/sass/theme-web/employers/list.scss */
+  .employers-list .employers-detail .info-section {
+    text-align: center;
+  }
+  /* line 104, ../../resources/sass/theme-web/employers/list.scss */
+  .employers-list .employers-detail .info-section .employer-img {
+    width: 100%;
+  }
+  /* line 108, ../../resources/sass/theme-web/employers/list.scss */
+  .employers-list .employers-detail .info-section .employer-info {
+    height: auto;
+  }
+  /* line 110, ../../resources/sass/theme-web/employers/list.scss */
+  .employers-list .employers-detail .info-section .employer-info span {
+    display: block;
+  }
+  /* line 113, ../../resources/sass/theme-web/employers/list.scss */
+  .employers-list .employers-detail .info-section .employer-info .employer-dpt {
+    display: none;
+  }
+  /* line 120, ../../resources/sass/theme-web/employers/list.scss */
+  .employers-list .employers-detail .actions-section .employer-action {
+    padding: 0;
+  }
+}
 /* line 19, ../../resources/sass/app.scss */
 #wrapper {
   background-color: red;

@@ -148,15 +148,15 @@
   }
 }
 /* SECTION - Config */
-/* line 4, ../../resources/sass/theme-web/config/oficinas.scss */
+/* line 6, ../../resources/sass/theme-web/config/oficinas.scss */
 #offices-list-page .office-card.prop2 .card-body {
   position: relative;
 }
-/* line 7, ../../resources/sass/theme-web/config/oficinas.scss */
+/* line 9, ../../resources/sass/theme-web/config/oficinas.scss */
 #offices-list-page .office-card.prop2 .card-body .card-title {
   margin-bottom: 0;
 }
-/* line 13, ../../resources/sass/theme-web/config/oficinas.scss */
+/* line 15, ../../resources/sass/theme-web/config/oficinas.scss */
 #offices-list-page .office-card .main-office {
   position: absolute;
   right: 0;
@@ -165,7 +165,7 @@
   border-radius: 0 3px 0 15px;
   color: #ffffff;
 }
-/* line 22, ../../resources/sass/theme-web/config/oficinas.scss */
+/* line 24, ../../resources/sass/theme-web/config/oficinas.scss */
 #offices-list-page .office-card .workers-office-count {
   position: absolute;
   left: 0;
@@ -174,7 +174,16 @@
   border-radius: 3px 0 15px 0;
   color: #ffffff;
 }
-/* line 31, ../../resources/sass/theme-web/config/oficinas.scss */
+/* line 32, ../../resources/sass/theme-web/config/oficinas.scss */
+#offices-list-page .office-card .workers-office-count:hover {
+  background-color: #338fda;
+  cursor: pointer;
+}
+/* line 37, ../../resources/sass/theme-web/config/oficinas.scss */
+#offices-list-page .office-card .workers-office-count i {
+  margin-right: 10px;
+}
+/* line 42, ../../resources/sass/theme-web/config/oficinas.scss */
 #offices-list-page .office-card .office-status {
   position: absolute;
   padding: 3px 5px;
@@ -185,11 +194,11 @@
   font-size: 10px;
   text-transform: uppercase;
 }
-/* line 41, ../../resources/sass/theme-web/config/oficinas.scss */
+/* line 52, ../../resources/sass/theme-web/config/oficinas.scss */
 #offices-list-page .office-card .office-status.status-open {
   background: #50bb62;
 }
-/* line 45, ../../resources/sass/theme-web/config/oficinas.scss */
+/* line 56, ../../resources/sass/theme-web/config/oficinas.scss */
 #offices-list-page .office-card .office-status.status-closed {
   background: #d63838;
 }

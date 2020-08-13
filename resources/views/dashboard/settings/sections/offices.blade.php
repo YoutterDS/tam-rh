@@ -1,3 +1,4 @@
+
 <section id="offices-list-page" class="card-section__primary">
     <div class="row">
         <div class="col-12 d-flex flex-wrap align-items-end justify-content-between ">
@@ -9,21 +10,23 @@
             </a>
         </div>
     </div>
+    <h3 class="color-primary text-uppercase">@lang('nav-pills.settings-offices')</h3>
     <br><br>
     <div class="row card-deck mt-2">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-            <h3 class="text-uppercase">Propuesta 1</h3>
-            <h5>Refactor básico de la oficina y mostramos información</h5>
             <div class="row">
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                     <div class="card office-card">
                         <div class="main-office">Oficina Principal</div>
+                        <a href="">
+                            <div class="workers-office-count"><i class="fas fa-users" title="35 Empleados"></i>35</div>
+                        </a>
                         <img class="card-img-top" src="https://xceed.me/blog/wp-content/uploads/2016/05/Barcelona-best-clubs-2019-at-xceed.png"
                              alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title text-uppercase">Barcelona</h5>
+                            <p class="card-text"><i class="far fa-clock"></i> 09:00 - 18:00 h</p>
                             <div class="card-text">
-                                <p><span><i class="fas fa-users" title="35 Empleados"></i> 35</span></p>
                                 <p><a href="https://www.google.com/maps/place/" target="_blank">
                                         <i class="fas fa-map" title="35 Empleados"></i>
                                         <span>Av. Torre Blanca, 57 - 08173 Sant Cugat del Vallès, Barcelona - Spain</span>
@@ -44,12 +47,13 @@
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                     <div class="card office-card">
+                        <div class="workers-office-count"><i class="fas fa-users" title="35 Empleados"></i>15</div>
                         <img class="card-img-top" src="https://img1.elperiodico.com/56/14/4f/girona-3-980x570.jpg"
                              alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title text-uppercase">Girona</h5>
                             <div class="card-text">
-                                <p><span><i class="fas fa-users" title="Empleados"></i> 15</span></p>
+                                <p class="card-text"><i class="far fa-clock"></i> 09:00 - 18:00 h</p>
                                 <p><a href="https://www.google.com/maps/place/" target="_blank">
                                         <i class="fas fa-map" title="35 Empleados"></i>
                                         <span>Carrer principal 10 - Girona - Spain</span>
@@ -60,50 +64,6 @@
                                     </a></p>
                             </div>
 
-                        </div>
-                        <div class="card-body text-right">
-                            <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-info-circle"></i> Ver Oficina</button>
-                            <button type="button" class="btn btn-secondary btn-sm"><i class="fas fa-edit"></i></button>
-                            <button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <br><br>
-    <div class="row card-deck mt-2">
-        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-            <h3 class="text-uppercase">Propuesta 2</h3>
-            <h5>Agregamos horarios y status de la oficina</h5>
-            <div class="row">
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                    <div class="card office-card prop2">
-                        <div class="main-office">Oficina Principal</div>
-                        <div class="workers-office-count"><i class="fas fa-users" title="35 Empleados"></i> 35</div>
-                        <img class="card-img-top" src="https://xceed.me/blog/wp-content/uploads/2016/05/Barcelona-best-clubs-2019-at-xceed.png"
-                             alt="Card image cap">
-                        <div class="card-body">
-                            <div class="office-status status-open">Oficina Abierta</div>
-                            <h5 class="card-title text-uppercase" style="margin-bottom: 0;">Barcelona</h5>
-                            <p class="card-text"><i class="far fa-clock"></i> 09:00 - 18:00 h</p>
-                        </div>
-                        <div class="card-body text-right">
-                            <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-info-circle"></i> Ver Oficina</button>
-                            <button type="button" class="btn btn-secondary btn-sm"><i class="fas fa-edit"></i></button>
-                            <button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                    <div class="card office-card prop2">
-                        <div class="workers-office-count"><i class="fas fa-users"></i> 15</div>
-                        <img class="card-img-top" src="https://img1.elperiodico.com/56/14/4f/girona-3-980x570.jpg"
-                             alt="Card image cap">
-                        <div class="card-body">
-                            <div class="office-status status-closed">Oficina cerrada</div>
-                            <h5 class="card-title text-uppercase">Girona</h5>
-                            <p class="card-text"><i class="far fa-clock"></i> 09:00 - 14:00 h</p>
                         </div>
                         <div class="card-body text-right">
                             <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-info-circle"></i> Ver Oficina</button>

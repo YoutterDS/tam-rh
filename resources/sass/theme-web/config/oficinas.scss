@@ -1,3 +1,5 @@
+$main-color: #338fda;
+
 #offices-list-page {
     .office-card {
         &.prop2 {
@@ -26,6 +28,15 @@
             padding: 5px 10px;
             border-radius: 3px 0 15px 0;
             color: #ffffff;
+
+            &:hover {
+                background-color: $main-color;
+                cursor: pointer;
+            }
+
+            i {
+                margin-right: 10px;
+            }
         }
 
         .office-status {

@@ -2,19 +2,7 @@
 
 use App\User;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-// Admin
-Route::group(['prefix'=>"dashboard/{locale?}/"], function() {
+Route::group(['prefix'=>"dashboard/{locale?}/"], static function() {
 
     Route::get('', 'DashboardController@index')->name('dashboard.index');
 
@@ -27,17 +15,13 @@ Route::group(['prefix'=>"dashboard/{locale?}/"], function() {
 
     Route::get('timetable', 'DashboardController@timetable')->name('dashboard.timetable');
 
+    Route::get('team', 'DashboardController@team')->name('dashboard.team');
+
     // User
     Route::prefix("empleado/")->group(function() {
         // https://dominbio.com/admin/user/create-user
         Route::get('create-user', 'UsersController@create')->name('admin.user.create');
     });
-
-    // Menú
-
-
-    // Publish
-
 });
 
 // Public

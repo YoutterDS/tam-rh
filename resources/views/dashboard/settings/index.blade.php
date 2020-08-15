@@ -1,15 +1,11 @@
 @extends('layouts.dashboard')
 
 @section('content')
-<!-- Content Row -->
 <div class="row">
-    <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800"><i class="fas fa-fw fa-cogs"></i> Configuración</h1>
     </div>
-
     <div class="card shadow col-lg-12 card-section">
-
         <div class="card-header">
             <ul class="nav nav-pills justify-content-center">
                 <li class="nav-item">
@@ -43,6 +39,5 @@
             </div>
         </div>
     </div>
-
 </div>
 @endsection

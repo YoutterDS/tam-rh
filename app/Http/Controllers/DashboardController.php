@@ -27,4 +27,9 @@ class DashboardController extends Controller
     {
         return view('dashboard.timetable.index');
     }
+
+    public function team(): View
+    {
+        return view('dashboard.team.index');
+    }
 }

@@ -50,8 +50,8 @@
       </a>
     </li>
      -->
-    <li class="nav-item">
-      <a class="nav-link " href="empleados.html" >
+    <li class="nav-item @if( request()->route()->getName() === 'dashboard.team' ) active @endif">
+      <a class="nav-link " href="{{ route('dashboard.team', ['locale'=>app()->getLocale()]) }}" >
         <i class="fas fa-fw fa-users"></i>
         <span>Empleados</span>
       </a>

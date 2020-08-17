@@ -4,7 +4,7 @@
 
     <div class="row" id="control-horario">
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800"><i class="fas fa-fw fa-clipboard-list"></i> Control horario</h1>
+            <h1 class="h3 mb-0 text-gray-800 text-uppercase"><i class="fas fa-fw fa-clipboard-list"></i> Control horario</h1>
         </div>
 
         <div class="card shadow col-lg-12 card-section">

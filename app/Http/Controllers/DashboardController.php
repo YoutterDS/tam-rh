@@ -37,4 +37,11 @@ class DashboardController extends Controller
     {
         return view('dashboard.team.new-employer');
     }
+
+
+    public function documents(): View
+    {
+        return view('dashboard.documents.index');
+    }
 }
+

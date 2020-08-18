@@ -69,6 +69,12 @@
         <span>Calendario</span>
       </a>
     </li>
+    <li class="nav-item @if( request()->route()->getName() === 'dashboard.documents' ) active @endif">
+        <a class="nav-link " href="{{ route('dashboard.documents', ['locale'=>app()->getLocale()]) }}" >
+            <i class="fas fa-fw fa-clipboard"></i>
+            <span>Documentos</span>
+        </a>
+    </li>
 
     <!-- Divider -->
     <hr class="sidebar-divider">

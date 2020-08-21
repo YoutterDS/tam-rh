@@ -43,16 +43,16 @@
       </a>
     </li>
 
-    <li class="nav-item @if( request()->route()->getName() === 'dashboard.team' ) active @endif">
-        <a class="nav-link" href="{{ route('dashboard.team', ['locale'=>app()->getLocale()]) }}" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+    <li class="nav-item @if( request()->route()->getName() === 'team.listado' ) active @endif">
+        <a class="nav-link" href="{{ route('team.listado', ['locale'=>app()->getLocale()]) }}" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
             <i class="fas fa-fw fa-users"></i>
             <span>Empleados</span>
         </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar" style="">
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{ route('dashboard.team', ['locale'=>app()->getLocale()]) }}"><i class="fas fa-fw fa-users"></i> Listado</a>
-                <a class="collapse-item" href="{{ route('dashboard.team', ['locale'=>app()->getLocale()]) }}"><i class="fas fa-fw fa-layer-group"></i> Equipos</a>
-                <a class="collapse-item" href="{{ route('dashboard.team', ['locale'=>app()->getLocale()]) }}"><i class="fas fa-fw fa-sitemap"></i> Organigrama</a>
+                <a class="collapse-item" href="{{ route('team.listado', ['locale'=>app()->getLocale()]) }}"><i class="fas fa-list"></i> Listado</a>
+                <a class="collapse-item" href="{{ route('team.departamentos', ['locale'=>app()->getLocale()]) }}"><i class="fas fa-fw fa-users"></i> Departamentos</a>
+                <a class="collapse-item" href="{{ route('team.organigrama', ['locale'=>app()->getLocale()]) }}"><i class="fas fa-fw fa-sitemap"></i> Organigrama</a>
             </div>
         </div>
     </li>

@@ -9,7 +9,7 @@
             <i class="fas fa-file-export"></i> <span>Exportar empleados</span>
         </button>
     @else
-        <a href="{{ route('dashboard.team-new', ['locale'=>app()->getLocale()]) }}" class="text-decoration-none" target="_blank">
+        <a href="{{ route('team.new', ['locale'=>app()->getLocale()]) }}" class="text-decoration-none" target="_blank">
             <button type="button" class="btn btn-success text-uppercase"><i class="fas fa-user-plus"></i> Alta nuevo empleado</button>
         </a>
     @endif

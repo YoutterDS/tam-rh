@@ -16,8 +16,11 @@ Route::group(['prefix'=>"dashboard/{locale?}/"], static function() {
     Route::get('timetable', 'DashboardController@timetable')->name('dashboard.timetable');
     Route::get('documents', 'DashboardController@documents')->name('dashboard.documents');
 
-    Route::get('team', 'DashboardController@team')->name('dashboard.team');
-    Route::get('team-new', 'DashboardController@teamNew')->name('dashboard.team-new');
+    /* TEAM */
+    Route::get('team/new', 'TeamController@new')->name('team.new');
+    Route::get('team/listado', 'TeamController@listado')->name('team.listado');
+    Route::get('team/departamentos', 'TeamController@departamentos')->name('team.departamentos');
+    Route::get('team/organigrama', 'TeamController@organigrama')->name('team.organigrama');
 
     // User
     Route::prefix("empleado/")->group(function() {

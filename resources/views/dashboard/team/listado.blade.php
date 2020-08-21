@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800 text-uppercase"><i class="fas fa-fw fa-users"></i> Listado de Empleados</h1>
+            <h1 class="h3 mb-0 text-gray-800 text-uppercase"><i class="fas fa-list"></i> Listado de Empleados</h1>
         </div>
         <div class="card shadow col-lg-12 card-section">
             @include('dashboard.team.partials.team-list-buttons', ['import' => false])

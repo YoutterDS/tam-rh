@@ -8,9 +8,6 @@
         <div class="card shadow col-lg-12 card-section">
             @include('dashboard.team.partials.team-list-buttons', ['import' => false])
             <div class="card-body p-2">
-                <input id="searchEmployersInput" onkeyup="filterMembers()" type="text">
-            </div>
-            <div class="card-body p-2">
                 <div class="list-group employers-list" id="employersListEmployersPage">
                     <div class="list-group-item list-group-item-action employers-detail" data-name="Ramon" data-dpt="DIRECTION">
                         @include('dashboard.partials.employers.info-section', ['name' => 'Ramon Ribera', 'job' => 'Manager','dptm' => 'DIRECTION'])
@@ -111,6 +108,25 @@
 
             $('#employersListEmployersPage .employers-detail').each(function (item, i) {
                  let name = $(this).data('name');
+                if (name.toUpperCase().indexOf(filter) > -1) {
+                    $(this).removeClass('d-none');
+                } else {
+                    $(this).addClass('d-none');
+                }
+            });
+        }
+        function filterMembers() {
+            let employers = $(".employers-detail");
+            let input, filter, list, items;
+            input = document.getElementById("searchEmployersInput");
+            filter = input.value.toUpperCase();
+            list = document.getElementById("employersListEmployersPage");
+            items = list.getElementsByClassName("employers-detail");
+
+            const elements = document.querySelectorAll('.employers-detail');
+
+            $('#employersListEmployersPage .employers-detail').each(function (item, i) {
+                let name = $(this).data('name');
                 if (name.toUpperCase().indexOf(filter) > -1) {
                     $(this).removeClass('d-none');
                 } else {

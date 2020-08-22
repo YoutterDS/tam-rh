@@ -9,8 +9,36 @@
             <i class="fas fa-file-export"></i> <span>Exportar empleados</span>
         </button>
     @else
-        <a href="{{ route('team.new', ['locale'=>app()->getLocale()]) }}" class="text-decoration-none" target="_blank">
-            <button type="button" class="btn btn-success text-uppercase"><i class="fas fa-user-plus"></i> Alta nuevo empleado</button>
-        </a>
+        <div class="card-body p-2">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-fw fa-user"></i></span>
+                        </div>
+                        <input type="text" id="searchEmployersInput" onkeyup="filterMembers()" class="form-control" placeholder="Buscar empleado" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01"><i class="fas fa-fw fa-users"></i></label>
+                        </div>
+                        <select class="custom-select" id="inputGroupSelect01">
+                            <option selected>Filtrar por departamento</option>
+                            <option value="DIRECTION">DIRECTION</option>
+                            <option value="IT">IT</option>
+                            <option value="MARKETING">MARKETING</option>
+                            <option value="RRHH">RRHH</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <a href="{{ route('team.new', ['locale'=>app()->getLocale()]) }}" class="text-decoration-none" target="_blank">
+                        <button type="button" class="btn btn-success text-uppercase"><i class="fas fa-user-plus"></i> Alta nuevo empleado</button>
+                    </a>
+                </div>
+            </div>
+        </div>
     @endif
 </div>

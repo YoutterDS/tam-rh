@@ -217,6 +217,30 @@
     margin-bottom: 6px;
   }
 }
+/* MODALS */
+/* line 2, ../../resources/sass/theme-web/modals/time-table.scss */
+.time-table-modal .table-count-hours {
+  border: none;
+  text-align: center;
+}
+/* line 6, ../../resources/sass/theme-web/modals/time-table.scss */
+.time-table-modal .table-count-hours thead th {
+  color: white;
+  background-color: rgba(52, 144, 220, 0.6);
+  border-color: rgba(52, 144, 220, 0.6);
+  border-bottom: 2px solid transparent;
+  border-top: 2px solid transparent;
+}
+/* line 15, ../../resources/sass/theme-web/modals/time-table.scss */
+.time-table-modal .table-count-hours th {
+  border-color: rgba(52, 144, 220, 0.6);
+  padding: 0.35rem 0.75rem;
+}
+/* line 20, ../../resources/sass/theme-web/modals/time-table.scss */
+.time-table-modal .table-count-hours td {
+  border-top: 1px solid rgba(52, 144, 220, 0.6);
+}
+
 /* line 19, ../../resources/sass/app.scss */
 #wrapper {
   background-color: red;

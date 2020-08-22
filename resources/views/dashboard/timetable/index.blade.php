@@ -39,7 +39,7 @@
                             <div class="employer-action">
                                 @include('dashboard.timetable.partials.register-status', ['registerStatus' => 1])
                                 <button type="button" class="btn btn-primary" title="Ver registro horario" data-toggle="modal"
-                                        data-target="#timetableExampleModal1">
+                                        data-target="#timetableDetailModal">
                                     <i class="fas fa-calendar-alt"></i>
                                 </button>
                             </div>
@@ -50,7 +50,7 @@
                         <div class="actions-section">
                             <div class="employer-action">
                                 @include('dashboard.timetable.partials.register-status', ['registerStatus' => 0])
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#timetableExampleModal2">
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#timetableDetailPendingModal">
                                     <i class="fas fa-calendar-alt"></i>
                                 </button>
                             </div>
@@ -61,7 +61,7 @@
                         <div class="actions-section">
                             <div class="employer-action">
                                 @include('dashboard.timetable.partials.register-status', ['registerStatus' => 1])
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#timetableExampleModal1"><i
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#timetableDetailModal"><i
                                         class="fas fa-calendar-alt"></i></button>
                             </div>
                         </div>
@@ -71,7 +71,7 @@
                         <div class="actions-section">
                             <div class="employer-action">
                                 @include('dashboard.timetable.partials.register-status', ['registerStatus' => 1])
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#timetableExampleModal1"><i
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#timetableDetailModal"><i
                                         class="fas fa-calendar-alt"></i></button>
                             </div>
                         </div>
@@ -81,7 +81,7 @@
                         <div class="actions-section">
                             <div class="employer-action">
                                 @include('dashboard.timetable.partials.register-status', ['registerStatus' => 1])
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#timetableExampleModal1"><i
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#timetableDetailModal"><i
                                         class="fas fa-calendar-alt"></i></button>
                             </div>
                         </div>
@@ -91,7 +91,7 @@
                         <div class="actions-section">
                             <div class="employer-action">
                                 @include('dashboard.timetable.partials.register-status', ['registerStatus' => 1])
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#timetableExampleModal1"><i
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#timetableDetailModal"><i
                                         class="fas fa-calendar-alt"></i></button>
                             </div>
                         </div>

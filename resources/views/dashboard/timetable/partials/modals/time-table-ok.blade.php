@@ -1,4 +1,4 @@
-<div class="modal fade" id="timetableExampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade time-table-modal" id="timetableDetailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-body">
@@ -9,10 +9,22 @@
                     <li><i class="fas fa-calendar-alt" style="color: #1d68a7;"></i> <strong class="text-uppercase">Fecha Fin</strong> 30/06/2020</li>
                 </ul>
                 <hr>
-                <ul style="list-style: none;padding: 0;">
-                    <li>Horas recomendadas -> 120</li>
-                    <li>Horas computadas -> 145</li>
-                </ul>
+                <table class="table table-count-hours">
+                    <thead>
+                    <tr>
+                        <th scope="col" class="text-uppercase">Horas mínimas</th>
+                        <th scope="col" class="text-uppercase">Horas computadas</th>
+                        <th scope="col" class="text-uppercase">Horas extras</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>120</td>
+                        <td>150</td>
+                        <td>+30</td>
+                    </tr>
+                    </tbody>
+                </table>
                 <hr>
                 <canvas id="timetableChart1"></canvas>
             </div>

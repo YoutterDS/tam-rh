@@ -17,6 +17,11 @@ class TeamController extends Controller
         return view('dashboard.team.listado');
     }
 
+    public function detalle(Request $request): View
+    {
+        return view('dashboard.team.detalle');
+    }
+
     public function departamentos(Request $request): View
     {
         return view('dashboard.team.departamentos');

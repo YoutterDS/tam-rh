@@ -107,25 +107,6 @@
             const elements = document.querySelectorAll('.employers-detail');
 
             $('#employersListEmployersPage .employers-detail').each(function (item, i) {
-                 let name = $(this).data('name');
-                if (name.toUpperCase().indexOf(filter) > -1) {
-                    $(this).removeClass('d-none');
-                } else {
-                    $(this).addClass('d-none');
-                }
-            });
-        }
-        function filterMembers() {
-            let employers = $(".employers-detail");
-            let input, filter, list, items;
-            input = document.getElementById("searchEmployersInput");
-            filter = input.value.toUpperCase();
-            list = document.getElementById("employersListEmployersPage");
-            items = list.getElementsByClassName("employers-detail");
-
-            const elements = document.querySelectorAll('.employers-detail');
-
-            $('#employersListEmployersPage .employers-detail').each(function (item, i) {
                 let name = $(this).data('name');
                 if (name.toUpperCase().indexOf(filter) > -1) {
                     $(this).removeClass('d-none');
@@ -135,4 +116,4 @@
             });
         }
     </script>
-    @endsection
+@endsection

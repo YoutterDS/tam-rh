@@ -147,6 +147,104 @@
     padding: 0;
   }
 }
+/* line 3, ../../resources/sass/theme-web/departaments/listado.scss */
+#team-departamentos .dpm-detail .info-section {
+  width: 80%;
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 9, ../../resources/sass/theme-web/departaments/listado.scss */
+#team-departamentos .dpm-detail .actions-section {
+  width: 19.5%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: right;
+  height: 70px;
+}
+/* line 16, ../../resources/sass/theme-web/departaments/listado.scss */
+#team-departamentos .dpm-detail .actions-section .dpm-action {
+  padding-top: 15px;
+}
+/* line 19, ../../resources/sass/theme-web/departaments/listado.scss */
+#team-departamentos .dpm-detail .actions-section .dpm-action .btn-employers {
+  color: #5a5c69;
+  text-decoration: none;
+}
+/* line 26, ../../resources/sass/theme-web/departaments/listado.scss */
+#team-departamentos .dpm-detail .dpm-logo {
+  display: inline-block;
+  vertical-align: top;
+  padding: 15px;
+  height: 70px;
+}
+/* line 32, ../../resources/sass/theme-web/departaments/listado.scss */
+#team-departamentos .dpm-detail .dpm-logo i {
+  font-size: 3rem;
+}
+/* line 37, ../../resources/sass/theme-web/departaments/listado.scss */
+#team-departamentos .dpm-detail .dpm-info {
+  display: inline-flex;
+  vertical-align: top;
+  height: 70px;
+  flex-direction: column-reverse;
+}
+/* line 43, ../../resources/sass/theme-web/departaments/listado.scss */
+#team-departamentos .dpm-detail .dpm-info .employer-name {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/* line 48, ../../resources/sass/theme-web/departaments/listado.scss */
+#team-departamentos .dpm-detail .dpm-info .employer-job {
+  margin: 0 10px;
+  font-weight: 200;
+}
+/* line 53, ../../resources/sass/theme-web/departaments/listado.scss */
+#team-departamentos .dpm-detail .dpm-info .employer-dpt {
+  text-transform: uppercase;
+  margin: 0 10px 0 0;
+  font-size: 12px;
+}
+
+@media (max-width: 1020px) {
+  /* line 67, ../../resources/sass/theme-web/departaments/listado.scss */
+  .employers-list .employers-detail .info-section {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+  /* line 73, ../../resources/sass/theme-web/departaments/listado.scss */
+  .employers-list .employers-detail .actions-section {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+}
+@media (max-width: 600px) {
+  /* line 85, ../../resources/sass/theme-web/departaments/listado.scss */
+  .employers-list .employers-detail .info-section {
+    text-align: center;
+  }
+  /* line 88, ../../resources/sass/theme-web/departaments/listado.scss */
+  .employers-list .employers-detail .info-section .employer-img {
+    width: 100%;
+  }
+  /* line 92, ../../resources/sass/theme-web/departaments/listado.scss */
+  .employers-list .employers-detail .info-section .employer-info {
+    height: auto;
+  }
+  /* line 95, ../../resources/sass/theme-web/departaments/listado.scss */
+  .employers-list .employers-detail .info-section .employer-info span {
+    display: block;
+  }
+  /* line 99, ../../resources/sass/theme-web/departaments/listado.scss */
+  .employers-list .employers-detail .info-section .employer-info .employer-dpt {
+    display: none;
+  }
+  /* line 106, ../../resources/sass/theme-web/departaments/listado.scss */
+  .employers-list .employers-detail .actions-section .employer-action {
+    padding: 0;
+  }
+}
 /* SECTION - Config */
 /* line 6, ../../resources/sass/theme-web/config/oficinas.scss */
 #offices-list-page .office-card.prop2 .card-body {

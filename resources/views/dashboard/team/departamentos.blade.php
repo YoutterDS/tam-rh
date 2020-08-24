@@ -33,9 +33,11 @@
                                 <button type="button" class="btn btn-link btn-employers" title="Editar departamento" style="color: black;text-decoration: none;">
                                     9 <i class="fas fa-users"></i>
                                 </button>
-                                <button type="button" class="btn btn-primary" title="Editar departamento">
-                                    <i class="fas fa-edit"></i>
-                                </button>
+                                <a href="{{ route('team.detalle-dpt', ['locale'=>app()->getLocale()]) }}">
+                                    <button type="button" class="btn btn-primary" title="Editar departamento">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>

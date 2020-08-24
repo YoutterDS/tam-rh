@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800 text-uppercase"><i class="fas fa-user-plus"></i> Alta nuevo departamento</h1>
+            <h1 class="h3 mb-0 text-gray-800 text-uppercase">Detalle departamento</h1>
         </div>
         <div class="card shadow col-lg-12 card-section">
             <div class="card-body p-5">
@@ -28,7 +28,8 @@
 
                         <div class="form-group">
                             <label for="infoTitleInput">Título del departmamento</label>
-                            <input type="text" class="form-control" id="infoNameInput" aria-describedby="emailHelp" placeholder="Título del departmamento">
+                            <input type="text" class="form-control" id="infoNameInput" aria-describedby="emailHelp" placeholder="Título del departmamento"
+                                   value="MARKETING">
                         </div>
                         <div class="form-group">
                             <label for="statusSelect" class="text-uppercase">Estado del departamento</label>
@@ -42,13 +43,19 @@
                         <div class="form-group">
                             <label for="infoEmailInput" class="text-uppercase font-weight-bold"><i class="fas fa-envelope"></i> Correo electrónico
                                 departamental</label>
-                            <input type="email" class="form-control" id="infoEmailInput" aria-describedby="emailHelp" placeholder="Correo electrónico departamental">
+                            <input type="email" class="form-control" id="infoEmailInput" aria-describedby="emailHelp" placeholder="Correo electrónico departamento"
+                                   value="marketing@tam.com">
                         </div>
                     </div>
+                    <ul>
+                        <li>
+                            <p><strong>Fecha de creación:</strong> 10/04/2015</p>
+                        </li>
+                    </ul>
                 </form>
             </div>
             <div class="card-footer text-right">
-                <button type="button" class="btn btn-primary text-uppercase"><i class="fas fa-user-plus"></i> Crear</button>
+                <button type="button" class="btn btn-primary text-uppercase"><i class="fas fa-save"></i> Guardar departamento</button>
             </div>
         </div>
     </div>

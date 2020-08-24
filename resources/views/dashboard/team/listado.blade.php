@@ -14,10 +14,8 @@
                         <div class="actions-section">
                             <div class="employer-action">
                                 @include('dashboard.team.partials.send-email-to-employer-btn')
-                                <button type="button" class="btn btn-primary" title="Ver registro horario" data-toggle="modal"
-                                        data-target="#infoEmployerModal">
-                                    <i class="fas fa-edit"></i>
-                                </button>
+                                @include('dashboard.team.partials.employer-profile-btn')
+                                @include('dashboard.team.partials.employer-edit-btn', ['ruta' => route('team.detalle', ['locale'=>app()->getLocale()]) ])
                             </div>
                         </div>
                     </div>
@@ -26,10 +24,8 @@
                         <div class="actions-section">
                             <div class="employer-action">
                                 @include('dashboard.team.partials.send-email-to-employer-btn')
-                                <button type="button" class="btn btn-primary" title="Ver registro horario" data-toggle="modal"
-                                        data-target="#infoEmployerModal">
-                                    <i class="fas fa-edit"></i>
-                                </button>
+                                @include('dashboard.team.partials.employer-profile-btn')
+                                @include('dashboard.team.partials.employer-edit-btn', ['ruta' => route('team.detalle', ['locale'=>app()->getLocale()]) ])
                             </div>
                         </div>
                     </div>
@@ -38,10 +34,8 @@
                         <div class="actions-section">
                             <div class="employer-action">
                                 @include('dashboard.team.partials.send-email-to-employer-btn')
-                                <button type="button" class="btn btn-primary" title="Ver registro horario" data-toggle="modal"
-                                        data-target="#infoEmployerModal">
-                                    <i class="fas fa-edit"></i>
-                                </button>
+                                @include('dashboard.team.partials.employer-profile-btn')
+                                @include('dashboard.team.partials.employer-edit-btn', ['ruta' => route('team.detalle', ['locale'=>app()->getLocale()]) ])
                             </div>
                         </div>
                     </div>
@@ -50,10 +44,8 @@
                         <div class="actions-section">
                             <div class="employer-action">
                                 @include('dashboard.team.partials.send-email-to-employer-btn')
-                                <button type="button" class="btn btn-primary" title="Ver registro horario" data-toggle="modal"
-                                        data-target="#infoEmployerModal">
-                                    <i class="fas fa-edit"></i>
-                                </button>
+                                @include('dashboard.team.partials.employer-profile-btn')
+                                @include('dashboard.team.partials.employer-edit-btn', ['ruta' => route('team.detalle', ['locale'=>app()->getLocale()]) ])
                             </div>
                         </div>
                     </div>
@@ -62,10 +54,8 @@
                         <div class="actions-section">
                             <div class="employer-action">
                                 @include('dashboard.team.partials.send-email-to-employer-btn')
-                                <button type="button" class="btn btn-primary" title="Ver registro horario" data-toggle="modal"
-                                        data-target="#infoEmployerModal">
-                                    <i class="fas fa-edit"></i>
-                                </button>
+                                @include('dashboard.team.partials.employer-profile-btn')
+                                @include('dashboard.team.partials.employer-edit-btn', ['ruta' => route('team.detalle', ['locale'=>app()->getLocale()]) ])
                             </div>
                         </div>
                     </div>
@@ -74,10 +64,8 @@
                         <div class="actions-section">
                             <div class="employer-action">
                                 @include('dashboard.team.partials.send-email-to-employer-btn')
-                                <button type="button" class="btn btn-primary" title="Ver registro horario" data-toggle="modal"
-                                        data-target="#infoEmployerModal">
-                                    <i class="fas fa-edit"></i>
-                                </button>
+                                @include('dashboard.team.partials.employer-profile-btn')
+                                @include('dashboard.team.partials.employer-edit-btn', ['ruta' => route('team.detalle', ['locale'=>app()->getLocale()]) ])
                             </div>
                         </div>
                     </div>

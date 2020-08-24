@@ -21,6 +21,7 @@ Route::group(['prefix'=>"dashboard/{locale?}/"], static function() {
     Route::get('team/new-dpt', 'TeamController@departamentosNew')->name('team.new-dpt');
     Route::get('team/listado', 'TeamController@listado')->name('team.listado');
     Route::get('team/detalle', 'TeamController@detalle')->name('team.detalle');
+    Route::get('team/detalle-dpt', 'TeamController@departamentosDetalle')->name('team.detalle-dpt');
     Route::get('team/departamentos', 'TeamController@departamentos')->name('team.departamentos');
     Route::get('team/organigrama', 'TeamController@organigrama')->name('team.organigrama');
 

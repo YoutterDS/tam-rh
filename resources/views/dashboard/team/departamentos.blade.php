@@ -9,7 +9,7 @@
             <div class="card-body p-2">
             <div class="row text-right">
                 <div class="col-sm">
-                    <a href="http://local.tam.com/dashboard/es/team/new" class="text-decoration-none" target="_blank">
+                    <a href="{{ route('team.new-dpt', ['locale'=>app()->getLocale()]) }}" class="text-decoration-none" target="_blank">
                         <button type="button" class="btn btn-success text-uppercase"><i class="fas fa-user-plus"></i> Crear departamento</button>
                     </a>
                 </div>

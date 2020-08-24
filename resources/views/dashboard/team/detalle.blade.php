@@ -103,7 +103,7 @@
                 </form>
             </div>
             <div class="card-footer">
-                <button type="button" class="btn btn-link text-uppercase"><i class="fas fa-user-plus"></i> Crear empleado</button>
+                <button type="button" class="btn btn-primary text-uppercase"><i class="fas fa-user-plus"></i> Crear empleado</button>
             </div>
         </div>
     </div>

@@ -40,20 +40,9 @@
             height: 70px;
             flex-direction: column-reverse;
 
-            .employer-name {
+            .dpm-name {
                 text-transform: uppercase;
                 font-weight: bold;
-            }
-
-            .employer-job {
-                margin: 0 10px;
-                font-weight: 200;
-            }
-
-            .employer-dpt {
-                text-transform: uppercase;
-                margin: 0 10px 0 0;
-                font-size: 12px;
             }
 
         }
@@ -62,49 +51,52 @@
 }
 
 @media (max-width: 1020px) {
-    .employers-list {
-        .employers-detail {
-            .info-section {
-                width: 100%;
-                display: block;
-                height: auto;
-            }
+    #team-departamentos {
+        .dpm-list {
+            .dpm-detail {
+                .info-section {
+                    width: 100%;
+                    display: block;
+                    height: auto;
+                }
 
-            .actions-section {
-                width: 100%;
-                display: block;
-                height: auto;
+                .actions-section {
+                    width: 100%;
+                    display: block;
+                    height: auto;
+                }
             }
         }
     }
 }
 
 @media (max-width: 600px) {
-    .employers-list {
-        .employers-detail {
-            .info-section {
-                text-align: center;
+    #team-departamentos {
+        .dpm-list {
+            .dpm-detail {
+                .info-section {
+                    text-align: center;
 
-                .employer-img {
-                    width: 100%;
-                }
-
-                .employer-info {
-                    height: auto;
-
-                    span {
-                        display: block;
+                    .dmp-logo {
+                        width: 100%;
                     }
 
-                    .employer-dpt {
-                        display: none;
+                    .dmp-info {
+                        height: auto;
+                        p {
+                            height: auto;
+
+                            span {
+                                display: block;
+                            }
+                        }
                     }
                 }
-            }
 
-            .actions-section {
-                .employer-action {
-                    padding: 0;
+                .actions-section {
+                    .dmp-action {
+                        padding: 0;
+                    }
                 }
             }
         }

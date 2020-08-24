@@ -51,8 +51,6 @@
                             <input type="text" class="form-control" id="infoIbanInput" aria-describedby="emailHelp" placeholder="Apellidos"
                                    value="ES5504877639949951451996">
                         </div>
-
-
                     </div>
                     <div class="form-section">
                         <label for="DeptmSelect" class="text-uppercase font-weight-bold"><i class="fas fa-envelope"></i> Datos de contacto</label>
@@ -93,17 +91,15 @@
                             </select>
                         </div>
                     </div>
-                    <div class="form-section">
-                        <ul>
-                            <li>
-                                <p><strong>Fecha de contratación:</strong> 10/04/2015</p>
-                            </li>
-                        </ul>
-                    </div>
+                    <ul>
+                        <li>
+                            <p><strong>Fecha de contratación:</strong> 10/04/2015</p>
+                        </li>
+                    </ul>
                 </form>
             </div>
-            <div class="card-footer">
-                <button type="button" class="btn btn-link text-uppercase"><i class="fas fa-user-plus"></i> Crear empleado</button>
+            <div class="card-footer text-right">
+                <button type="button" class="btn btn-primary text-uppercase"><i class="fas fa-user-plus"></i> Crear empleado</button>
             </div>
         </div>
     </div>

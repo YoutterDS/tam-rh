@@ -88,7 +88,6 @@
             </div>
         </div>
     </div>
-    @include('dashboard.timetable.partials.modals.filter-employers-list')
     @include('dashboard.team.modals.info-employer')
     @include('dashboard.team.modals.send-email-to-employer')
 @endsection

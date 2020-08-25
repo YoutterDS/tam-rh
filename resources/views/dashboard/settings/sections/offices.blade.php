@@ -1,24 +1,20 @@
-
 <section id="offices-list-page" class="card-section__primary">
-    <div class="row">
-        <div class="col-12 d-flex flex-wrap align-items-end justify-content-between ">
-            <a href="#" class="btn btn-success btn-icon-split" data-toggle="modal" data-target="#modalOffice">
-                <span class="icon text-white-50">
-                  <i class="fas fa-plus"></i>
-                </span>
-                <span class="text">Añadir oficina</span>
-            </a>
+    <div class="card-body p-2">
+        <div class="row text-right">
+            <div class="col-sm">
+                    <button type="button" class="btn btn-success text-uppercase" data-toggle="modal" data-target="#modalOfficeCreate">
+                        <i class="fas fa-fw fa-building"></i> Crear oficina
+                    </button>
+            </div>
         </div>
     </div>
-    <h3 class="color-primary text-uppercase">@lang('nav-pills.settings-offices')</h3>
-    <br><br>
     <div class="row card-deck mt-2">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
             <div class="row">
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                     <div class="card office-card">
                         <div class="main-office">Oficina Principal</div>
-                        <a href="">
+                        <a href="{{ route('team.departamentos', ['locale'=>app()->getLocale()]) }}">
                             <div class="workers-office-count"><i class="fas fa-users" title="35 Empleados"></i>35</div>
                         </a>
                         <img class="card-img-top" src="https://xceed.me/blog/wp-content/uploads/2016/05/Barcelona-best-clubs-2019-at-xceed.png"
@@ -36,18 +32,19 @@
                                         <i class="far fa-envelope"></i> ofi-bcn@company.com
                                     </a></p>
                             </div>
-
                         </div>
                         <div class="card-body text-right">
-                            <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-info-circle"></i> Ver Oficina</button>
-                            <button type="button" class="btn btn-secondary btn-sm"><i class="fas fa-edit"></i></button>
-                            <button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                            <button type="button" class="btn btn-primary btn-sm text-uppercase" data-toggle="modal" data-target="#modalOfficeDetail">
+                                <i class="fas fa-edit"></i> Editar Oficina
+                            </button>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                     <div class="card office-card">
-                        <div class="workers-office-count"><i class="fas fa-users" title="35 Empleados"></i>15</div>
+                        <a href="{{ route('team.departamentos', ['locale'=>app()->getLocale()]) }}">
+                            <div class="workers-office-count"><i class="fas fa-users" title="35 Empleados"></i>15</div>
+                        </a>
                         <img class="card-img-top" src="https://img1.elperiodico.com/56/14/4f/girona-3-980x570.jpg"
                              alt="Card image cap">
                         <div class="card-body">
@@ -63,12 +60,11 @@
                                         <i class="far fa-envelope"></i> ofi-girona@company.com
                                     </a></p>
                             </div>
-
                         </div>
                         <div class="card-body text-right">
-                            <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-info-circle"></i> Ver Oficina</button>
-                            <button type="button" class="btn btn-secondary btn-sm"><i class="fas fa-edit"></i></button>
-                            <button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                            <button type="button" class="btn btn-primary btn-sm text-uppercase" data-toggle="modal" data-target="#modalOfficeDetail">
+                                <i class="fas fa-edit"></i> Crear Oficina
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -76,203 +72,10 @@
         </div>
     </div>
 </section>
-
-<section class="card-section__secundary closed">
-    <div class="row">
-        <div class="col-12">
-            <a href="#" class="btn btn-primary btn-show-list"><i class="fa fa-angle-double-left"></i> Volver al listado</a>
-        </div>
-    </div>
-    <div class="row  mt-4">
-        <div class="col-12 ">
-            <h5 class="color-primary">Oficina "Barcelona"</h5>
-            <a href="https://goo.gl/maps/YGXd9YmbciuAxezC7" target="GMaps"><i class="fa fa-map-marker" aria-hidden="true"></i> C/ Lorem, nº 7,
-                Barcelona - 17005, Barcelona, España</a><br/>
-            <a href="tel:668.254.332">668.254.332</a> - <a href="mailto:barcelona@youtterds.com">barcelona@youtterds.com</a>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12 mt-2 d-flex flex-wrap align-items-end justify-content-between ">
-            <h5>Departamentos</h5>
-            <a href="#" class="btn btn-success btn-icon-split" data-toggle="modal" data-target="#modalDepartment">
-                <span class="icon text-white-50">
-                  <i class="fas fa-plus"></i>
-                </span>
-                <span class="text">Añadir Departamento</span>
-            </a>
-        </div>
-    </div>
-    <div class="row mt-2 card-deck card-columns">
-        @foreach( range(1, 5) as $rang )
-            <div class="col col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                <div class="card card-department text-center mb-6 ">
-                    <div class="card-header d-flex flex-wrap flex-row align-items-center justify-content-between ">
-                        <p></p>
-                        <h5 class="card-title color-primary">Departamento de Producción</h5>
-                        <div class="dropdown no-arrow">
-                            <a class="dropdown-toggle" href="#" id="cardMenu_01" role="button" data-toggle="dropdown" aria-haspopup="true"
-                               aria-expanded="false">
-                                <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="cardMenu_01">
-                                <div class="dropdown-header">Acciones</div>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalDeleteDepartment">Eliminar</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body row">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-                            Responsable: <b>John Doe</b><br/>
-                            <b>Jefe Departamento</b><br/>
-                            <a href="#"><b>john.doe@tam-rh.com</b></a>
-                            <div class="m-3">
-                                <a href="#" class="btn btn-success" data-toggle="modal" data-target="#modalDepartment">Editar</a>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
-                            <div class="d-flex justify-content-end  mb-2">
-                                <a href="#" class="btn btn-success btn-icon-split" data-toggle="modal" data-target="#modalAddEmployeeToDepartment">
-                                <span class="icon text-white-50">
-                                <i class="fas fa-plus"></i>
-                                </span>
-                                    <span class="text">Añadir empleado/a</span>
-                                </a>
-                            </div>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1">
-                                    <i class="fas fa-search" aria-hidden="true"></i>
-                                </span>
-                                </div>
-                                <input type="text" class="form-control filter-by" data-filter=".user-name" data-li=".list-employers-item"
-                                       data-target="#listEmployersDepartment{{ $loop->index }}" placeholder="Filtrar por nombre" aria-label="Username"
-                                       aria-describedby="basic-addon1">
-                            </div>
-
-                            <ul class="list-group list-employers" id="listEmployersDepartment{{ $loop->index }}">
-                                @php $randomNumber = rand(2, 50); @endphp
-                                @foreach( range(1,$randomNumber) as $item )
-                                    @php
-                                        $faker = \Faker\Factory::create();
-                                        $firstName = $faker->firstName;
-                                        $lastName = $faker->lastName;
-                                    @endphp
-                                    <li class="list-group-item list-group-item-action list-employers-item">
-                                        <div class="d-flex align-content-center justify-content-between">
-                                            <div class="d-flex align-items-center ">
-                                                <img class="rounded-circle thumb m-2" src="https://randomuser.me/api/portraits/men/44.jpg">
-                                                <div class="text-left user-name">{{ $firstName }} {{ $lastName }}</div>
-                                            </div>
-                                            <div class="d-flex align-items-sm-center">
-                                                <button class="btn btn-success m-1 align-self-center tooltiped" data-toggle="tooltip" title="Editar">
-                                                    <i class="fa fa-edit" aria-hidden="true"></i></button>
-                                                <button class="btn btn-warning m-1 align-self-center tooltiped" data-toggle="tooltip"
-                                                        title="Desvincular"><i class="fa fa-unlink" data-toggle="modal"
-                                                                               data-target="#modalRemoveEmployeeFromDepartment"
-                                                                               aria-hidden="true"></i></button>
-                                            </div>
-                                        </div>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="card-footer text-muted">
-                        {{ $randomNumber }} empleados
-                    </div>
-                </div>
-            </div>
-        @endforeach
-    </div>
-
-    <div class="form-divider"></div>
-
-    <div class="row">
-        <div class="col-12 mt-2 d-flex align-items-end justify-content-between ">
-            <h5>Días Festivos</h5>
-            <div>
-                <a href="#" class="btn btn-success btn-icon-split" data-toggle="modal" data-target="#modalImportHoliday">
-                    <span class="icon text-white-50">
-                    <i class="fas fa-plus"></i>
-                    </span>
-                    <span class="text">Importar días festivos</span>
-                </a>
-                <a href="#" class="btn btn-success btn-icon-split" data-toggle="modal" data-target="#modalAddHoliday">
-                    <span class="icon text-white-50">
-                    <i class="fas fa-plus"></i>
-                    </span>
-                    <span class="text">Añadir día/s festivo/s</span>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="row mt-2" id="listDays-Free">
-        @foreach( range(1,12) as $item )
-            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-2">
-                <div class="d-flex flex-wrap align-content-center justify-content-between  border rounded mr-1 mb-2 p-1">
-                    <div class="d-flex align-self-center justify-content-md-center">
-                        <div class="text-left ml-1">
-                            {{ rand(1, 31) }}.{{ rand(1, 12) }}.2020<br/>
-                            <small><i>Festivo nacional</i></small>
-                        </div>
-                    </div>
-                    <div class="justify-content-right justify-content-md-center">
-                        <button class="btn btn-danger m-1 align-self-center tooltiped" data-toggle="tooltip" title="Eliminar"><i class="fa fa-trash"
-                                                                                                                                 data-toggle="modal"
-                                                                                                                                 data-target="#modalDeleteHoliday"
-                                                                                                                                 aria-hidden="true"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        @endforeach
-    </div>
-</section>
-
 @section('modals-sections')
-    {{-- Editing Offices --}}
-    <div class="modal fade" id="modalOffice" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Edición de Oficinas</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-
-                @include('dashboard.settings.sections.modals.office')
-
-            </div>
-        </div>
-    </div>
-
-    {{-- Removing Offices --}}
-    <div class="modal fade" id="modalDeleteOffice" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Eliminación de Oficina</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        ¿Seguro que desea eliminar la esta oficina?<br/>
-                        <b class="text-danger">Esta operación no podrá desacerse.</b>
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                    <a class="btn btn-danger" href="#">Eliminar</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('dashboard.settings.sections.modals.office-create')
+    @include('dashboard.settings.sections.modals.office-detail')
+    @include('dashboard.settings.sections.modals.remove-office')
 
     {{-- Add employee to Office --}}
     <div class="modal fade" id="modalAddEmployeeToDepartment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

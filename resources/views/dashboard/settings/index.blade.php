@@ -14,12 +14,6 @@
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#{{ str_slug(\Lang::get('nav-pills.settings-offices')) }}"><i class="fas fa-fw fa-building"></i> @lang('nav-pills.settings-offices')</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#{{ str_slug(\Lang::get('nav-pills.settings-departments')) }}"><i class="fas fa-fw fa-sitemap"></i> @lang('nav-pills.settings-departments')</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#{{ str_slug(\Lang::get('nav-pills.settings-documents')) }}"><i class="fas fa-fw fa-clipboard"></i> @lang('nav-pills.settings-documents')</a>
-                </li>
             </ul>
         </div>
         <div class="card-body p-0 ">
@@ -29,12 +23,6 @@
                 </div>
                 <div id="{{ str_slug(\Lang::get('nav-pills.settings-offices')) }}" class="tab-pane fade">
                     @include('dashboard.settings.sections.offices')
-                </div>
-                <div id="{{ str_slug(\Lang::get('nav-pills.settings-departments')) }}" class="tab-pane fade">
-                    @include('dashboard.settings.sections.departments')
-                </div>
-                <div id="{{ str_slug(\Lang::get('nav-pills.settings-documents')) }}" class="tab-pane fade">
-                    @include('dashboard.settings.sections.documents')
                 </div>
             </div>
         </div>

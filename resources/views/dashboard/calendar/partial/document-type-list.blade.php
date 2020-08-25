@@ -1,13 +1,14 @@
-        <h3 class="color-primary text-uppercase">Documentos públicos</h3><br>
-    <div class="col-12 d-flex flex-wrap align-items-end justify-content-between ">
-        <table class="table " id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info">
-            <thead>
+<h3 class="color-primary text-uppercase">{{$titulo}}</h3>
+<p>{{$descripcion}}</p>
+<div class="col-12 d-flex flex-wrap align-items-end justify-content-between ">
+    <table class="table " id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info">
+        <thead>
             <tr role="row">
                 <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" width="40" >&nbsp;</th>
                 <th class="sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" >
-                    Nombre</th>
-               <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" >
-                    Fecha subida
+                    Nombre del documento</th>
+                <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" >
+                    Fecha publicación
                 </th>
                 <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending">
                     Responsable
@@ -16,8 +17,8 @@
                     Acciones
                 </th>
             </tr>
-            </thead>
-            <tbody>
+        </thead>
+        <tbody>
             <tr role="row" class="odd">
                 <td class="align-center">
                     <i class="fas fa-file-pdf"></i>
@@ -55,6 +56,6 @@
                     <button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
                 </td>
             </tr>
-            </tbody>
-        </table>
-    </div>
+        </tbody>
+    </table>
+</div>

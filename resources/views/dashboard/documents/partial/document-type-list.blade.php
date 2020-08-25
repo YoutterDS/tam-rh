@@ -6,9 +6,9 @@
             <tr role="row">
                 <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" width="40" >&nbsp;</th>
                 <th class="sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" >
-                    Nombre</th>
+                    Nombre del documento</th>
                 <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" >
-                    Fecha subida
+                    Fecha publicación
                 </th>
                 <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending">
                     Responsable

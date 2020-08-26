@@ -11,7 +11,7 @@
                     <div class="row">
                         <div class="col col-sm-12 col-md-12 col-xl-6">
                             <div class="form-section">
-                                <label class="text-uppercase font-weight-bold"><i class="fas fa-camera"></i> Foto perfil</label>
+                                <label class="text-uppercase font-weight-bold section-title"><i class="fas fa-camera"></i> Foto perfil</label>
                                 <div style="max-height: 90px;margin: 15px auto;display: block;">
                                     <img src="{{URL::asset('/img/profile.png')}}" alt="TAM - Ramon Ribera"
                                          style="display: block;height: 90px;margin: 0 auto;">
@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <div class="form-section">
-                        <label class="text-uppercase font-weight-bold"><i class="fas fa-info"></i> Datos básicos</label>
+                        <label class="text-uppercase font-weight-bold section-title"><i class="fas fa-info"></i> Datos básicos</label>
                         <div class="form-group">
                             <label for="GenderSelect">Género</label>
                             <select class="form-control" id="GenderSelect">
@@ -49,7 +49,7 @@
                         </div>
                     </div>
                     <div class="form-section">
-                        <label for="DeptmSelect" class="text-uppercase font-weight-bold"><i class="fas fa-envelope"></i> Datos de contacto</label>
+                        <label for="DeptmSelect" class="text-uppercase font-weight-bold section-title"><i class="fas fa-envelope"></i> Datos de contacto</label>
                         <div class="form-group">
                             <label for="infoEmailInput">Téléfono</label>
                             <input type="text" class="form-control" id="infoEmailInput" aria-describedby="emailHelp"
@@ -63,7 +63,7 @@
                     </div>
                     <div class="form-section">
                         <div class="form-group">
-                            <label for="DeptmSelect" class="text-uppercase font-weight-bold"><i class="fas fa-users"></i> Departamento</label>
+                            <label for="DeptmSelect" class="text-uppercase font-weight-bold section-title"><i class="fas fa-users"></i> Departamento</label>
                             <select class="form-control" id="DeptmSelect">
                                 <option value="0">Todos los departamentos</option>
                                 <option value="1" selected>Marketing</option>
@@ -88,7 +88,7 @@
                         </div>
                     </div>
                     <div class="form-section">
-                        <label for="DeptmSelect" class="text-uppercase font-weight-bold">
+                        <label for="DeptmSelect" class="text-uppercase font-weight-bold section-title">
                             <i class="far fa-money-bill-alt"></i> Datos salariales</label>
                         <div class="form-group">
                             <label for="salaryTypeSelect">Tipo de contrato</label>

@@ -7,46 +7,12 @@
         </div>
         <div class="card shadow col-lg-12 card-section">
             <div class="card-body p-2">
-                <div id="chart-container"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto autem consequatur error facere id libero minus, nam odit quasi quibusdam quis unde. Fugit iusto quas quo sit sunt, ullam.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto autem consequatur error facere id libero minus, nam odit quasi quibusdam quis unde. Fugit iusto quas quo sit sunt, ullam.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto autem consequatur error facere id libero minus, nam odit quasi quibusdam quis unde. Fugit iusto quas quo sit sunt, ullam.</p>
             </div>
         </div>
     </div>
-@endsection
-@section('js')
-    <script>
-        $(document).ready(function () {
-        let datascource = {
-                'name': 'Lao Lao',
-                'title': 'general manager',
-                'children': [
-                    { 'name': 'Bo Miao', 'title': 'department manager' },
-                    { 'name': 'Su Miao', 'title': 'department manager',
-                        'children': [
-                            { 'name': 'Tie Hua', 'title': 'senior engineer' },
-                            { 'name': 'Hei Hei', 'title': 'senior engineer',
-                                'children': [
-                                    { 'name': 'Pang Pang', 'title': 'engineer' },
-                                    { 'name': 'Xiang Xiang', 'title': 'UE engineer' }
-                                ]
-                            }
-                        ]
-                    },
-                    { 'name': 'Yu Jie', 'title': 'department manager' },
-                    { 'name': 'Yu Li', 'title': 'department manager' },
-                    { 'name': 'Hong Miao', 'title': 'department manager' },
-                    { 'name': 'Yu Wei', 'title': 'department manager' },
-                    { 'name': 'Chun Miao', 'title': 'department manager' },
-                    { 'name': 'Yu Tie', 'title': 'department manager' }
-                ]
-            },
-            let orgchart = new OrgChart({
-                'chartContainer': '#chart-container',
-                'data' : datascource,
-                'depth': 2,
-                'nodeContent': 'title'
-            });
-        });
-    </script>
 @endsection
 
 

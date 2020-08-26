@@ -4,7 +4,7 @@
     </div>
     <div class="employer-info">
         <p>
-            <span class="badge badge-secondary employer-dpt">{{ $dptm }}</span>
+            <span class="badge badge-secondary employer-dpt"><i class="fas fa-fw fa-users" style="margin-right: 5px;"></i> {{ $dptm }}</span>
             <span class="employer-name">{{$name}}</span>
             <span class="employer-job">{{ $job }}</span>
         </p>

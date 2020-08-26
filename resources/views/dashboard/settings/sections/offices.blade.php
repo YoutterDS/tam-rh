@@ -14,7 +14,7 @@
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                     <div class="card office-card">
                         <div class="main-office">Oficina Principal</div>
-                        <a href="{{ route('team.departamentos', ['locale'=>app()->getLocale()]) }}">
+                        <a href="{{ route('team.listado', ['locale'=>app()->getLocale()]) }}">
                             <div class="workers-office-count"><i class="fas fa-users" title="35 Empleados"></i>35</div>
                         </a>
                         <img class="card-img-top" src="https://xceed.me/blog/wp-content/uploads/2016/05/Barcelona-best-clubs-2019-at-xceed.png"
@@ -42,7 +42,7 @@
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                     <div class="card office-card">
-                        <a href="{{ route('team.departamentos', ['locale'=>app()->getLocale()]) }}">
+                        <a href="{{ route('team.listado', ['locale'=>app()->getLocale()]) }}">
                             <div class="workers-office-count"><i class="fas fa-users" title="35 Empleados"></i>15</div>
                         </a>
                         <img class="card-img-top" src="https://img1.elperiodico.com/56/14/4f/girona-3-980x570.jpg"

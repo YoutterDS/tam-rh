@@ -34,6 +34,18 @@
                     </div>
                 </div>
                 <div class="col-sm">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01"><i class="fas fa-fw fa-building"></i></label>
+                        </div>
+                        <select class="custom-select" id="inputGroupSelect01">
+                            <option selected>Filtrar por oficina</option>
+                            <option value="1">BARCELONA</option>
+                            <option value="2">GIRONA</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm">
                     <a href="{{ route('team.new', ['locale'=>app()->getLocale()]) }}" class="text-decoration-none" target="_blank">
                         <button type="button" class="btn btn-success text-uppercase"><i class="fas fa-user-plus"></i> Alta nuevo empleado</button>
                     </a>

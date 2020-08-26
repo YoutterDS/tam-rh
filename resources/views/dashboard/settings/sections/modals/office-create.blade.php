@@ -20,7 +20,7 @@
 {{--                        </div>--}}
 {{--                    </div>--}}
                     <div class="form-section">
-                        <label class="text-uppercase font-weight-bold"><i class="fas fa-info"></i> Datos básicos</label>
+                        <label class="text-uppercase font-weight-bold section-title"><i class="fas fa-info"></i> Datos básicos</label>
                             <div class="form-row">
                                 <label for="officeTitle">Título</label>
                                 <input type="text" class="form-control" required name="name" id="officeTitle" placeholder="Título de oficina">
@@ -31,7 +31,7 @@
                         </div>
                     </div>
                     <div class="form-section">
-                        <label class="text-uppercase font-weight-bold"><i class="fas fa-phone"></i> Datos de contacto</label>
+                        <label class="text-uppercase font-weight-bold section-title"><i class="fas fa-phone"></i> Datos de contacto</label>
                             <div class="form-row">
                                 <label for="officePhone">Teléfono</label>
                                 <input type="text" class="form-control" id="officePhone" placeholder="Teléfono de la oficina">
@@ -42,7 +42,7 @@
                             </div>
                     </div>
                     <div class="form-section">
-                        <label class="text-uppercase font-weight-bold"><i class="fas fa-map-marker-alt"></i> Datos de localización</label>
+                        <label class="text-uppercase font-weight-bold section-title"><i class="fas fa-map-marker-alt"></i> Datos de localización</label>
                         <div class="form-row">
                             <label for="officeDirection">Dirección</label>
                             <input type="text" class="form-control" required name="name" id="officeDirection" placeholder="Dirección de la oficina">

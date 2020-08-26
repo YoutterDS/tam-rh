@@ -63,7 +63,7 @@
                         </div>
                         <div class="card-body text-right">
                             <button type="button" class="btn btn-primary btn-sm text-uppercase" data-toggle="modal" data-target="#modalOfficeDetail">
-                                <i class="fas fa-edit"></i> Crear Oficina
+                                <i class="fas fa-edit"></i> Editar Oficina
                             </button>
                         </div>
                     </div>

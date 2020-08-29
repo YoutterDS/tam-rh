@@ -1,6 +1,14 @@
 // Init
 require('./bootstrap');
 
+//jQuery
+require('jquery/dist/jquery.min');
+window.$ = window.jQuery = require('jquery');
+
+
+//OrgChart
+require('orgchart/dist/js/jquery.orgchart.min');
+
 // Bootstrap Sb-admin-2
 require('startbootstrap-sb-admin-2/js/sb-admin-2.js');
 // require('startbootstrap-sb-admin-2/vendor/bootstrap/js/bootstrap.bundle.js');

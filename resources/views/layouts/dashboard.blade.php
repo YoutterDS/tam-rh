@@ -12,7 +12,6 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/orgchart/orgchart.css') }}">
     <link rel="stylesheet" href="{{ asset('css/select2/select2.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     @yield('css')
@@ -72,8 +71,8 @@
         'url' => url('/'),
     ]); ?>
 </script>
+
 <script src="{{ asset('js/dashboard.js') }}"></script>
-<script src="{{ asset('js/orgchart/orgchart.js') }}"></script>
 
 
 @switch ( app()->getLocale() )

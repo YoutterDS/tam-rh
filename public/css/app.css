@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito");
-/* line 11, ../../resources/sass/app.scss */
+/* line 9, ../../resources/sass/app.scss */
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
@@ -331,7 +331,7 @@
   border-top: 1px solid rgba(52, 144, 220, 0.6);
 }
 
-/* line 19, ../../resources/sass/app.scss */
+/* line 17, ../../resources/sass/app.scss */
 #wrapper {
   background-color: red;
 }

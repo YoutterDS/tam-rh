@@ -27,6 +27,7 @@
     },
     "dependencies": {
         "bootstrap-select": "^1.13.17",
+        "orgchart": "^2.1.10",
         "startbootstrap-sb-admin-2": "^4.0.7"
     }
 }

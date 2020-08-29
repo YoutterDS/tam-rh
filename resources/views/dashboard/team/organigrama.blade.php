@@ -1,68 +1,6 @@
 @extends('layouts.dashboard')
 
 @section('content')
-    <style>
-        #team-organigrama .orgchart {
-            background: none;
-            width: 100%;
-            padding: 0;
-        }
-
-        #team-organigrama .orgchart .node {
-            background-color: transparent;
-        }
-
-        #team-organigrama .orgchart .node .title {
-            color: #3490dc;
-            background-color: transparent;
-            height: auto;
-            padding: 1px 1px 0 1px;
-            width: auto;
-        }
-
-        #team-organigrama .orgchart .node .title .dptIcon {
-            display: block;
-            font-size: 2rem;
-            margin: 0;
-        }
-
-        #team-organigrama .orgchart .node .title p.name {
-            padding: 0;
-            text-transform: uppercase;
-            margin: 1px 0 0 0;
-        }
-        #team-organigrama .orgchart .node .title p.position {
-            display: block;
-            color: #6e707e9e;
-            margin: 0;
-            font-size: .6rem;
-            text-transform: uppercase;
-            line-height: 1;
-        }
-
-        #team-organigrama .orgchart .node .title .profileImg {
-            max-width: 50px;
-            height: auto;
-            border-radius: 100px;
-            margin-bottom: 10px;
-        }
-
-        #team-organigrama .orgchart .lines td,
-        #team-organigrama .orgchart .lines .downLine {
-            border-color: #e5e5e5 !important
-        }
-
-        #team-organigrama .orgchart .lines .downLine {
-            background-color: #e5e5e5 !important
-        }
-        .orgchart .lines .topLine {
-            border-top: 1px solid #e5e5e5 !important;
-        }
-        .orgchart .lines .downLine {
-            width: 1px;
-        }
-    </style>
-
     <div class="row" id="team-organigrama">
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800 text-uppercase"><i class="fas fa-fw fa-sitemap"></i> Organigrama</h1>
@@ -78,7 +16,7 @@
 @section('js')
     <script>
         $(document).ready(function () {
-
+            //TODO: Charge via API this info
             let ds = {
                 'name': 'TAM RH',
                 'title': 'general manager',
@@ -136,7 +74,7 @@
                     },
                 ]
             };
-
+            // TODO: Refactor create Node functions
             let oc = $('#chart-container').orgchart({
                 'data': ds,
                 'pan': false,
@@ -144,14 +82,12 @@
                 'draggable': false,
                 'toggleSiblingsResp': true,
                 'createNode': function ($node, data) {
-
                     if (data.type === 'dpt') {
                         $node.addClass('dpt');
                         $node.children('.title').html('<p class="dptIcon"><i class="' + data.icon + '"></i></p><p class="name">' + data.name + '</p>');
                     } else {
                         $node.children('.title').html('<img class="profileImg" src="https://randomuser.me/api/portraits/men/' + Math.floor((Math.random() * 100) + 1) + '.jpg"><p class="name">' + data.name + '</p><p class="position">' + data.title + '</p>');
                     }
-
                 }
             });
         });

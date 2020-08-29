@@ -147,6 +147,70 @@
     padding: 0;
   }
 }
+/* line 2, ../../resources/sass/theme-web/employers/organigrama.scss */
+#team-organigrama .orgchart {
+  background: none;
+  width: 100%;
+  padding: 0;
+}
+/* line 7, ../../resources/sass/theme-web/employers/organigrama.scss */
+#team-organigrama .orgchart .node {
+  background-color: transparent;
+}
+/* line 9, ../../resources/sass/theme-web/employers/organigrama.scss */
+#team-organigrama .orgchart .node .title {
+  color: #3490dc;
+  background-color: transparent;
+  height: auto;
+  padding: 1px 1px 0 1px;
+  width: auto;
+}
+/* line 16, ../../resources/sass/theme-web/employers/organigrama.scss */
+#team-organigrama .orgchart .node .title .dptIcon {
+  display: block;
+  font-size: 2rem;
+  margin: 0;
+}
+/* line 22, ../../resources/sass/theme-web/employers/organigrama.scss */
+#team-organigrama .orgchart .node .title p.name {
+  padding: 0;
+  text-transform: uppercase;
+  margin: 1px 0 0 0;
+}
+/* line 28, ../../resources/sass/theme-web/employers/organigrama.scss */
+#team-organigrama .orgchart .node .title p.position {
+  display: block;
+  color: #6e707e9e;
+  margin: 0;
+  font-size: .6rem;
+  text-transform: uppercase;
+  line-height: 1;
+}
+/* line 36, ../../resources/sass/theme-web/employers/organigrama.scss */
+#team-organigrama .orgchart .node .title .profileImg {
+  max-width: 50px;
+  height: auto;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+/* line 45, ../../resources/sass/theme-web/employers/organigrama.scss */
+#team-organigrama .orgchart .lines td {
+  border-color: #e5e5e5 !important;
+}
+/* line 48, ../../resources/sass/theme-web/employers/organigrama.scss */
+#team-organigrama .orgchart .lines .downLine {
+  border-color: #e5e5e5 !important;
+  background-color: #e5e5e5 !important;
+}
+/* line 53, ../../resources/sass/theme-web/employers/organigrama.scss */
+#team-organigrama .orgchart .lines .topLine {
+  border-top: 1px solid #e5e5e5 !important;
+}
+/* line 56, ../../resources/sass/theme-web/employers/organigrama.scss */
+#team-organigrama .orgchart .lines .downLine {
+  width: 1px;
+}
+
 /* line 3, ../../resources/sass/theme-web/departaments/listado.scss */
 #team-departamentos .dpm-detail .info-section {
   width: 80%;

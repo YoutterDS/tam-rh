@@ -49,6 +49,27 @@
                                    placeholder="Número DNI del empleado"
                                    value="45985632D">
                         </div>
+                        <div class="form-group">
+                            <label for="infoDniInput">Horario</label>
+                            <input type="text" class="form-control" id="infoDniInput" aria-describedby="emailHelp"
+                                   placeholder="Número DNI del empleado"
+                                   value="09:00 - 17:00h">
+                        </div>
+                    </div>
+                    <div class="form-section">
+                        <label for="DeptmSelect" class="text-uppercase font-weight-bold section-title"><i class="fas fa-envelope"></i> Datos horarios</label>
+                        <div class="form-group">
+                            <label for="infoEmailInput">Número de horas semanales</label>
+                            <input type="text" class="form-control" id="infoEmailInput" aria-describedby="emailHelp"
+                                   placeholder="Número de teléfono del empleado"
+                                   value="40">
+                        </div>
+                        <div class="form-group">
+                            <label for="infoEmailInput">Número de horas semanales</label>
+                            <input type="text" class="form-control" id="infoEmailInput" aria-describedby="emailHelp"
+                                   placeholder="Número de teléfono del empleado"
+                                   value="40">
+                        </div>
                     </div>
                     <div class="form-section">
                         <label for="DeptmSelect" class="text-uppercase font-weight-bold section-title"><i class="fas fa-envelope"></i> Datos de contacto</label>
@@ -131,7 +152,7 @@
                 </form>
             </div>
             <div class="card-footer text-right">
-                <button type="button" class="btn btn-primary text-uppercase"><i class="fas fa-save"></i> Guardar empleado</button>
+                <button type="button" class="btn btn-primary text-uppercase"><i class="fas fa-save"></i> Actualizar datos</button>
             </div>
         </div>
     </div>

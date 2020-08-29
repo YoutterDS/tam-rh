@@ -173,35 +173,38 @@
 /* line 26, ../../resources/sass/theme-web/departaments/listado.scss */
 #team-departamentos .dpm-detail .dpm-logo {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: bottom;
   padding: 15px;
-  height: 70px;
+  height: 60px;
 }
 /* line 32, ../../resources/sass/theme-web/departaments/listado.scss */
 #team-departamentos .dpm-detail .dpm-logo i {
-  font-size: 3rem;
+  font-size: 1.5rem;
+  height: 27px;
+  VERTICAL-ALIGN: -webkit-baseline-middle;
+  text-align: center;
 }
-/* line 37, ../../resources/sass/theme-web/departaments/listado.scss */
+/* line 40, ../../resources/sass/theme-web/departaments/listado.scss */
 #team-departamentos .dpm-detail .dpm-info {
   display: inline-flex;
   vertical-align: top;
-  height: 70px;
+  height: 60px;
   flex-direction: column-reverse;
 }
-/* line 43, ../../resources/sass/theme-web/departaments/listado.scss */
+/* line 46, ../../resources/sass/theme-web/departaments/listado.scss */
 #team-departamentos .dpm-detail .dpm-info .dpm-name {
   text-transform: uppercase;
   font-weight: bold;
 }
 
 @media (max-width: 1020px) {
-  /* line 57, ../../resources/sass/theme-web/departaments/listado.scss */
+  /* line 60, ../../resources/sass/theme-web/departaments/listado.scss */
   #team-departamentos .dpm-list .dpm-detail .info-section {
     width: 100%;
     display: block;
     height: auto;
   }
-  /* line 63, ../../resources/sass/theme-web/departaments/listado.scss */
+  /* line 66, ../../resources/sass/theme-web/departaments/listado.scss */
   #team-departamentos .dpm-list .dpm-detail .actions-section {
     width: 100%;
     display: block;
@@ -209,27 +212,27 @@
   }
 }
 @media (max-width: 600px) {
-  /* line 77, ../../resources/sass/theme-web/departaments/listado.scss */
+  /* line 80, ../../resources/sass/theme-web/departaments/listado.scss */
   #team-departamentos .dpm-list .dpm-detail .info-section {
     text-align: center;
   }
-  /* line 80, ../../resources/sass/theme-web/departaments/listado.scss */
+  /* line 83, ../../resources/sass/theme-web/departaments/listado.scss */
   #team-departamentos .dpm-list .dpm-detail .info-section .dmp-logo {
     width: 100%;
   }
-  /* line 84, ../../resources/sass/theme-web/departaments/listado.scss */
+  /* line 87, ../../resources/sass/theme-web/departaments/listado.scss */
   #team-departamentos .dpm-list .dpm-detail .info-section .dmp-info {
     height: auto;
   }
-  /* line 86, ../../resources/sass/theme-web/departaments/listado.scss */
+  /* line 89, ../../resources/sass/theme-web/departaments/listado.scss */
   #team-departamentos .dpm-list .dpm-detail .info-section .dmp-info p {
     height: auto;
   }
-  /* line 89, ../../resources/sass/theme-web/departaments/listado.scss */
+  /* line 92, ../../resources/sass/theme-web/departaments/listado.scss */
   #team-departamentos .dpm-list .dpm-detail .info-section .dmp-info p span {
     display: block;
   }
-  /* line 97, ../../resources/sass/theme-web/departaments/listado.scss */
+  /* line 100, ../../resources/sass/theme-web/departaments/listado.scss */
   #team-departamentos .dpm-list .dpm-detail .actions-section .dmp-action {
     padding: 0;
   }

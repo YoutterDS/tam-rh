@@ -25,19 +25,22 @@
 
         .dpm-logo {
             display: inline-block;
-            vertical-align: top;
+            vertical-align: bottom;
             padding: 15px;
-            height: 70px;
+            height: 60px;
 
             i {
-                font-size: 3rem;
+                font-size: 1.5rem;
+                height: 27px;
+                VERTICAL-ALIGN: -webkit-baseline-middle;
+                text-align: center;
             }
         }
 
         .dpm-info {
             display: inline-flex;
             vertical-align: top;
-            height: 70px;
+            height: 60px;
             flex-direction: column-reverse;
 
             .dpm-name {

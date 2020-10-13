@@ -69,7 +69,7 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-      <a class="nav-link " href="eventos.html" >
+      <a class="nav-link " href="{{ route('dashboard.events.index', [ 'locale' => app()->getLocale() ]) }}" >
         <i class="fas fa-fw fa-calendar"></i>
         <span>Eventos</span>
       </a>

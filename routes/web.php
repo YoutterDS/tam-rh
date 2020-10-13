@@ -28,6 +28,12 @@ Route::group(['prefix'=>"dashboard/{locale?}/"], static function() {
         // https://dominbio.com/admin/user/create-user
         Route::get('create-user', 'UsersController@create')->name('admin.user.create');
     });
+
+    // User
+    Route::prefix("events")->group(function() {
+        Route::get('',      'EventsController@index')->name('dashboard.events.index');
+        Route::get('/{id}', 'EventsController@show')->name('dashboard.events.show');
+    });
 });
 
 // Public

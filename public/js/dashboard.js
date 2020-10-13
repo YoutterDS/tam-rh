@@ -37293,8 +37293,8 @@ $(window).on('hashchange', function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\wamp64\www\tam-rh\resources\js\dashboard.js */"./resources/js/dashboard.js");
-module.exports = __webpack_require__(/*! C:\wamp64\www\tam-rh\resources\sass\dashboard.scss */"./resources/sass/dashboard.scss");
+__webpack_require__(/*! /Users/manel/Sites/tam-rh/resources/js/dashboard.js */"./resources/js/dashboard.js");
+module.exports = __webpack_require__(/*! /Users/manel/Sites/tam-rh/resources/sass/dashboard.scss */"./resources/sass/dashboard.scss");
 
 
 /***/ })

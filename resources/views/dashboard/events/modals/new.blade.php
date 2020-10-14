@@ -14,10 +14,16 @@
                             <textarea id="description" name="description" rows="3" class="form-control form-control-sm"></textarea>
                         </div>
 
-                        <div>
+                        <div class="mb-3">
                             <label for="location" class="form-check-label">Ubicación</label>
                             <input id="location" name="location" type="text" class="form-control form-control-sm">
                         </div>
+
+                        <div>
+                            <label for="location" class="form-check-label">Fechas</label>
+                            <input type="text" id="datapicker" name="date" class="form-control form-control-sm">
+                        </div>
+
                     </div>
                     <div class="form-group form-section">
                         <div>
@@ -80,9 +86,9 @@
                     </div>
                 </form>
             </div>
-            <div class="modal-footer d-none">
-                <button type="button" class="btn btn-link" style="text-transform: uppercase;font-weight: bold;"><i class="fas fa-sync-alt"></i>
-                    Restablecer filtros
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link" style="text-transform: uppercase;font-weight: bold;"><i class="fas fa-save"></i>
+                    Guardar
                 </button>
             </div>
         </div>
@@ -121,6 +127,48 @@
 
         $('.select2-search__field').css('width', '100%');
 
+        $('#datapicker').daterangepicker({
+            timePicker: true,
+            // viewMode: "months",
+            // minViewMode: "months",
+            // singleDatePicker: true,
+            // startDate: moment().startOf('hour'),
+            // endDate: moment().startOf('hour').add(32, 'hour'),
+            locale: {
+                "format": "DD/MM/YYYY HH:mm",
+                "separator": " - ",
+                "applyLabel": "Aplicar",
+                "cancelLabel": "Cancelar",
+                "fromLabel": "Desde",
+                "toLabel": "Hasta",
+                // "customRangeLabel": "Custom",
+                "weekLabel": "W",
+                "daysOfWeek": [
+                    "Dom",
+                    "Lun",
+                    "Mar",
+                    "Mié",
+                    "Jue",
+                    "Vie",
+                    "Sáb"
+                ],
+                "monthNames": [
+                    "Enero",
+                    "Febrero",
+                    "Marzo",
+                    "Abril",
+                    "Mayo",
+                    "Junio",
+                    "Julio",
+                    "Agosto",
+                    "Septiembre",
+                    "Octubre",
+                    "Noviembre",
+                    "Diciembre"
+                ],
+                "firstDay": 1
+            },
+        });
 
     });
 </script>

@@ -14,9 +14,9 @@
                             <textarea id="description" name="description" rows="3" class="form-control form-control-sm p-3"></textarea>
                         </div>
 
-                        <div>
+                        <div class="mb-3">
                             <label for="location" class="form-check-label">Fecha límite</label>
-                            <input type="text" id="datapicker" class="form-control" style="max-width: 180px;">
+                            <input type="text" id="datapicker" class="form-control form-control-sm">
                         </div>
                     </div>
                 </form>

@@ -5,6 +5,7 @@ require('./bootstrap');
 require('jquery/dist/jquery.min');
 window.$ = window.jQuery = require('jquery');
 
+require ('./daterangepicker');
 
 //OrgChart
 require('orgchart/dist/js/jquery.orgchart.min');
@@ -23,4 +24,6 @@ require('./dashboard/main.js');
 
 // Sections
 require('./dashboard/sections/nav-pills.js');
+
+
 

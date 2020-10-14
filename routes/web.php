@@ -29,10 +29,16 @@ Route::group(['prefix'=>"dashboard/{locale?}/"], static function() {
         Route::get('create-user', 'UsersController@create')->name('admin.user.create');
     });
 
-    // User
+    // Events
     Route::prefix("events")->group(function() {
         Route::get('',      'EventsController@index')->name('dashboard.events.index');
         Route::get('/{id}', 'EventsController@show')->name('dashboard.events.show');
+    });
+
+    // Tasks
+    Route::prefix("tasks")->group(function() {
+        Route::get('',      'TasksController@index')->name('dashboard.tasks.index');
+        Route::get('/{id}', 'TasksController@show')->name('dashboard.tasks.show');
     });
 });
 

@@ -84,7 +84,7 @@
 
     <!-- Nav Item - Tables -->
     <li class="nav-item">
-      <a class="nav-link" href="tareas.html">
+      <a class="nav-link" href="{{ route('dashboard.tasks.index', [ 'locale' => app()->getLocale() ]) }}">
         <i class="fas fa-fw fa-clipboard-list"></i>
         <span>Tareas</span></a>
     </li>

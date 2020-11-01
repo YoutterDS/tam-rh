@@ -14,6 +14,7 @@ Route::group(['prefix'=>"dashboard/{locale?}/"], static function() {
 
 
     Route::get('timetable', 'DashboardController@timetable')->name('dashboard.timetable');
+    Route::get('timetable/detail', 'DashboardController@timetableDetail')->name('dashboard.timetable.detail');
     Route::get('documents', 'DashboardController@documents')->name('dashboard.documents');
 
     /* TEAM */

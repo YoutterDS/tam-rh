@@ -32,6 +32,9 @@
                 <canvas id="timetableChart2"></canvas>
             </div>
             <div class="modal-footer">
+                <a href="{{ route('dashboard.timetable.detail', ['locale'=>app()->getLocale()]) }}">
+                    <button type="button" class="btn btn-primary"><i class="fas fa-list"></i> Detalle</button>
+                </a>
                 <button type="button" class="btn btn-success text-uppercase"><i class="fas fa-check"></i> Validar registro</button>
             </div>
         </div>

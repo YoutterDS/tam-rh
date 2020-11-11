@@ -7,22 +7,38 @@
     </div>
 
     <div class="card shadow col-lg-12 card-section">
-        <div class="card-header">
-            <ul class="nav justify-content-center" id="tab1">
-                <li class="nav-item">
-                    <a class="nav-link" href="#" data-toggle="tab">
-                        <i class="fas fa-fw fa-chevron-left"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#empleados" id="datapicker">Mayo 2020</a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link grey" data-toggle="tab">
-                        <i class="fas fa-fw fa-chevron-right opacity-40"></i>
-                    </a>
-                </li>
-            </ul>
+        <div class="card-body p-3">
+            <div class="row">
+                <div class="col-sm col-sm-4">
+                    <div class="input-group mb-2">
+
+                        <select class="custom-select" id="inputGroupSelect01">
+                            <option value="2020" selected>2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm col-sm-4">
+                    <div class="input-group mb-2">
+                        <select class="custom-select" id="inputGroupSelect01">
+                            <option value="1" selected>Enero</option>
+                            <option value="2">Febrero</option>
+                            <option value="2">Marzo</option>
+                            <option value="2">Abril</option>
+                            <option value="2">Mayo</option>
+                            <option value="2">Junio</option>
+                            <option value="2">Julio</option>
+                            <option value="2">Agosto</option>
+                            <option value="2">Septiembre</option>
+                            <option value="2">Octubre</option>
+                            <option value="2">Noviembre</option>
+                            <option value="2">Diciembre</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </div>
         <style>
             .table-time-registrations .filled .fichaje-block .save-btn {

@@ -28,6 +28,7 @@
 </head>
 
 <body id="page-top">
+
     <div class="progress axios">
         <div class="indeterminate"></div>
     </div>
@@ -85,4 +86,5 @@
     @yield('js-sections')
     @livewireScripts
 </body>
+
 </html>

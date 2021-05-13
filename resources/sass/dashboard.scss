@@ -1,0 +1,26 @@
+@import 'https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i';
+
+@import 'variables.scss';
+
+// Bootstrap sb-admin-2
+@import '~startbootstrap-sb-admin-2/scss/sb-admin-2.scss';
+@import '~startbootstrap-sb-admin-2/vendor/fontawesome-free/css/all.css';
+@import "~bootstrap/scss/variables";
+
+@import "theme-dashboard/daterangepicker.css";
+
+@import 'theme-dashboard/sb-bootstrap-personalized.scss';
+
+@import '~bootstrap-select/dist/css/bootstrap-select.css';
+
+@import 'theme-dashboard/colors.scss';
+@import 'theme-dashboard/titles.scss';
+@import 'theme-dashboard/forms.scss';
+@import 'theme-dashboard/bootstrap-select.scss';
+@import 'theme-dashboard/btns.scss';
+@import 'theme-dashboard/cards.scss';
+@import 'theme-dashboard/lists.scss';
+@import 'theme-dashboard/filters.scss';
+@import 'theme-dashboard/tooltips.scss';
+
+@import '~orgchart/dist/css/jquery.orgchart.min.css';

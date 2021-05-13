@@ -1,0 +1,24 @@
+.time-table-modal {
+    .table-count-hours {
+        border: none;
+        text-align: center;
+        thead {
+            th {
+                color: white;
+                background-color: rgba(52, 144, 220, 0.6);
+                border-color: rgba(52, 144, 220, 0.6);
+                border-bottom: 2px solid transparent;
+                border-top: 2px solid transparent;
+            }
+        }
+
+        th {
+            border-color: rgba(52, 144, 220, 0.6);
+            padding: 0.35rem 0.75rem ;
+        }
+
+        td {
+            border-top: 1px solid rgba(52, 144, 220, 0.6);
+        }
+    }
+}

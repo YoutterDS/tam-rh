@@ -1,0 +1,34 @@
+.list {
+    &-employers {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height: 300px;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+
+        border-top-left-radius: 0.35rem;
+        border-bottom-left-radius: 0.35rem;
+
+        &-item {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-left: none;
+
+            .thumb {
+                $minSize: 45px !important;
+                min-height: $minSize;
+                min-width: $minSize;
+                max-height: $minSize;
+                max-width: $minSize;
+            }
+
+            &:first-child {
+                border-top: none;
+                border-top-right-radius: 0;
+            }
+            &:last-child {
+                border-bottom: none;
+                border-bottom-right-radius: 0;
+            }
+        }
+    }
+}

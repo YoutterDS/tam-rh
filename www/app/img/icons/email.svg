@@ -1,0 +1,13 @@
+<svg id="icone_sobre" data-name="icone sobre" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_151" data-name="Rectángulo 151" width="40" height="40" fill="none"/>
+    </clipPath>
+  </defs>
+  <rect id="Rectángulo_150" data-name="Rectángulo 150" width="40" height="40" fill="none"/>
+  <g id="Grupo_174" data-name="Grupo 174">
+    <g id="Grupo_173" data-name="Grupo 173" clip-path="url(#clip-path)">
+      <path id="Trazado_139" data-name="Trazado 139" d="M106.12,155.6H79V138.177h25.943a.042.042,0,0,1,.02,0,.835.835,0,0,1,.14,1.48l-12.049,8.426a.8.8,0,0,1-.775.029l-6.939-4.3a.8.8,0,1,1,.84-1.35l6.427,4.018,9.208-6.712H80.6V154h23.92V143.2h1.6Z" transform="translate(-72.68 -127.123)" fill="#a0bde6"/>
+    </g>
+  </g>
+</svg>

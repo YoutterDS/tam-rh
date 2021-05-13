@@ -1,0 +1,28 @@
+.daterangepicker {
+
+    &.show-calendar {
+        .drp-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+            }
+
+            .drp-selected {
+                padding: 0;
+            }
+            .applyBtn {
+                @extend .btn-forms;
+                min-width: auto;
+                margin: inherit;
+
+                @media (max-width: 768px) {
+                    min-width: 100%;
+                }
+            }
+        }
+    }
+}

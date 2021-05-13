@@ -1,0 +1,272 @@
+.topbar {
+    background-color: $body-bg-secondary;
+    min-height: $topbar-h;
+
+    @media (max-width: 768px) {
+        display: none !important;
+    }
+
+    &-page-heading {
+        color: $heading-primary-color;
+        //margin-left: $app-margin;
+    }
+
+    &-user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        text-align: right;
+        color: #707070;
+
+        padding-left: 106px;
+
+        @media (max-width: 768px) {
+            padding-left: 25px;
+        }
+
+        &_name {
+            font-size: 14px;
+            line-height: 14px;
+            font-weight: $font-semibold;
+        }
+
+        &_edit {
+            font-size: 10px;
+            line-height: 10px;
+            color: #AAAAAA;
+        }
+
+        &_img {
+            $size: 40px;
+            width: $size;
+            height: $size;
+            margin-left: 8px;
+            margin-right: 10px;
+        }
+    }
+
+    &-divider {
+        border-color: #707070 !important;
+    }
+
+    &-bottom {
+        background-color: #F2F3F3;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: $app-margin;
+        margin-right: $app-margin;
+        margin-bottom: $topbar-bottom-mb;
+        padding-left: $app-padding;
+        padding-right: $app-padding;
+        border-top-left-radius: $top-left-radio;
+        height: $topbar-bottom-h;
+
+        &__welcome {
+            font-weight: $font-semibold;
+            color: black;
+        }
+
+        &__date {
+            color: #1D5FBF;
+            font-weight: $font-semibold;
+            font-size: 15px;
+        }
+
+        @media (max-width: 768px) {
+            display: none !important;
+        }
+    }
+
+    &-mobile {
+        $height: 100px;
+        min-height: $height;
+        width: 100vw;
+        background-color: $body-bg;
+        display: none;
+        padding-left: $app-padding;
+        padding-right: $app-padding;
+        padding-bottom: 0;
+        padding-top: 0;
+        box-shadow: inset 0px -79px 67px -60px rgba(0,0,0,0.2);
+
+        transition: all $speed-animation-fast;
+
+        &-logo {
+            background-image: url('./../img/logos/tam-rh.svg');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: left bottom;
+
+            height: 42px;
+            width: 184px;
+
+            transition: all $speed-animation-fast;
+            transform-origin: center center;
+        }
+
+        &-date {
+            color: rgba(white, .25);
+            font-weight: $font-semibold;
+            text-align: right;
+            font-size: 14px;
+
+            transition: all $speed-animation-fast;
+        }
+
+        &-user {
+            padding: 0;
+
+            &_img {
+                $size: 40px;
+                height: $size;
+                width: $size;
+                margin-bottom: 20px;
+                transition: all $speed-animation-fast;
+            }
+
+            &_icon {
+                $size: 14px;
+                height: $size;
+                width: $size;
+                margin-right: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            z-index: 9 !important;
+        }
+
+        &-sticky {
+            top: 0;
+            position: fixed;
+
+            z-index: 9;
+            &.shadow-bottom {
+                box-shadow: 0px 7px 21px -10px rgba(0,0,0,0.51);
+            }
+        }
+
+        &-small {
+            min-height: 50px;
+            align-items: center;
+
+            .topbar-mobile-logo {
+                background-position: left center;
+                background-size: auto 100%;
+
+                height: 35px;
+            }
+
+            .topbar-mobile-user {
+                &_img {
+                    margin-bottom: 0px;
+                }
+            }
+
+            .topbar-mobile-date {
+                max-height: 0;
+                opacity: 0;
+                transition: all $speed-animation-fast;
+            }
+        }
+
+
+        &_bottom { // topbar-mobile_bottom
+            background-color: $body-bg-secondary;
+
+            height: 44px;
+            max-height: auto;
+
+            z-index: 9 !important;
+
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+
+            padding-left: $app-padding;
+            padding-right: $app-padding;
+            padding-top: 0;
+            padding-bottom: 0;
+
+            &--page-heading {
+                color: $font-color;
+                font-size: 20px;
+                line-height: 20px;
+                font-weight: $font-semibold;
+            }
+
+            h1 {
+                margin: 0;
+            }
+
+            .nav-link {
+                padding: 0;
+
+                .badge-counter {
+                    margin-top: -35px !important;
+                    right: -0.40rem !important;
+                }
+            }
+
+            .dropdown-menu {
+                min-width: 90vw;
+
+                .dropdown-header {
+                    background-color: #3490dc;
+                    border: 1px solid #3490dc;
+                    padding-top: 0.75rem;
+                    padding-bottom: 0.75rem;
+                    color: #fff;
+                }
+
+                .dropdown-item {
+                    white-space: normal;
+                }
+            }
+
+            @media (max-width: 768px) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+        }
+    }
+
+    .exit-session {
+        max-width: 18px;
+        object-fit: scale-down;
+    }
+
+}
+.notifications {
+    font-size: 22px;
+
+    .icon {
+        opacity: .4;
+        transition: opacity .7s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .badge {
+        position: absolute;
+        transform: scale(0.7);
+        transform-origin: top right;
+
+        margin-top: -20px !important;
+        right: 0.40rem !important;
+
+        &-counter {
+            font-size: 14px;
+        }
+    }
+}

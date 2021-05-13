@@ -1,0 +1,155 @@
+/* General */
+pre {
+    margin: 0;
+}
+
+/* Browser ScrollBar */
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    transform: width .2s;
+    border-radius: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #99ace4;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #4e73df;
+}
+
+
+.container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
+    padding-left: .8rem;
+    padding-right: .8rem;
+}
+
+/* Nav Tabs */
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.card {
+    padding-right: 0;
+    padding-left: 0;
+}
+.tab-pane {
+    padding: 4px;
+    max-height: 0px;
+    // overflow: hidden;
+    transition: all 0.2s ease-out;
+}
+.tab-content {
+    padding: 0px;
+}
+.tab-pane.fade {
+    height: auto;
+    max-height: 20000px;
+    transition: all 0.2s ease-out;
+    transform: translateY(1rem);
+}
+
+.tab-pane.fade.show {
+    transform: translateY(0rem);
+}
+
+/* Opacity */
+.opacity-40 {
+    opacity: .40;
+}
+
+/* Calendar */
+.datepicker table tr td span.active, .datepicker table tr td span.active:hover, .datepicker table tr td span.active.disabled, .datepicker table tr td span.active.disabled:hover {
+background-image: none;
+}
+.datepicker table tr td span.active:hover, .datepicker table tr td span.active:hover:hover, .datepicker table tr td span.active.disabled:hover, .datepicker table tr td span.active.disabled:hover:hover, .datepicker table tr td span.active:active, .datepicker table tr td span.active:hover:active, .datepicker table tr td span.active.disabled:active, .datepicker table tr td span.active.disabled:hover:active, .datepicker table tr td span.active.active, .datepicker table tr td span.active:hover.active, .datepicker table tr td span.active.disabled.active, .datepicker table tr td span.active.disabled:hover.active, .datepicker table tr td span.active.disabled, .datepicker table tr td span.active:hover.disabled, .datepicker table tr td span.active.disabled.disabled, .datepicker table tr td span.active.disabled:hover.disabled, .datepicker table tr td span.active[disabled], .datepicker table tr td span.active:hover[disabled], .datepicker table tr td span.active.disabled[disabled], .datepicker table tr td span.active.disabled:hover[disabled] {
+background-color: #4e73df;
+}
+
+
+
+.form-control {
+    padding: 0 0.75rem;
+}
+
+.bs-searchbox, .bs-actionsbox, .bs-donebutton {
+    margin-bottom: 6px;
+}
+
+.dropdown {
+    &-item {
+        padding: 0.55rem 1.5rem;
+    }
+    &-menu {
+        padding: 0;
+    }
+    &-divider {
+        margin: 0;
+        &__modal {
+            padding: 0.55rem 1.5rem;
+        }
+    }
+}
+
+.btn-light {
+    background-color: white;
+    border: 1px solid #d1d3e2;
+    color: #6e707e;
+    font-size: 16px;
+}
+
+.card-deck .card {
+    margin-left: inherit !important;
+    margin-right: inherit !important;
+}
+
+.btn-group-toggle {
+    .btn:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .show > .btn-secondary.dropdown-toggle {
+        background-color: $success !important;
+        border-color: $success !important;
+    }
+}
+
+button {
+    &:focus, &:active, &.active, &:link {
+        outline: 0 !important;
+        box-shadow: none !important;
+    }
+}
+
+.input-group > .input-group-append > .btn, .input-group > .input-group-append > .input-group-text, .input-group > .input-group-prepend:not(:first-child) > .btn, .input-group > .input-group-prepend:not(:first-child) > .input-group-text, .input-group > .input-group-prepend:first-child > .btn:not(:first-child), .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+
+    background-color: white;
+
+    border-left: none;
+
+    padding: 0;
+    min-width: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        max-height: 90%;
+        object-fit: scale-down;
+    }
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    border-color: $green-soft;
+    background-color: $green-soft;
+}

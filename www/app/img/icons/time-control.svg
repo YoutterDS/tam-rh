@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="30.934765mm"
+   height="30.936522mm"
+   viewBox="0 0 30.934765 30.936522"
+   version="1.1"
+   id="svg607"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="time-control.svg">
+  <defs
+     id="defs601">
+    <clipPath
+       id="cp22">
+      <path
+         transform="matrix(1,0,0,-1,0,768)"
+         d="m 616.129,567.5 h 119 v 120 h -119 z"
+         id="path16" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="689.88798"
+     inkscape:cy="281.31986"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1258"
+     inkscape:window-height="1040"
+     inkscape:window-x="1758"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata604">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(76.699529,-73.73412)">
+    <g
+       clip-path="url(#cp22)"
+       id="g29"
+       transform="matrix(0.35277777,0,0,0.35277777,-299.33959,39.968412)">
+      <path
+         transform="matrix(1,0,0,-1,679.6768,98.68292)"
+         d="m 0,0 c 0,-1.149 0.827,-2.132 1.96,-2.326 18.742,-3.261 32.425,-19.525 32.431,-38.548 v -0.021 h 4.727 C 39.124,-19.565 23.783,-1.325 2.769,2.326 1.481,2.548 0.258,1.686 0.035,0.398 0.012,0.266 0,0.132 0,-0.002"
+         fill="#ffffff"
+         id="path19" />
+      <path
+         transform="matrix(1,0,0,-1,634.0703,134.85382)"
+         d="M 0,0 C 1.149,-0.001 2.133,0.828 2.325,1.962 5.577,20.714 21.848,34.409 40.88,34.413 V 39.14 C 19.548,39.138 1.312,23.786 -2.328,2.767 -2.551,1.479 -1.687,0.256 -0.399,0.034 -0.268,0.011 -0.134,0 0.001,0"
+         fill="#ffffff"
+         id="path21" />
+      <path
+         transform="matrix(1,0,0,-1,715.8223,144.3089)"
+         d="m 0,0 c -1.149,0 -2.131,-0.827 -2.325,-1.959 -3.269,-18.734 -19.53,-32.407 -38.547,-32.412 v -4.728 c 21.315,0.002 39.542,15.331 43.2,36.33 0.223,1.287 -0.64,2.511 -1.927,2.734 C 0.269,-0.012 0.135,0 0,0"
+         fill="#ffffff"
+         id="path23" />
+      <path
+         transform="matrix(1,0,0,-1,670.2227,180.4378)"
+         d="m 0,0 c 0.001,1.149 -0.827,2.131 -1.96,2.325 -18.734,3.259 -32.416,19.514 -32.43,38.531 h -4.727 C -39.105,19.541 -23.77,1.32 -2.769,-2.329 c 1.288,-0.223 2.511,0.64 2.734,1.927 0.022,0.133 0.034,0.267 0.034,0.402"
+         fill="#ffffff"
+         id="path25" />
+      <path
+         transform="matrix(1,0,0,-1,657.2725,116.48181)"
+         d="m 0,0 3.979,2.553 15.446,-24.071 c 0.705,-1.099 0.386,-2.561 -0.713,-3.266 -1.099,-0.705 -2.561,-0.387 -3.266,0.711 0,0.001 0,0.001 -10e-4,0.002 z"
+         fill="#ffffff"
+         id="path27" />
+    </g>
+  </g>
+</svg>

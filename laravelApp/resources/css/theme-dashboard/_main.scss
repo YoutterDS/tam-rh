@@ -1,0 +1,78 @@
+html {
+    width               : 100%;
+    height              : 100%;
+    display             : table;
+
+    scroll-behavior     : smooth;
+}
+
+body {
+    width               : 100%;
+    display             : table-cell;
+    color               : $font-color;
+    overflow-x          : hidden;
+}
+
+html, body {
+    margin              : 0px;
+    padding             : 0px;
+    overflow-y          : scroll;
+}
+
+#app, #wrapper {
+    background-color    : $body-bg;
+    font-size           : 12px;
+
+    @media (max-width: 600px) {
+        max-width: 100vw;
+        min-height: 100vh;
+
+        #content {
+            padding-top     : $sidebar-brand;
+            padding-bottom  : 50px;
+        }
+    }
+
+    #content-wrapper {
+        background-color    : $body-bg-secondary;
+        overflow-x          : inherit;
+    }
+}
+
+a {
+    color               : $font-color;
+    transition          : all .4s;
+    &:hover {
+        text-decoration : none;
+        color           : $color-primary
+    }
+}
+
+.scroll-to-top {
+    $size               : 31px;
+    height              : $size;
+    width               : $size;
+    line-height         : 26px;
+
+    vertical-align      : center;
+
+    border-radius       : 100%;
+    background-color    : $body-bg;
+}
+
+.form-control:focus {
+    outline: 0 !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.btn:focus, button:focus {
+    outline: 0 !important;
+}
+
+.noactions {
+    pointer-events: none !important;
+    opacity: .2 !important;
+}
+.focus {
+    box-shadow: none;
+}

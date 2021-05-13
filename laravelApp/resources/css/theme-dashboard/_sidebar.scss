@@ -1,0 +1,272 @@
+.sidebar {
+    transition: width .3s;
+
+    background-color: #1D5FBF;
+    color: white;
+
+    @media (max-width: 768px) {
+        display: none !important;
+    }
+
+    &-brand {
+        min-height: $sidebar-brand;
+        padding: 0;
+
+        &-icon {
+            background-image: url('./../img/logos/tam-rh.svg');
+            background-size: 75%;
+            background-repeat: no-repeat;
+            background-position: center top;
+
+            height: 90px;
+            width: 100%;
+
+            transition: background-image .3s;
+            transform-origin: center center;
+        }
+    }
+
+    .nav {
+        &-item {
+            margin-left: 25px;
+            border-radius: 100px 0px 0px 100px;
+            transition: background-color .3s;
+            opacity: .5;
+
+            &:hover, &.active {
+                background-color: #376fbf;
+                font-weight: $font-regular;
+                opacity: 1;
+            }
+
+            &.active {
+                pointer-events: none;
+            }
+
+            .nav-link {
+                height: 51px;
+                display: flex;
+                align-items: center;
+                transition: all .3s;
+
+
+                &__icon {
+                    $size: 25px;
+
+                    width: $size;
+                    height: $size;
+
+                    margin-right: 14px;
+                }
+
+                span {
+                    font-size: 1rem;
+                    color: white;
+                    font-weight: $font-regular;
+                }
+            }
+        }
+    }
+
+    &.toggled {
+        .sidebar-brand {
+            &-icon {
+                background-image: url('./../img/logos/tam-rh__small.svg');
+                background-size: auto 45px;
+            }
+        }
+
+        .nav {
+            &-item {
+                margin-left: 6px;
+                .nav-link {
+                    flex-direction: column;
+                    span {
+                       display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &-mobile {
+        background-color: $body-bg;
+        color: $body-bg-secondary;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        list-style: none;
+        display: none;
+        box-shadow: inset 0px -79px 67px -60px rgba(0,0,0,0.2);
+        overflow: hidden;
+
+
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container-fluid, .container {
+            padding-left: 1.2rem;
+            padding-right: 1.2rem;
+        }
+
+        &.expanded {
+            max-height: 60vh;
+            transition: all $speed-animation-fast;
+        }
+
+        &.collapsed {
+            max-height: 83px; //83px;
+
+            @media #{$mobile-landscape} {
+                max-height: 83px;
+            }
+
+            transition: all $speed-animation-fast;
+
+            #sidebarMobileSmall {
+                opacity: 1;
+                display: flex;
+                align-items: center;
+                min-height: 83px;
+                max-height: 83px;
+                visibility: visible;
+
+                transition: all $speed-animation;
+
+                .sidebar-mobile-link {
+                    &__icon {
+                        max-height: 30px;
+                        max-width: 30px;
+                        @media #{$mobile-landscape} {
+                            max-height: 35px;
+                        }
+                    }
+                }
+            }
+
+            #sidebarMobileBig {
+                max-height: 0;
+                opacity: 0;
+                visibility: hidden;
+
+                transition: all $speed-animation;
+            }
+        }
+
+        #sidebarMobileSmall {
+            opacity: 0;
+            width: 100vw;
+            max-height: 0;
+            overflow: hidden;
+            visibility: hidden;
+
+            transition: all $speed-animation;
+        }
+
+        #sidebarMobileBig {
+            opacity: 1;
+            display: block;
+            visibility: visible;
+            width: 100vw;
+            height: auto;
+            max-height: 60vh; //324px;
+            overflow: hidden;
+            padding-top: 14px;
+            padding-bottom: 40px;
+
+            transition: all $speed-animation;
+
+            .col, .row {
+                padding-right: 0 ;
+                padding-left: 0 ;
+            }
+
+            .sidebar-mobile-link {
+                display: flex;
+                align-items: center;
+                color: rgba(white, .50);
+                font-size: 15px;
+                font-weight: $font-regular;
+                width: 100%;
+                opacity: .5;
+
+                border-radius: 100px 0px 0px 100px;
+
+                &.reverse {
+                    border-radius: 0 100px 100px 0px;
+                }
+
+                &__icon {
+                    $size: 35px;
+                    width: $size;
+                    height: $size;
+                    margin-right: 20px;
+                    margin-left: 10px;
+                }
+
+                span {
+                    white-space: nowrap;
+                    background-color: transparent;
+                    color: white;
+                    font-weight: $font-regular;
+                }
+
+                &:hover, &.active {
+                    background-color: #376fbf;
+                    font-weight: $font-regular;
+                    opacity: 1;
+                }
+            }
+
+            #collapseSidebarMobile {
+                $size: 31px;
+                width: $size;
+                height: $size;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                background-color: $body-bg;
+                border-radius: 100%;
+
+                margin-left: auto;
+
+                box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.1);
+
+                img {
+                    $size: 10px;
+                    width: $size;
+                    height: $size;
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        &-link {
+            $size: 50px;
+            height: $size;
+            width: $size;
+
+            opacity: .5;
+
+            &__icon {
+                width: 100%;
+                height: 100%;
+
+                transition: background-color .3s;
+
+            }
+
+            &:hover, &.active {
+                opacity: 1;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,46 @@
+.nav {
+    &-pills {
+        margin-bottom: 10px;
+
+        @media (max-width: 768px) {
+            display: flex;
+        }
+
+        &-item {
+
+            @media (max-width: 768px) {
+                flex: 1;
+            }
+
+            &_link {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                background-color: $white;
+                color: $body-bg;
+
+                min-height: 30px;
+                min-width: 233px;
+
+                border-radius: 5px;
+
+                font-size: 15px;
+
+                margin: 2px;
+
+                box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.30);
+
+                &:hover, &.active {
+                    background-color: $body-bg;
+                    color: $white;
+                }
+
+                @media (max-width: 768px) {
+                    min-width: 90%;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

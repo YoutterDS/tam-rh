@@ -1,0 +1,131 @@
+.fc {
+    &-header-toolbar {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media (max-width: 600px) {
+            justify-content: center;
+            flex-direction: column-reverse;
+        }
+    }
+
+    &-toolbar-chunk {
+        @media (max-width: 600px) {
+            margin-top: 14px;
+            text-align: center;
+            width: 100%;
+            text-align: center;
+
+            &:first-child {
+                margin-top: none;
+            }
+        }
+    }
+
+    &-toolbar-title {
+        color: $grey;
+        display: block;
+        text-transform: inherit !important;
+        min-width: 220px !important;
+        text-align: right !important;
+
+        &::first-letter {
+            text-transform: capitalize;
+        }
+
+        @media (max-width: 600px) {
+            text-align: center !important;
+            width: 100%;
+        }
+    }
+
+    &-daygrid-week-number {
+        background-color: rgba($body-bg, .1) !important;
+        color: $body-bg !important;
+    }
+
+    &-button-group {
+        button {
+            background-color    : $body-bg !important;
+
+            border              : none !important;
+            border-radius       : 5px !important;
+            font-size           : 12px !important;
+            text-transform      : uppercase !important;
+
+            margin              : 2px !important;
+
+            transition          : all $speed-animation;
+
+            &.fc-dayGridMonth-button, &.fc-timeGridWeek-button, &.fc-listWeek-button, &.fc-today-button {
+                border          : 1px solid $blue !important;
+                background-color: white !important;
+                color           : $grey !important;
+                font-weight     : $font-semibold !important;
+
+
+                &:hover, &.fc-button-active {
+                    background-color: $blue !important;
+                    color           : white !important;
+                }
+            }
+        }
+    }
+
+    &-today-button {
+        $color              : var(--fc-today-bg-color, rgba(255, 220, 40, 0.15)) !important;
+        background-color    : $color;
+        border-color        : $color;
+
+        text-transform      : uppercase !important;
+        color               : $grey !important;
+    }
+
+    &-event-title {
+        color: red !important;
+        opacity: 1 !important;
+        font-size: .85rem !important;
+
+        @media (max-width: 600px) {
+            // display: none;
+            font-size: .45rem !important;
+        }
+    }
+
+    &-timegrid-axis-cushion {
+        color: $blue !IMPORTANT;
+    }
+
+    &-theme-standard .fc-scrollgrid {
+        border-color: $blue-soft !important;
+    }
+
+    &-col-header-cell-cushion  {
+        color: $blue;
+    }
+
+    &-theme-standard {
+        td, th {
+            border-color: $blue-soft !important;
+            color: $blue;
+        }
+    }
+
+    &-daygrid-day-number {
+        color: $blue;
+        font-size: 10px;
+        font-weight: $font-semibold;
+    }
+
+    .day-festive {
+        background-color: green;
+        border-color: green;
+        pointer-events: none;
+    }
+    .day-festive--proposed {
+        background-color: orange;
+        border-color: orange;
+        pointer-events: unset;
+    }
+}

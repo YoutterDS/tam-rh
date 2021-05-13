@@ -1,0 +1,12 @@
+.m {
+    &t {
+        &-negative {
+            &-1 {
+                margin-top: -27px;
+                @media (max-width: 768px) {
+                    margin-top: inherit;
+                }
+            }
+        }
+    }
+}

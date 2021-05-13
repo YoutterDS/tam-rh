@@ -1,0 +1,19 @@
+.badge {
+    border-radius: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    &-counter {
+        $size: 20px;
+        width: $size;
+        height: $size;
+        padding: 1px;
+        background-color: #2D62A4;
+        margin-top: - $size !important;
+    }
+}

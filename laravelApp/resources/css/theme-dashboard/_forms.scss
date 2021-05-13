@@ -1,0 +1,278 @@
+.form {
+    position: relative;
+    .validate {
+        label:after {
+            content     : '*';
+            display     : inline-flex;
+            align-items : center;
+            color       : red;
+        }
+    }
+
+    &-divider {
+        height          : 0;
+        margin          : 2rem 0;
+        overflow        : hidden;
+        border-top      : 1px solid #eaecf4;
+    }
+
+    .btn[type="submit"] {
+        min-width       : 200px;
+        text-transform  : uppercase;
+        margin-top      : 24px;
+    }
+
+    &-section {
+        color: $font-color !important;
+        padding-top: 15px;
+
+        &_title {
+            font-size: 18px;
+            color: $font-color;
+            text-transform: uppercase;
+            padding-bottom: 10px;
+
+            &.small {
+                font-size: 12px;
+                text-align: right;
+                color: $body-bg;
+            }
+        }
+    }
+
+    label {
+        font-style: normal;
+        padding-left: 6px;
+    }
+
+    input, textarea {
+        border-color: $form-inputs-border-color;
+        font-size: 12px;
+    }
+
+    textarea {
+        padding-top: 6px;
+    }
+
+    .bootstrap-select {
+        border: 1px solid $form-inputs-border-color;
+
+        .dropdown-toggle {
+            &::after {
+                border-color: $form-inputs-border-color;
+            }
+        }
+    }
+
+    .custom-file {
+        &-label {
+            border-color: $form-inputs-border-color;
+            font-size: 12px;
+        }
+    }
+
+    &-group {
+        /*
+        &.row {
+            .form {
+                &-control {
+                    width: auto;
+                    flex: 1;
+                }
+
+                &-label {
+                    display: flex;
+                    align-items: center;
+                    padding-right: 4px;
+                    text-align: right;
+                }
+            }
+
+        }
+        */
+    }
+
+    &-grey {
+        input, textarea {
+            border-color: $grey-soft;
+            font-size: 12px;
+        }
+
+        .input-group > .input-group-append > .btn, .input-group > .input-group-append > .input-group-text, .input-group > .input-group-prepend:not(:first-child) > .btn, .input-group > .input-group-prepend:not(:first-child) > .input-group-text, .input-group > .input-group-prepend:first-child > .btn:not(:first-child), .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
+            border-color: $grey-soft;
+        }
+
+        .bootstrap-select {
+            border: 1px solid $grey-soft;
+
+            .dropdown-toggle {
+                &::after {
+                    border-color: $grey-soft;
+                }
+            }
+        }
+
+        .custom-file {
+            &-label {
+                border-color: $grey-soft;
+                font-size: 12px;
+            }
+        }
+    }
+
+    &-green {
+        input, textarea {
+            border-color: $form-green-inputs-border-color;
+            font-size: 12px;
+        }
+
+        .input-group > .input-group-append > .btn, .input-group > .input-group-append > .input-group-text, .input-group > .input-group-prepend:not(:first-child) > .btn, .input-group > .input-group-prepend:not(:first-child) > .input-group-text, .input-group > .input-group-prepend:first-child > .btn:not(:first-child), .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
+            border-color: $form-green-inputs-border-color;
+        }
+
+        .bootstrap-select {
+            border: 1px solid $form-green-inputs-border-color;
+
+            .dropdown-toggle {
+                &::after {
+                    border-color: $form-green-inputs-border-color;
+                }
+            }
+        }
+
+        .custom-file {
+            &-label {
+                border-color: $form-green-inputs-border-color;
+            }
+        }
+
+        .form-section_title {
+            color: #6BC46B;
+        }
+    }
+
+    &-100 {
+        min-width: 100% !important;
+    }
+
+}
+
+button, .btn {
+    border: none;
+}
+
+label {
+    display: block;
+    text-align: center;
+    margin-bottom: 0.2rem;
+    font-size: 12px;
+    font-style: italic;
+    color: $font-color;
+
+    user-select: none;
+}
+
+.custom-control-label {
+    vertical-align: middle;
+}
+.custom-control-label::before {
+    top: 0.13rem;
+}
+
+.custom-switch {
+    .custom-control-label {
+        &::after {
+            top: calc(0.22rem + 1px);
+        }
+    }
+}
+
+input[type="file"]:not(.custom-file) {
+    display: none;
+}
+
+.custom-file {
+
+    &-label {
+        $left-margin: 40px !important;
+
+        margin-left: $left-margin;
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            background-color: transparent;
+            border: none;
+            bottom: 0;
+            left: -#{$left-margin};
+            width: 24px;
+            padding-right: 8px;
+            background-image: url('./../img/icons/blue/clip.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% auto;
+        }
+
+    }
+}
+
+.weekdays {
+    display: flex;
+    justify-content: space-between;
+
+    .btn {
+        min-width: auto !important;
+
+        width: fit-content;
+
+        min-height: calc(1.6em + 0.75rem - 1px) !important;
+        height: calc(1.6em + 0.75rem - 1px) !important;
+
+        padding: 0 !important;
+
+        flex: auto;
+        margin-right: 0px;
+        border-radius: 0;
+
+        color: white !important;
+        text-align: center !important;
+        font-weight: $font-regular;
+        text-transform: inherit !important;
+
+        &:first-child {
+            border-top-left-radius: 5px !important;
+            border-bottom-left-radius: 5px !important;
+        }
+
+        &:last-child {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+    }
+}
+
+input[type=color] {
+    -webkit-appearance: none;
+    border: 1px solid $body-bg;
+    background-color: transparent;
+    width: 43px;
+    height: 43px;
+    margin: auto;
+    padding: 0;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 100% !important;
+
+    &::-webkit-color-swatch {
+        border: none;
+        border-radius: 50%;
+        padding: 0;
+    }
+
+    &::-webkit-color-swatch-wrapper {
+        border: none;
+        border-radius: 50%;
+        padding: 0;
+    }
+}
+

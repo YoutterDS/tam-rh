@@ -1,0 +1,88 @@
+
+// Body
+$body-bg                : #1D5FBF;
+$body-bg-secondary      : white;
+
+// Typography
+$font-family-sans-serif : "Segoe UI", sans-serif;
+$font-size-base         : 0.9rem;
+$line-height-base       : 1.6;
+$font-color             : #656565;
+$font-regular           : 100;
+$font-semibold          : 500;
+$font-bold              : 800;
+
+// Colors
+$color-primary          : #3490dc;
+$color-primary-dark     : #3A6591;
+$box-bg                 : #F2F3F3;
+$box-bg-secondary       : #D9E9FF;
+
+$blue                   : #1D5FBF;
+$blue-soft              : #A0BDE6;
+$blue-extra-soft        : #d6e6fd;
+$grey                   : #707070;
+$grey-soft              : #BBBBBB;
+$green                  : #00AC00;
+$green-soft             : #6BC46B;
+$green-ligther          : #E2FFE2;
+$indigo                 : #6574cd;
+$purple                 : #9561e2;
+$pink                   : #f66D9b;
+$red                    : #e3342f;
+$red-dark               : #C46262;
+$orange                 : #f6993f;
+$orange-soft            : #F1A674;
+$yellow                 : #ffed4a;
+$teal                   : #4dc0b5;
+$cyan                   : #6cb2eb;
+
+// Tooltips
+$bg-color-tooltip       : $color-primary; //$cyan; // #f8f29f;
+$text-color-tooltip     : white; //#626059;
+
+// Buttons
+$btn-bg                 : #C46262;
+
+// Forms
+$form-checkbox-bc               : #A0BDE6;
+$form-inputs-border-color       : #A0BDE6;
+$form-green-inputs-border-color : $green-soft;
+$form-bg-create                 : $green-ligther;
+
+// box
+$top-left-radio         : 20px;
+
+// Padding
+$app-padding            : 25px;
+
+// Progress Bar
+$progress-bar-bg        : #D9D9D9;
+$progress-bar-bg-danger : #C46262;
+$progress-bar-bg-warning : $orange-soft;
+$progress-bar-bg-success : $green-soft;
+
+// Margin
+$app-margin             : .8rem;
+
+// Nabvar & topbar
+$topbar-h               : 100px;
+$topbar-bottom-h        : 49px;
+$topbar-bottom-mb       : 15px;
+$sidebar-brand          : $topbar-h + $topbar-bottom-h ;
+
+// Headings
+$heading-primary-color  : black;
+$heading-secondary-color  : black;
+$heading-h1-size        : 30px;
+
+// Animations
+$speed-animation        : .7s;
+$speed-animation-fast   : .3s;
+
+
+// Breakpoints
+$mobile-landscape : "(max-width: 667px) and (orientation:landscape)";
+
+// Forms
+$form-max-height: 10000px;

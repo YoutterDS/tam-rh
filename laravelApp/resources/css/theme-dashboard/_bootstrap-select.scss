@@ -1,0 +1,76 @@
+ .bootstrap-select {
+    border: 1px solid $form-inputs-border-color;
+    font-size: 12px !important;
+    font-weight: $font-regular !important;
+
+    button {
+        padding-top: 0.4rem;
+        padding-bottom: 0.2rem;
+        min-height: calc(1.6em + 0.75rem + 0px);
+        min-width: auto !important;
+        padding-top: 0;
+        padding-bottom: 0;
+        text-transform: inherit;
+
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled).active,
+        &.show > .btn-light.dropdown-toggle,
+        &:hover,
+        &:not(:focus),
+        &:focus,
+        &:active,
+        &.active,
+        &:link {
+            background-color: white !important;
+            outline: 0 !important;
+            box-shadow: none !important;
+        }
+    }
+
+    .dropdown-toggle {
+        position: relative;
+        overflow: hidden !important;
+
+        .filter-option, .text {
+            font-size: 12px !important;
+            font-weight: $font-regular !important;
+
+            &-inner-inner {
+                color: $font-color !important;
+            }
+        }
+
+        &::after {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border: none;
+
+            background-image: url('./../img/icons/blue/arrow-down.svg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 15px auto;
+            background-color: white;
+
+            top: 0px;
+            right: 0;
+            bottom: 0;
+
+            width: 34px;
+
+            border-left: 1px solid $form-inputs-border-color;
+        }
+
+        &:hover,
+        &:focus,
+        &:active,
+        &.active,
+        &:link {
+            &:after {
+                background-color: $blue-extra-soft;
+            }
+        }
+    }
+}

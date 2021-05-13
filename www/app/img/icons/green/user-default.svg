@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="icono_usuario"
+   data-name="icono usuario"
+   width="40"
+   height="40"
+   viewBox="0 0 40 40"
+   version="1.1"
+   sodipodi:docname="user-default.svg"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)">
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1329"
+     inkscape:window-height="721"
+     id="namedview10"
+     showgrid="false"
+     inkscape:zoom="21.25"
+     inkscape:cx="10.941176"
+     inkscape:cy="20"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="Grupo_15" />
+  <defs
+     id="defs4">
+    <clipPath
+       id="clip-path">
+      <rect
+         id="Rectángulo_36"
+         data-name="Rectángulo 36"
+         width="40"
+         height="40"
+         fill="#bbb" />
+    </clipPath>
+  </defs>
+  <g
+     id="Grupo_15"
+     data-name="Grupo 15"
+     clip-path="url(#clip-path)">
+    <path
+       id="Trazado_26"
+       data-name="Trazado 26"
+       d="M81.111,99.087H79.77a10.051,10.051,0,0,0-9.853,8.073,20,20,0,0,0,25.8,0,10.051,10.051,0,0,0-9.853-8.073h-1.2a.73.73,0,0,1-.73-.73v-.819a.735.735,0,0,1,.55-.707,6.406,6.406,0,0,0,4.729-6.174V86.4a6.4,6.4,0,1,0-12.792.1v4.163a6.405,6.405,0,0,0,4.834,6.2.59.59,0,0,1,.445.573V98.5a.591.591,0,0,1-.591.591"
+       transform="translate(-62.819 -71.879)"
+       fill="#bbb"
+       style="fill:#00ac00;fill-opacity:1" />
+    <path
+       id="Trazado_27"
+       data-name="Trazado 27"
+       d="M14.768,25.376a8.413,8.413,0,0,1-3.195-6.6v-4.26a8.426,8.426,0,0,1,16.853,0v4.26a8.413,8.413,0,0,1-3.195,6.6,12.119,12.119,0,0,1,9.355,8.306,20,20,0,1,0-29.173,0,12.119,12.119,0,0,1,9.355-8.306"
+       fill="#bbb"
+       style="fill:#00ac00;fill-opacity:1" />
+  </g>
+</svg>

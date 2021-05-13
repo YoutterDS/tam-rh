@@ -1,0 +1,1288 @@
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    &-tasks {
+
+        margin-top: 20px;
+
+        &--item {
+            margin-bottom: 10px;
+
+            &_title {
+                font-size: 22px;
+            }
+
+            &_progress-bar {
+                background-color: $progress-bar-bg;
+                height: 5px;
+                margin-top: 6px;
+                display: flex;
+
+                span {
+                    &.danger {
+                        background-color: $progress-bar-bg-danger;
+                    }
+                    &.warning {
+                        background-color: $progress-bar-bg-warning;
+                    }
+                    &.success {
+                        background-color: $progress-bar-bg-success;
+                    }
+                }
+            }
+
+            &_date-limit {
+                color: $body-bg;
+                font-size: 10px;
+                text-align: right;
+            }
+        }
+    }
+
+    &-offices {
+        width: 100%;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fill, minmax(233px, 1fr));
+
+        &.reverse {
+            direction: rtl;
+        }
+        .item-right {
+            direction: initial;
+        }
+    }
+
+    &-employees {
+        $c: &; // var to define the ".list-employees"
+        $boxShadowLeft: inset -2px 0px 0px 0px rgba(#A0BDE6, .7);
+        $boxShadowRight: inset 2px 0px 0px 0px rgba(#A0BDE6, .7);
+        $radius: 25px;
+
+        margin-top: 24px;
+
+        &--item {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            padding: 4px;
+
+            margin-bottom: 8px;
+
+            min-height: 46px;
+            border-top-left-radius: $radius;
+            border-bottom-left-radius: $radius;
+
+            background-color: #FFFFFF;
+
+            @media (max-width: 600px) {
+                flex-direction: column;
+                border-bottom-left-radius: 0;
+            }
+
+            &_img {
+                display: flex;
+                align-items: center;
+            }
+
+            &_name {
+                padding-left: 14px;
+                padding-right: 14px;
+
+                margin-top: 5px;
+                margin-right: 8px;
+                margin-bottom: 5px;
+
+                font-size: 14px;
+                font-weight: $font-semibold;
+                color: $grey;
+                flex: 1;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                box-shadow: $boxShadowLeft;
+            }
+
+            &_department {
+                $size: 14px;
+                width: $size;
+                height: $size;
+
+                border-radius: 100%;
+            }
+
+            &_delay {
+                display: flex;
+                align-items: center;
+
+                padding-right: 8px;
+
+                font-style: italic;
+                font-size: 12px;
+                color: #707070;
+            }
+
+            &_employeer {
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                flex-direction: column;
+                flex: 1;
+
+                color: $grey;
+
+                padding-left: 14px;
+                padding-right: 14px;
+
+                box-shadow: $boxShadowLeft;
+
+                @media (max-width: 600px) {
+                    box-shadow: none;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: flex-end;
+                    padding-bottom: 14px;
+                }
+
+                &-name {
+                    font-size: 14px;
+                    line-height: 16px;
+                    font-weight: $font-semibold;
+                }
+
+                &-position {
+                    font-size: 12px;
+                    line-height: 14px;
+                    font-style: italic;
+                    font-weight: $font-regular;
+
+                    @media (max-width: 600px) {
+                        padding-left: 14px;
+                    }
+                }
+            }
+
+            &_department-info {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: max-content;
+
+                padding-left: 14px;
+                padding-right: 14px;
+
+                box-shadow: $boxShadowLeft;
+
+                span {
+                    @media (max-width: 600px) {
+                        display: none;
+                    }
+                }
+
+                @media (max-width: 600px) {
+                    margin-left: auto;
+                    box-shadow: $boxShadowLeft, $boxShadowRight;
+                }
+            }
+
+            &_email, &_view, &_edit, &_info-hourly-record, &_detail, &_active, &_delete, &_dates, &_validation {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-left: 14px;
+                padding-right: 14px;
+            }
+
+            &_department-info, &_email, &_view, &_edit, &_info-hourly-record, &_detail, &_active, &_delete, &_dates, &_validation {
+                box-shadow: $boxShadowLeft;
+
+                &:last-child {
+                    box-shadow: none;
+                }
+                @media (max-width: 600px) {
+                    padding-left: 14px;
+                    padding-right: 14px;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                }
+            }
+
+            &_icon {
+
+                img {
+                    width: 27px;
+                    object-fit: scale-down;
+                    margin: auto;
+                    opacity: .4;
+
+                    transition: opacity $speed-animation-fast;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &_dates {
+                min-width: max-content;
+                max-width: 10px;
+            }
+
+            &_validation {
+                flex-direction: column;
+                justify-content: flex-start;
+
+                .custom {
+                    &-switch {
+                        min-width: 92px;
+                        min-height: inherit;
+
+                        label {
+                            text-align: left;
+
+                            &:after {
+                                top: calc(0.22rem);
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.refused {
+                $boxShadowRight: inset -2px 0px 0px 0px rgba($red, .7);
+
+                background-color: rgba($red, .3) !important;
+                * {
+                    color: $red !important;
+                }
+
+                .list-employees--item_employeer, .list-employees--item_dates {
+                    box-shadow: $boxShadowRight;
+                }
+
+                .list-employees--item_employeer {
+                    @media (max-width: 600px) {
+                        box-shadow: none;
+                    }
+                }
+
+                .custom-control-input:checked ~ .custom-control-label::before {
+                    border-color: $red;
+                }
+
+                .custom {
+
+                    &-switch {
+
+
+                        &--validate {
+                            label {
+                                opacity: .5;
+                                pointer-events: none;
+
+                                &:after {
+                                    opacity: .5;
+                                }
+
+                                &:before {
+                                    pointer-events: none;
+                                }
+                            }
+                        }
+
+                        &--refuse {
+                            label {
+                                opacity: .8;
+                                pointer-events: none;
+
+                                &:after {
+                                    opacity: .8;
+                                }
+
+                                &:before {
+                                    background-color: $red;
+                                    pointer-events: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.validated {
+                $boxShadowRight: inset -2px 0px 0px 0px rgba($green, .7);
+
+                background-color: rgba($green, .3) !important;
+                * {
+                    color: $green !important;
+                }
+
+                .list-employees--item_employeer, .list-employees--item_dates {
+                    box-shadow: $boxShadowRight;
+                }
+
+                .list-employees--item_employeer {
+                    @media (max-width: 600px) {
+                        box-shadow: none;
+                    }
+                }
+
+                .custom-control-input:checked ~ .custom-control-label::before {
+                    border-color: $green;
+                }
+
+                .custom {
+                    &-switch {
+
+                        &--validate {
+                            label {
+                                opacity: .8;
+                                pointer-events: none;
+
+                                &:after {
+                                    opacity: .8;
+                                }
+
+                                &:before {
+                                    background-color: $green;
+                                    pointer-events: none;
+                                }
+                            }
+                        }
+
+                        &--refuse {
+                            label {
+                                opacity: .5;
+                                pointer-events: none;
+
+                                &:after {
+                                    opacity: .5;
+                                }
+
+                                &:before {
+                                    pointer-events: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &--block {
+            display: flex;
+            flex: 1;
+
+            &:last-child {
+                flex: 0;
+                @media (max-width: 600px) {
+                    margin-left: auto;
+                }
+            }
+        }
+
+        &--form {
+            position: relative;
+
+            padding-left: 58px;
+            padding-bottom: 0;
+
+            max-height: 0;
+            width: 100%;
+            overflow: hidden;
+
+            transition: max-height $speed-animation;
+
+            @media (max-width: 600px) {
+                padding-left: 0;
+            }
+
+            .btn-close {
+                right: 14px;
+            }
+
+            &_email, &_edit, &_info-hourly-record, &_detail {
+
+                &.active {
+                    max-height: $form-max-height;
+                    transition: max-height $speed-animation ease-in;
+                }
+
+                .form {
+                    textarea {
+                        min-height: 145px;
+                    }
+
+                    .btn {
+                        min-width: 200px;
+                    }
+
+                    .btn-close {
+                        bottom: initial;
+                    }
+
+                    label {
+                        font-style: italic;
+                        color: $body-bg;
+                    }
+                }
+            }
+
+            &_basic-info {
+
+                &--box {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+
+                    .btn-close {
+                        bottom: 16px;
+                    }
+                }
+
+                &--photo {
+                    object-fit: scale-down;
+                    width: 100%;
+                    max-width: 465px;
+                    border-top-left-radius: $radius;
+                }
+
+                &--data {
+                    align-self: flex-end;
+                    flex: 1;
+
+                    font-size: 19px;
+                    font-weight: $font-regular;
+                    color: $body-bg;
+
+                    padding-left: 24px;
+
+                    .fullname {
+                        font-size: 18px;
+                        font-weight: $font-semibold;
+                    }
+
+                    .position {
+                        font-style: italic;
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+
+                    a {
+                        color: $body-bg;
+                        transition: all $speed-animation;
+
+                        &:hover {
+                            color: $font-color;
+                        }
+                    }
+                }
+            }
+
+            &_edit {
+
+                &--photo {
+                    $size: 99px;
+                    width: $size;
+                    height: $size;
+
+                    display: flex;
+                    justify-content: center;
+
+                    margin: auto;
+                    margin-bottom: 14px;
+                    margin-top: 9px;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        object-fit: scale-down;
+                    }
+                }
+            }
+
+            &_email, &_basic-info, &_edit, &_info-hourly-record, &_detail {
+                opacity: 0;
+                max-height: 0;
+                overflow: hidden;
+                padding-bottom: 0;
+                transition: opacity $speed-animation-fast;
+
+                &.active {
+                    opacity: 1;
+                    padding-bottom: 16px;
+                    max-height: $form-max-height;
+                    transition: opacity $speed-animation-fast;
+                }
+            }
+
+            &.active {
+                height: auto;
+                max-height: $form-max-height;
+
+                transition: max-height $speed-animation;
+            }
+
+            &.not-active {
+                height: 0;
+                max-height: 0;
+                transition: max-height $speed-animation-fast;
+            }
+
+            &_info-hourly-record, &_detail {
+
+                &--data {
+                    display: flex;
+                    align-content: baseline;
+                    flex-wrap: wrap;
+                    margin-top: auto;
+                    padding-top: 14px;
+                    padding-bottom: 14px;
+
+                    &_title {
+                        flex: 1;
+
+                        font-size: 20px;
+                        color: $font-color;
+                        text-transform: uppercase;
+
+                        @media (max-width: 600px) {
+                            width: 100%;
+                        }
+                    }
+
+                    &_hours {
+                        margin-top: auto;
+                        display: flex;
+                        flex-direction: column;
+                        padding-right: 14px;
+
+                        &__item {
+                            display:flex;
+                            font-size: 14px;
+
+                            &-title {
+                                flex: 1;
+                            }
+
+                            &-calculation {
+                                width: 50px;
+                                text-align: right;
+                                color: $blue;
+                            }
+                        }
+
+                        @media (max-width: 600px) {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                &--chart {
+                    height: 250px !important;
+
+                    canvas {
+                        margin: auto;
+                        display: block;
+                        width: 100%;
+                        max-width: 650px;
+                        height: 250px;
+                    }
+                }
+
+                &--buttons {
+                    padding-top: 14px;
+                    padding-bottom: 14px;
+                }
+            }
+
+            &_detail {
+
+                &--records, &--absences {
+
+                    margin-top: 14px;
+
+                    &:first-child {
+                        margin-top: 25px;
+                    }
+
+                    @media (max-width: 600px) {
+                        margin-bottom: 25px;
+                    }
+
+                    &__item {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        @media (max-width: 600px) {
+                            flex-wrap: wrap;
+                        }
+
+                        .form-group {
+                            margin-right: 8px;
+                            margin-bottom: 0;
+
+                            @media (max-width: 600px) {
+                                margin-bottom: 8px;
+                            }
+
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                            &.date, &.time {
+                                width: 90px;
+
+                                @media (max-width: 600px) {
+                                    width: 30%;
+                                }
+                            }
+
+                            &.type {
+                                min-width:  150px;
+
+                                @media (max-width: 600px) {
+                                    width: 30%;
+                                }
+                            }
+
+                        }
+
+                    }
+                }
+
+                &--absences {
+
+                    &__item {
+                        $bg-opacity: .25;
+
+                        justify-items: flex-start;
+                        min-height: 30px;
+                        padding-left: 14px;
+
+                        &.medical {
+                            background-color: rgba($red-dark, $bg-opacity);
+                        }
+
+                        &.holidays {
+                            background-color: rgba($green-soft, $bg-opacity);
+                        }
+
+                        &.festive {
+                            background-color: rgba($orange-soft, $bg-opacity);
+                        }
+                    }
+
+                    .date {
+                        flex: 0;
+                        min-width: 110px;
+
+                    }
+
+                    .type {
+                        flex: 1;
+                    }
+                }
+
+                .empty {
+                    min-width: 42px;
+                }
+
+                .btn-save, .btn-add {
+                    $size: 32px;
+
+                    min-width: inherit !important;
+                    max-width: $size !important;
+                    max-height: 32px !important; //calc(1.6em + 0.75rem + 2px) !important;
+                    min-height: inherit !important;
+
+                    padding: 2px !important;
+
+                    img {
+                        width: 100%;
+                        object-fit: scale-down;
+                    }
+                }
+
+                .btn-add {
+                    background-color: transparent;
+                    $padding: 40px;
+                }
+            }
+        }
+
+        &-grey {
+            #{$c}--item {
+                background-color: $box-bg;
+            }
+        }
+
+        &-home {
+            #{$c}--item {
+                @media (max-width: 600px) {
+                    border-bottom-left-radius: $radius;
+                }
+            }
+            #{$c}--block {
+                flex:1;
+                &:last-child {
+                    @media (max-width: 600px) {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &-departments {
+        $c: &; // var to define the ".list-employees"
+        $boxShadowLeft: inset -2px 0px 0px 0px rgba(#A0BDE6, .7);
+        $boxShadowRight: inset 2px 0px 0px 0px rgba(#A0BDE6, .7);
+        $radius: 25px;
+
+        &--item {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            padding: 4px;
+
+            margin-bottom: 8px;
+
+            min-height: 46px;
+            border-top-left-radius: $radius;
+            border-bottom-left-radius: $radius;
+
+            background-color: $box-bg;
+
+            z-index: 2;
+            position: relative;
+
+            &_color {
+                $size: 40px;
+                width: $size;
+                height: $size;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 100%;
+            }
+
+            &_name {
+                padding-left: 14px;
+                padding-right: 14px;
+
+                font-size: 14px;
+                font-weight: $font-semibold;
+                color: $grey;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex: 1;
+
+                box-shadow: $boxShadowLeft;
+            }
+
+            &_employeers, &_edit {
+                padding-left: 18px;
+                padding-right: 18px;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            &_employeers {
+                padding-left: 0;
+                box-shadow: $boxShadowLeft;
+
+                span {
+                    display: inline-block;
+                    min-width: 30px;
+                    text-align: right;
+                    padding-left: 8px;
+                }
+            }
+
+            &_icon {
+                font-size: 14px;
+                font-weight: $font-semibold;
+                color: $blue-soft;
+
+                img {
+                    width: 27px;
+                    object-fit: scale-down;
+                    margin: auto;
+                    opacity: .4;
+
+                    transition: opacity $speed-animation-fast;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+
+                &.big {
+                    img {
+                        width: 37px;
+                    }
+                }
+            }
+
+        }
+
+        &--form {
+            z-index: 1;
+            position: relative;
+
+            padding-bottom: 0;
+
+            max-height: 0;
+            width: 100%;
+            // overflow: hidden;
+
+            transition: max-height $speed-animation;
+
+            &.active {
+                height: auto;
+                max-height: $form-max-height;
+
+                transition: max-height $speed-animation;
+            }
+
+            &.not-active {
+                height: 0;
+                max-height: 0;
+                transition: max-height $speed-animation-fast;
+            }
+
+            .btn-close {
+                right: 36px;
+                bottom: 18px;
+            }
+
+            &_employeers, &_edit {
+                opacity: 0;
+                max-height: 0;
+                overflow: hidden;
+                margin-bottom: 8px;
+
+                padding-right: 0.75rem;
+                padding-left: 0.75rem;
+                padding-bottom: 0;
+
+                transition: opacity $speed-animation-fast;
+
+                &.active {
+                    opacity: 1;
+                    max-height: $form-max-height;
+                    transition: opacity $speed-animation-fast;
+                }
+
+                .list-employees--item_employeer {
+                    box-shadow: none;
+                }
+            }
+
+            &_employeers {
+                margin-bottom: 4px;
+                padding-left: 0;
+                padding-right: 0;
+
+                .list-employees {
+                    margin-top: 0;
+                }
+
+                .btn-close {
+                    position: relative;
+                    margin-left: auto;
+                    right: inherit;
+                    bottom: inherit;
+                    margin-bottom: 14px;
+
+                }
+            }
+
+            &_edit {
+                padding-top: 30px;
+                margin-top: -30px;
+
+                .btn-close {
+                    // small devices
+                    @media (max-width: 600px) {
+                        right: 10px;
+                    }
+                }
+
+                &.active {
+                    background-color: $box-bg;
+                }
+            }
+        }
+    }
+
+    &-organizationchart {
+        $c: &; // var to define the ".list-employees"
+        $radius: 25px;
+        width: 100%;
+
+        &--item {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            flex: 0;
+
+            overflow: hidden;
+
+            padding: 4px;
+            margin-bottom: 8px;
+
+            height: auto;
+            min-height: 46px;
+            border-top-left-radius: $radius;
+            border-bottom-left-radius: $radius;
+
+            box-sizing: border-box;
+
+            background-color: $box-bg;
+
+            &_color {
+                $size: 40px;
+                width: $size;
+                height: $size;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 100%;
+            }
+
+            &_img {
+                display: flex;
+                align-items: center;
+            }
+
+            &_department {
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                flex-direction: column;
+                flex: 1;
+
+                color: $grey;
+
+                padding-left: 14px;
+                padding-right: 14px;
+
+                font-size: 14px;
+                line-height: 16px;
+                font-weight: $font-semibold;
+            }
+
+            &_employeer {
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                flex-direction: column;
+                flex: 1;
+
+                color: $grey;
+
+                padding-left: 14px;
+                padding-right: 14px;
+
+                &-name {
+                    font-size: 14px;
+                    line-height: 16px;
+                    font-weight: $font-semibold;
+                }
+
+                &-position {
+                    font-size: 12px;
+                    line-height: 14px;
+                    font-style: italic;
+                    font-weight: $font-regular;
+                }
+            }
+
+            &_arrow {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 4px;
+                cursor: pointer;
+
+                img {
+                    transition: transform .3s;
+                }
+
+                &.down {
+                    img {
+                        transform: rotate(90deg);
+                    }
+                }
+                @media(hover: hover) and (pointer: fine) {
+                    &:hover {
+                        img {
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+            }
+
+            &.subitem {
+                min-height: 0px;
+                max-height: 0px;
+                padding: 0;
+                margin-bottom: 0;
+                opacity: 0;
+
+                transition: all $speed-animation-fast;
+
+                &.active {
+                    height: auto;
+                    max-height: 200px;
+                    min-height: 46px;
+                    padding: 4px;
+                    opacity: 1;
+                    margin-bottom: 8px;
+
+                    transition: all $speed-animation-fast;
+                }
+            }
+        }
+    }
+
+    &-documents {
+        $c: &; // var to define the ".list-employees"
+        $boxShadowLeft: inset -2px 0px 0px 0px rgba(#A0BDE6, .7);
+        $boxShadowRight: inset 2px 0px 0px 0px rgba(#A0BDE6, .7);
+        $radius: 25px;
+
+        margin-top: 24px;
+        margin-bottom: 40px;
+
+        &--item {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            padding: 4px;
+
+            margin-bottom: 8px;
+
+            min-height: 46px;
+            border-top-left-radius: $radius;
+            border-bottom-left-radius: $radius;
+
+            background-color: $box-bg;
+
+            @media (max-width: 600px) {
+                flex-direction: column;
+                border-bottom-left-radius: 0;
+            }
+
+            &_type {
+                $size: 40px;
+                width: $size;
+                height: $size;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                padding: 2px;
+
+                background-color: $blue;
+
+                border-radius: 100%;
+
+                img {
+                    width: 50%;
+                    object-fit: scale-down;
+                    opacity: .7;
+                }
+            }
+
+            &_document {
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                flex-direction: column;
+                flex: 1;
+
+                color: $grey;
+
+                padding-left: 14px;
+                padding-right: 14px;
+
+                box-shadow: $boxShadowLeft;
+
+                @media (max-width: 600px) {
+                    margin-left: auto;
+                    box-shadow: none;
+                }
+
+                &-name {
+                    font-weight: $font-semibold;
+                }
+            }
+
+            &_department {
+                $size: 14px;
+                width: $size;
+                height: $size;
+
+                border-radius: 100%;
+            }
+
+            &_icon {
+
+                img {
+                    width: 27px;
+                    object-fit: scale-down;
+                    margin: auto;
+                    opacity: .4;
+
+                    transition: opacity $speed-animation-fast;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &_see, &_download, &_delete {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-left: 14px;
+                padding-right: 14px;
+                box-shadow: $boxShadowLeft;
+
+                &:last-child {
+                    box-shadow: none;
+                }
+            }
+
+            &_delete {
+                padding-left: 34px;
+
+                img {
+                    max-width: 20px;
+                }
+            }
+        }
+
+        &--block {
+            display: flex;
+            flex: 1;
+
+            &:last-child {
+                flex: 0;
+                @media (max-width: 600px) {
+                    margin-left: auto;
+                }
+            }
+        }
+
+        &--form {
+            position: relative;
+
+            padding-left: 58px;
+            padding-bottom: 0;
+
+            max-height: 0;
+            width: 100%;
+            overflow: hidden;
+
+            transition: max-height $speed-animation;
+
+            @media (max-width: 600px) {
+                padding-left: 0;
+            }
+
+            &_add {
+                opacity: 0;
+                max-height: 0;
+                overflow: hidden;
+                padding-bottom: 0;
+                transition: opacity $speed-animation-fast;
+                margin-left: 12px;
+                max-width: 94%;
+
+                border-top-left-radius: $radius;
+
+                &.create {
+                    background-color: $form-bg-create;
+                    margin-top: -40px;
+                    padding-top: 50px;
+                    z-index: 0;
+                }
+
+                &.active {
+                    opacity: 1;
+                    padding-bottom: 16px;
+                    max-height: $form-max-height;
+                    transition: max-height $speed-animation ease-in;
+                }
+
+                .form {
+                    max-width: 50%;
+                    margin: auto;
+
+                    @media (max-width: 600px) {
+                        max-width: 100%;
+                    }
+
+                    .btn {
+                        min-width: 200px;
+                    }
+
+                    .btn-close {
+                        bottom: 17px;
+                    }
+
+                    label {
+                        font-style: italic;
+                        color: $body-bg;
+                    }
+                }
+            }
+
+            &.active {
+                height: auto;
+                max-height: $form-max-height;
+
+                transition: max-height $speed-animation;
+            }
+
+            &.not-active {
+                height: 0;
+                max-height: 0;
+                transition: max-height $speed-animation-fast;
+            }
+        }
+    }
+}
+
+#box-office-form {
+    .box-subforms--footer {
+
+        .btn-forms {
+            min-width: auto !important;
+        }
+    }
+}

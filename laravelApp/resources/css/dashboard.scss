@@ -1,0 +1,37 @@
+@import 'variables';
+
+// Bootstrap sb-admin-2
+@import '~startbootstrap-sb-admin-2/scss/sb-admin-2';
+@import '~startbootstrap-sb-admin-2/vendor/fontawesome-free/css/all.css';
+@import "~bootstrap/scss/variables";
+
+@import 'theme-dashboard/sb-bootstrap-personalized';
+
+@import '~bootstrap-select/dist/css/bootstrap-select.css';
+
+@import 'daterangepicker.css';
+
+@import 'theme-dashboard/main';
+@import 'theme-dashboard/spacing';
+@import 'theme-dashboard/colors';
+@import 'theme-dashboard/titles';
+@import 'theme-dashboard/progressbar';
+@import 'theme-dashboard/modals';
+@import 'theme-dashboard/box';
+@import 'theme-dashboard/forms';
+@import 'theme-dashboard/bootstrap-select';
+@import 'theme-dashboard/btns';
+@import 'theme-dashboard/cards';
+@import 'theme-dashboard/lists';
+@import 'theme-dashboard/filters';
+@import 'theme-dashboard/tooltips';
+@import 'theme-dashboard/sidebar';
+@import 'theme-dashboard/topbar';
+@import 'theme-dashboard/icons';
+@import 'theme-dashboard/badges';
+@import 'theme-dashboard/checkboxs';
+@import 'theme-dashboard/nav';
+@import 'theme-dashboard/social-network';
+@import 'theme-dashboard/timetable';
+@import 'theme-dashboard/daterangepicker';
+@import 'theme-dashboard/calendar';

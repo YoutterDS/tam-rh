@@ -1,0 +1,41 @@
+
+  .tooltip-main {
+    background: $bg-color-tooltip;
+    border: 1px solid $bg-color-tooltip;
+  }
+
+  .tooltip-qm {
+    font-size: 12px;
+  }
+
+  .tooltip-inner {
+    font-size: 12px;
+    padding: 6px 14px 6px 14px;
+    background: $bg-color-tooltip;
+    color: $text-color-tooltip;
+    border: 1px solid $bg-color-tooltip;
+    text-align: left;
+  }
+
+  .tooltip.show {
+    opacity: 1;
+  }
+
+  .bs-tooltip{
+      &-auto .arrow::before {
+        border-color: $bg-color-tooltip;
+      }
+      &-top .arrow::before {
+        border-top-color: $bg-color-tooltip;
+      }
+      &-left .arrow::before {
+        border-left-color: $bg-color-tooltip;
+      }
+      &-right .arrow::before {
+        border-right-color: $bg-color-tooltip;
+      }
+      &-bottom .arrow::before {
+        border-bottom-color: $bg-color-tooltip;
+      }
+  }
+

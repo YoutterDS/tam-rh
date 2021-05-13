@@ -1,4 +1,0 @@
-- git init
-- git remote add origin https://github.com/YoutterDS/tam-rh.git
-- modificar archivos
-- Terminal > Insertar en > seleccionar el repositorio

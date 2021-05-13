@@ -1,9 +1,11 @@
 <?php
 
+namespace Database\Seeders;
+
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
-class UserTableSeeder extends Seeder
+class UsersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -18,12 +20,6 @@ class UserTableSeeder extends Seeder
         $user->password = bcrypt('123');
         $user->touch();
         $user->save();
-
-        // $role           = Role::where('type', 'SA')->get()->first();
-        // $user->roles()->save($role);
-
-        // $permission     = Permission::find(1);
-        // $user->permissions()->save($permission);
 
     }
 }

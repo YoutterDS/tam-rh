@@ -13,8 +13,10 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
+    @livewireStyles
 </head>
 <body>
+
     <main id="app" class="box-login">
         @yield('content')
     </main>
@@ -29,6 +31,7 @@
       </script>
       <script src="{{ asset('js/dashboard.js') }}"></script>
       @yield('js')
+      @livewireScripts
 </body>
 </html>
 

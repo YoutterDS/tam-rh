@@ -23,78 +23,65 @@
 
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
     <link rel="stylesheet" href="{{ asset('css/select2/select2.css') }}">
-    {{-- <link rel="stylesheet" href="{{ asset('css/app.css') }}"> --}}
     @yield('css')
-{{--
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/js/select2.min.js" defer></script>
---}}
+    @livewireStyles
 </head>
 <body id="page-top">
-<div class="progress axios">
-    <div class="indeterminate"></div>
-</div>
-<div id="wrapper">
-    @include('dashboard.partials.sidebar')
-
-    <div id="content-wrapper" class="d-flex flex-column">
-
-        @include('dashboard.partials.topbar')
-
-        <div id="content" >
-            <div class="container-fluid">
-                @yield('content')
-            </div>
-        </div>
-        @include('dashboard.partials.footer')
+    <div class="progress axios">
+        <div class="indeterminate"></div>
     </div>
-</div>
+    <div id="wrapper">
+        @include('dashboard.partials.sidebar')
 
-<a class="scroll-to-top" href="#page-top">
-    <img src="{{ asset('img/icons/white/arrow-down.svg') }}" alt="">
-</a>
+        <div id="content-wrapper" class="d-flex flex-column">
 
-<!-- Logout Modal-->
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">¿Tan pronto?</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
+            @include('dashboard.partials.topbar')
+
+            <div id="content" >
+                <div class="container-fluid">
+                    @yield('content')
+                </div>
             </div>
-            <div class="modal-body">Seleccione "Cerrar sessión" si está seguro de terminar la sesión actual.</div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                <a class="btn btn-primary" href="{{ route('login', ['locale'=>app()->getLocale()]) }}">Cerrar sessión</a>
-            </div>
+            @include('dashboard.partials.footer')
         </div>
     </div>
-</div>
 
-@yield('modals-sections')
+    <a class="scroll-to-top" href="#page-top">
+        <img src="{{ asset('img/icons/white/arrow-down.svg') }}" alt="">
+    </a>
 
-<script>
-    window.Laravel = <?php echo json_encode([
-        'csrfToken' => csrf_token(),
-        'app_debug' => config('app.debug'),
-        'url' => url('/'),
-    ]); ?>
-</script>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">¿Tan pronto?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Seleccione "Cerrar sessión" si está seguro de terminar la sesión actual.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                    <a class="btn btn-primary" href="{{ route('login', ['locale'=>app()->getLocale()]) }}">Cerrar sessión</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<script src="{{ asset('js/dashboard.js') }}"></script>
-{{--
-@switch ( app()->getLocale() )
-    @case('en')
-    <script src="{{ asset('js/bootstrap-select/i18n/defaults-en_US.js') }}"></script>
-    @break
-    @default
-    <script src="{{ asset('js/bootstrap-select/i18n/defaults-' . locale_get_default( app()->getLocale() ) .'.js') }}"></script>
-    @break
-@endswitch
---}}
-@yield('js')
-@yield('js-sections')
+    @yield('modals-sections')
+
+    <script>
+        window.Laravel = <?php echo json_encode([
+            'csrfToken' => csrf_token(),
+            'app_debug' => config('app.debug'),
+            'url' => url('/'),
+        ]); ?>
+    </script>
+
+    <script src="{{ asset('js/dashboard.js') }}"></script>
+    @yield('js')
+    @yield('js-sections')
+    @livewireScripts
 </body>
 </html>

@@ -45,6 +45,6 @@ class User extends Authenticatable
     // Mutators
     public function getFullNameAttribute()
     {
-        return $this->email . ', ' . $this->name;
+        return $this->name . ' ' . $this->surname;
     }
 }

@@ -30,6 +30,7 @@ require('chart.js');
 require('./dashboard/main.js');
 
 // Sections /*
+require('./dashboard/clock.js');
 require('./dashboard/sections/nav-pills.js');
 require('./dashboard/sections/offices.js');
 require('./dashboard/sections/employees.js');

@@ -16,7 +16,7 @@
         <!-- Nav Item - User Information -->
         <li class="nav-item topbar-user ">
             <div class="mt-1">
-                <div class="topbar-user_name">John Doe</div>
+                <div class="topbar-user_name">{{ auth()->user()->full_name }}</div>
                 <div class="d-flex align-items-center">
                     <a href="#" class="topbar-user_edit">Editar perfil</a>
                     <div class="divider-vertical">|</div>
@@ -30,9 +30,9 @@
 </nav>
 @if( request()->route()->getName() === 'dashboard.index' )
 <nav class="topbar-bottom">
-    <div class="topbar-bottom__welcome">Bienvenido de nuevo Nombre Apellido</div>
+    <div class="topbar-bottom__welcome">Bienvenido de nuevo {{ auth()->user()->name }}</div>
     <div class="topbar-bottom__lastacces">Su último acceso fué hace 04:03h</div>
-    <div class="topbar-bottom__date">04.05.2020 - 16:45</div>
+    <div class="topbar-bottom__date">{{ \Carbon\Carbon::now()->format('d.m.Y') }}- <span id="clock"></span></div>
 </nav>
 @endif
 

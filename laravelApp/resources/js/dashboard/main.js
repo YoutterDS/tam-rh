@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+    window.clock();
+
     $('.selectpicker').selectpicker();
 
     // $('[data-toggle="tooltip"]').tooltip();

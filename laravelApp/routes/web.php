@@ -11,18 +11,21 @@ use \App\Http\Controllers\TaskController;
 use \App\Http\Controllers\CalendarController;
 use \App\Http\Controllers\SubscriptionController;
 use \App\Http\Controllers\PreregisterController;
+use \App\Http\Controllers\UserController;
 
 Auth::routes();
 
 Route::group(['prefix'=>"dashboard/{locale?}/", 'middleware' => 'auth'], static function() {
+
+
     /* HOME */
     Route::get('', [DashboardController::class, 'index'])->name('dashboard.index');
 
     /* SETTINGS */
-    Route::get('configuracion', [DashboardController::class, 'settings'])->name('dashboard.settings');
+    Route::get('configuracion/', [DashboardController::class, 'settings'])->name('dashboard.settings');
 
     /* PROFILE */
-    Route::get('perfil', [DashboardController::class, 'profile'])->name('dashboard.profile');
+    Route::get('perfil/', [DashboardController::class, 'profile'])->name('dashboard.profile');
 
     /* TIMETABLE */
     Route::prefix("timetable/")->group(function() {

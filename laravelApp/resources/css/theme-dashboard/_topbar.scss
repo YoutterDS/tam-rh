@@ -29,6 +29,7 @@
             font-size: 14px;
             line-height: 14px;
             font-weight: $font-semibold;
+            margin-bottom: 2px;
         }
 
         &_edit {
@@ -240,8 +241,14 @@
     }
 
     .exit-session {
-        max-width: 18px;
-        object-fit: scale-down;
+        display: flex;
+        width: 18px;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            object-fit: scale-down;
+        }
     }
 
 }

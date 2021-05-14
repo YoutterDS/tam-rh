@@ -14,14 +14,14 @@
         <div class="topbar-divider"></div>
 
         <!-- Nav Item - User Information -->
-        <li class="nav-item topbar-user">
+        <li class="nav-item topbar-user ">
             <div class="mt-1">
                 <div class="topbar-user_name">John Doe</div>
-                <a href="#" class="topbar-user_edit">Editar perfil</a>
-                 |
-                <a href="#" data-toggle="modal" data-target="#logoutModal">
-                    <img src="{{ asset('img/icons/exit-session.svg') }}" alt="Exit session" class="exit-session">
-                </a>
+                <div class="d-flex align-items-center">
+                    <a href="#" class="topbar-user_edit">Editar perfil</a>
+                    <div class="divider-vertical">|</div>
+                    <livewire:logout />
+                </div>
             </div>
             <img class="topbar-user_img rounded-circle" src="{{ asset('img/icons/user-default.svg') }}">
         </li>
@@ -50,14 +50,11 @@
                 <!-- Dropdown - User Information -->
                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                     <a class="dropdown-item" href="#">
-                    <img class="topbar-mobile-user_icon" src="{{ asset('img/icons/blue/edit.svg') }}" alt="">
-                    Editar Perfil
+                        <img class="topbar-mobile-user_icon" src="{{ asset('img/icons/blue/edit.svg') }}" alt="">
+                        Editar Perfil
                     </a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                        <img src="{{ asset('img/icons/exit-session.svg') }}" alt="Exit session" class="topbar-mobile-user_icon">
-                        Cerrar sessión
-                    </a>
+                    <livewire:logout text="Y" extraClass="dropdown-item" />
                 </div>
             </a>
         </div>

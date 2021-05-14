@@ -1,7 +1,8 @@
 <div>
+
     <div class="progress axios" wire:loading >
         <div class="indeterminate"></div>
-      </div>
+    </div>
 
     <form class="text-center" {{-- action="{{ route('dashboard.index') }}" --}} wire:submit.prevent="subitForm">
 

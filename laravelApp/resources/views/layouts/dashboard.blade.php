@@ -29,9 +29,10 @@
 
 <body id="page-top">
 
-    <div class="progress axios">
+    <div class="progress axios" wire:loading >
         <div class="indeterminate"></div>
     </div>
+
     <div id="wrapper">
         @include('dashboard.partials.sidebar')
 
@@ -51,8 +52,8 @@
     <a class="scroll-to-top" href="#page-top">
         <img src="{{ asset('img/icons/white/arrow-down.svg') }}" alt="">
     </a>
-
-    <!-- Logout Modal-->
+{{--
+    <!-- Logout Modal -->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -70,7 +71,7 @@
             </div>
         </div>
     </div>
-
+--}}
     @yield('modals-sections')
 
     <script>

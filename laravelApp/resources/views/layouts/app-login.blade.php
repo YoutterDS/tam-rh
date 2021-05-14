@@ -16,7 +16,11 @@
     @livewireStyles
 </head>
 <body>
-
+{{--
+    <div class="progress axios" wire:loading >
+        <div class="indeterminate"></div>
+    </div>
+--}}
     <main id="app" class="box-login">
         @yield('content')
     </main>

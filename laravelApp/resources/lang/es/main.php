@@ -40,4 +40,5 @@ return [
     'lang-castellano'               => '(Castellano)',
     'lang-catala'                   => '(Català)',
     'lang-english'                  => '(English)',
+    'logout'                        => 'Cerrar Sesión',
 ];

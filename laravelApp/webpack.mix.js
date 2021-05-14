@@ -13,4 +13,4 @@ mix.setPublicPath('./../www/')
             })
         ]
     })
-    .browserSync('tam-rh-l8.test');
+    .browserSync('tam-rh.test');

@@ -33,8 +33,8 @@
         background-color: $btn-bg;
 
         &:hover {
-            color: $body-bg;
-            background-color: $btn-bg;
+            //color: $body-bg;
+            background-color: $grey; // $btn-bg;
         }
     }
 

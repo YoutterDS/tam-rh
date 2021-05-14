@@ -1,5 +1,7 @@
 <div>
-    {{-- <div class="loading" wire:loading></div> --}}
+    <div class="progress axios" wire:loading >
+        <div class="indeterminate"></div>
+      </div>
 
     <form class="text-center" {{-- action="{{ route('dashboard.index') }}" --}} wire:submit.prevent="subitForm">
 
@@ -9,7 +11,7 @@
         <div class="form-group mb-1">
             <label for="email">@lang('login.email')</label>
             <input type="email" class="form-control @error('email') is-invalid @enderror"
-                   wire:model="email"
+                   wire:model.debounce.500ms="email"
                    id="email"
                    name="email"
                    value="{{ old('email') }}"
@@ -19,7 +21,7 @@
         <div class="form-group mb-0">
             <label for="email">@lang('login.password')</label>
             <input type="password" class="form-control @error('password') is-invalid @enderror"
-                   wire:model="password"
+                   wire:model.debounce.500ms="password"
                    id="password" name="password"
                    autocomplete="current-password"
                    value="{{ old('password') }}" >
@@ -27,9 +29,10 @@
         <div class="form-group mt-1">
             <div class="custom-control custom-checkbox small">
                 <input type="checkbox" class="custom-control-input"
-                       wire:model="remember"
+                       wire:model.debounce.500ms="remember"
                        id="remember"
-                       name="remember">
+                       name="remember"
+                       value="true">
                 <label class="custom-control-label" for="remember">@lang('login.remember-me')</label>
             </div>
         </div>

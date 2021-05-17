@@ -165,13 +165,6 @@
     </div>
 
 </div>
-
-<!-- Content Row -->
-<div class="row">
-
-    asdf
-
-</div>
 @endsection
 
 @section('js')

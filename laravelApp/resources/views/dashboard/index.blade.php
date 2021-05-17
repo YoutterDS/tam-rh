@@ -176,6 +176,7 @@
         }
         wClock.onmessage = function (event) {
             document.getElementById("clock").innerText = event.data;
+            document.getElementById("clockMobile").innerText = event.data;
         };
     } else {
         console.log("Sorry, your browser does not support Web Workers...");

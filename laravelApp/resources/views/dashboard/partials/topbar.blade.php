@@ -42,7 +42,7 @@
             <a href="{{ route('dashboard.index') }}">
                 <div class="topbar-mobile-logo"></div>
             </a>
-            <div class="topbar-mobile-date">{{ \Carbon\Carbon::now()->format('d.m.Y') }} - <span id="clock">{{ \Carbon\Carbon::now()->format('h:i A') }}</span></div>
+            <div class="topbar-mobile-date">{{ \Carbon\Carbon::now()->format('d.m.Y') }} - <span id="clockMobile">{{ \Carbon\Carbon::now()->format('h:i A') }}</span></div>
         </div>
         <div class="navbar topbar-mobile-user">
             <a href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

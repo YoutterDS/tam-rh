@@ -30,9 +30,9 @@
 </nav>
 @if( request()->route()->getName() === 'dashboard.index' )
 <nav class="topbar-bottom">
-    <div class="topbar-bottom__welcome">Bienvenido de nuevo {{ auth()->user()->name }}</div>
+    <div class="topbar-bottom__welcome">@lang('topbar.welcome-back') {{ auth()->user()->name }}</div>
     <div class="topbar-bottom__lastacces">Su último acceso fué hace 04:03h</div>
-    <div class="topbar-bottom__date">{{ \Carbon\Carbon::now()->format('d.m.Y') }}- <span id="clock"></span></div>
+    <div class="topbar-bottom__date">{{ \Carbon\Carbon::now()->format('d.m.Y') }} - <span id="clock">{{ \Carbon\Carbon::now()->format('h:i A') }}</span></div>
 </nav>
 @endif
 

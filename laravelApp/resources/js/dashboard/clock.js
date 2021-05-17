@@ -1,8 +1,12 @@
-window.clock = () => {
+var timerStart = true;
+
+function clock()
+{
     let date = new Date();
     let hrs = date.getHours();
     let mins = date.getMinutes();
-    let secs = date.getSeconds();
+    // let secs = date.getSeconds();
+
     let period = "AM";
     if (hrs == 0) {
       hrs = 12;
@@ -12,10 +16,18 @@ window.clock = () => {
     }
     hrs = hrs < 10 ? "0" + hrs : hrs;
     mins = mins < 10 ? "0" + mins : mins;
-    secs = secs < 10 ? "0" + secs : secs;
+    // secs = secs < 10 ? "0" + secs : secs;
 
-    let time = `${hrs}:${mins}:${period}`;
-    document.getElementById("clock").innerText = time;
-    setTimeout(clock, 1000);
+    let time = `${hrs}:${mins} ${period}`;
+    // document.getElementById("clock").innerText = time;
+    // setTimeout(clock, 1000);
+
+    postMessage(time);
 };
 
+if (timerStart){
+    myVar=setInterval(function(){
+        clock();
+    },1000);
+    timerStart = false;
+ }

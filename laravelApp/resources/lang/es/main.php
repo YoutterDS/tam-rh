@@ -3,6 +3,8 @@
 return [
     'save'                          => 'CUARDAR',
     'update'                        => 'ACTUALIZAR',
+    'edit-profile'                  => 'Editar perfil',
+    'your-last-access-was-ago'      => 'Su último acceso fué',
     'send'                          => 'Enviar',
     'select'                        => 'Seleccione',
     'filter-by-employee'            => 'Buscar empleado',

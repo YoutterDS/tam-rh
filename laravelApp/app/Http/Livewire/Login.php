@@ -31,6 +31,7 @@ class Login extends Component
         $this->addError('password', 'wrong');
     }
 
+
     public function render()
     {
         return view('livewire.login');

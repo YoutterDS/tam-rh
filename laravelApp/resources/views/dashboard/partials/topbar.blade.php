@@ -18,7 +18,7 @@
             <div class="mt-1">
                 <div class="topbar-user_name">{{ auth()->user()->full_name }}</div>
                 <div class="d-flex align-items-center">
-                    <a href="#" class="topbar-user_edit">Editar perfil</a>
+                    <a href="#" class="topbar-user_edit">@lang('main.edit-profile')</a>
                     <div class="divider-vertical">|</div>
                     <livewire:logout />
                 </div>
@@ -31,7 +31,7 @@
 @if( request()->route()->getName() === 'dashboard.index' )
 <nav class="topbar-bottom">
     <div class="topbar-bottom__welcome">@lang('topbar.welcome-back') {{ auth()->user()->name }}</div>
-    <div class="topbar-bottom__lastacces">Su último acceso fué hace 04:03h</div>
+    <div class="topbar-bottom__lastacces">@lang('main.your-last-access-was-ago') {{ auth()->user()->last_login }}</div>
     <div class="topbar-bottom__date">{{ \Carbon\Carbon::now()->format('d.m.Y') }} - <span id="clock">{{ \Carbon\Carbon::now()->format('h:i A') }}</span></div>
 </nav>
 @endif
@@ -51,7 +51,7 @@
                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                     <a class="dropdown-item" href="#">
                         <img class="topbar-mobile-user_icon" src="{{ asset('img/icons/blue/edit.svg') }}" alt="">
-                        Editar Perfil
+                        @lang('main.edit-profile')
                     </a>
                     <div class="dropdown-divider"></div>
                     <livewire:logout text="Y" extraClass="dropdown-item" />

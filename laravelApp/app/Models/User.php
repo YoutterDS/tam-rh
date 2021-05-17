@@ -20,6 +20,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'last_login_at',
+        'last_login_ip',
     ];
 
     /**
@@ -39,12 +41,18 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'weekdais' => 'array',
+        'weekdais'          => 'array',
+        'last_login_at'     => 'datetime',
     ];
 
     // Mutators
     public function getFullNameAttribute()
     {
         return $this->name . ' ' . $this->surname;
+    }
+
+    public function getLastLoginAttribute()
+    {
+        return $this->last_login_at->diffForHumans();
     }
 }

@@ -29,11 +29,11 @@
     </ul>
 </nav>
 @if( request()->route()->getName() === 'dashboard.index' )
-<nav class="topbar-bottom">
-    <div class="topbar-bottom__welcome">@lang('topbar.welcome-back') {{ auth()->user()->name }}</div>
-    <div class="topbar-bottom__lastacces">@lang('main.your-last-access-was-ago') {{ auth()->user()->last_login }}</div>
-    <div class="topbar-bottom__date">{{ \Carbon\Carbon::now()->format('d.m.Y') }} - <span id="clock">{{ \Carbon\Carbon::now()->format('h:i A') }}</span></div>
-</nav>
+    <nav class="topbar-bottom">
+        <div class="topbar-bottom__welcome">@lang('topbar.welcome-back') {{ auth()->user()->name }}</div>
+        <div class="topbar-bottom__lastacces">@lang('main.your-last-access-was-ago') {{ auth()->user()->last_login }}</div>
+        <div class="topbar-bottom__date">{{ \Carbon\Carbon::now()->format('d.m.Y') }} - <span id="clock">{{ \Carbon\Carbon::now()->format('h:i A') }}</span></div>
+    </nav>
 @endif
 
 <div class="topbar-mobile-sticky">
@@ -42,10 +42,10 @@
             <a href="{{ route('dashboard.index') }}">
                 <div class="topbar-mobile-logo"></div>
             </a>
-            <div class="topbar-mobile-date">04.05.2020 - 16:45</div>
+            <div class="topbar-mobile-date">{{ \Carbon\Carbon::now()->format('d.m.Y') }} - <span id="clock">{{ \Carbon\Carbon::now()->format('h:i A') }}</span></div>
         </div>
         <div class="navbar topbar-mobile-user">
-            <a href="#" class="" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img class="topbar-mobile-user_img rounded-circle" src="{{ asset('img/icons/white/user-default.svg') }}">
                 <!-- Dropdown - User Information -->
                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

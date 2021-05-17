@@ -176,16 +176,16 @@
 
 @section('js')
 <script>
-   var w = null;
-   if (typeof(Worker)!=="undefined"){
-      if (w==null){
-        w = new Worker("{{ asset('js/clock.js') }}");
-      }
-      w.onmessage = function (event) {
-        document.getElementById("clock").innerText = event.data;
-      };
-   } else {
-      // document.getElementById("clock").innerText = "Sorry, your browser does not support Web Workers ...";
-   }
+   var wClock = null;
+   if( typeof(Worker) !== "undefined" ){
+        if ( wClock==null ){
+            wClock = new Worker("{{ asset('js/clock.js') }}");
+        }
+        wClock.onmessage = function (event) {
+            document.getElementById("clock").innerText = event.data;
+        };
+    } else {
+        console.log("Sorry, your browser does not support Web Workers...");
+    }
 </script>
 @endsection

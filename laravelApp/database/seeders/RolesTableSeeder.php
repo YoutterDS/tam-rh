@@ -25,13 +25,8 @@ class RolesTableSeeder extends Seeder
         ]);
 
         DB::table('roles')->insert([
-            'type'         => 'G',
-            'name_es'      => 'Gerente', // Administrador Oficina
-        ]);
-
-        DB::table('roles')->insert([
-            'type'         => 'JD',
-            'name_es'      => 'Jefe Departamento', // Administrador Departamento
+            'type'         => 'R',
+            'name_es'      => 'Responsable', // Administrador Departamento
         ]);
 
         DB::table('roles')->insert([

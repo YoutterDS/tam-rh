@@ -17,7 +17,6 @@ Auth::routes();
 
 Route::group(['prefix'=>"dashboard/{locale?}/", 'middleware' => 'auth'], static function() {
 
-
     /* HOME */
     Route::get('', [DashboardController::class, 'index'])->name('dashboard.index');
 

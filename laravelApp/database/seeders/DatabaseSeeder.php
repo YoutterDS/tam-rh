@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use UserTableSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,10 +14,10 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            CountriesTableSeeder::class,
-            LocalesTableSeeder::class,
-            RolesTableSeeder::class,
-            UsersTableSeeder::class,
+            CountriesSeeder::class,
+            LocalesSeeder::class,
+            RolesSeeder::class,
+            UsersSeeder::class,
         ]);
     }
 }

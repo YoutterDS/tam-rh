@@ -31,7 +31,7 @@
 @if( request()->route()->getName() === 'dashboard.index' )
     <nav class="topbar-bottom">
         <div class="topbar-bottom__welcome">@lang('topbar.welcome-back') {{ auth()->user()->name }}</div>
-        <div class="topbar-bottom__lastacces">@lang('main.your-last-access-was-ago') {{ auth()->user()->last_login }}</div>
+        <div class="topbar-bottom__lastacces">@if( auth()->user()->last_login )@lang('main.your-last-access-was-ago') {{ auth()->user()->last_login }}@endif</div>
         <div class="topbar-bottom__date">{{ \Carbon\Carbon::now()->format('d.m.Y') }} - <span id="clock">{{ \Carbon\Carbon::now()->format('h:i A') }}</span></div>
     </nav>
 @endif

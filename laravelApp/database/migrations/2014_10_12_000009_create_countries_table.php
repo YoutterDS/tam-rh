@@ -21,7 +21,7 @@ class CreateCountriesTable extends Migration
             $table->string('type')->default('I'); // "I" === "International"
 
             // Definirá la moneda del país
-            $table->unsignedBigInteger('coin_id');
+            $table->unsignedBigInteger('coin_id')->nullable();
             $table->foreign('coin_id')
                   ->references('id')
                   ->on('coins');

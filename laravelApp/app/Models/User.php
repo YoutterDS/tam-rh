@@ -53,6 +53,10 @@ class User extends Authenticatable
 
     public function getLastLoginAttribute()
     {
-        return $this->last_login_at->diffForHumans();
+        if( $this->last_login_at ) {
+            return $this->last_login_at->diffForHumans();
+        } else {
+            return null;
+        }
     }
 }

@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
-class UsersTableSeeder extends Seeder
+class UsersSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -20,6 +20,5 @@ class UsersTableSeeder extends Seeder
         $user->password = bcrypt('123');
         $user->touch();
         $user->save();
-
     }
 }

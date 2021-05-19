@@ -1,8 +1,11 @@
 <?php
 
-use Illuminate\Database\Seeder;
+namespace Database\Seeders;
 
-class LocalesTableSeeder extends Seeder
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+class LocalesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,8 +14,8 @@ class LocalesTableSeeder extends Seeder
      */
     public function run()
     {
-        \DB::table('locales')->delete();
-        \DB::table('locales')->insert(array (
+        DB::table('locales')->delete();
+        DB::table('locales')->insert(array (
             0 =>
                 array (
                     'code'          => 'es',

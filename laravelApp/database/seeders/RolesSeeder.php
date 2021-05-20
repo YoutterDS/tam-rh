@@ -5,6 +5,9 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
+
 class RolesSeeder extends Seeder
 {
     /**
@@ -14,6 +17,12 @@ class RolesSeeder extends Seeder
      */
     public function run()
     {
+        Role::create(['name' => 'super-admin']);
+        Role::create(['name' => 'admin']); // Administrador: El usuario que ha dado de alta el servicio
+        Role::create(['name' => 'manager']); // Responsable departamento
+        Role::create(['name' => 'employee']); // Trabajador
+
+        /*
         DB::table('roles')->insert([
             'type'         => 'SA',
             'name_es'      => 'SuperAdministrador', // Zeus: Acceso a todas las empresas
@@ -35,5 +44,6 @@ class RolesSeeder extends Seeder
             'type'         => 'E',
             'name_es'      => 'Empleado',
         ]);
+        */
     }
 }

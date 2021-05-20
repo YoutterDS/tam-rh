@@ -22,8 +22,9 @@ class UsersSeeder extends Seeder
         $user->touch();
         $user->save();
 
-        $role           = Role::where('type', 'A')->get()->first();
-        $user->roles()->save($role);
+        $user->assignRole('admin');
+        // $role           = Role::where('type', 'A')->get()->first();
+        // $user->roles()->save($role);
 
         // $permission     = Permission::find(1);
         // $user->permissions()->save($permission);

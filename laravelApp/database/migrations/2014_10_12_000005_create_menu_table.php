@@ -30,12 +30,12 @@ class CreateMenuTable extends Migration
 
             $table->string('extra_class')->nullable();
 
-            $table->unsignedBigInteger('role_id')->default(1);
+            // $table->unsignedBigInteger('role_id')->default(1);
 
             $table->timestamps();
 
-            $table->foreign('role_id')
-                  ->references('id')->on('roles');
+            /* $table->foreign('role_id')
+                  ->references('id')->on('roles'); */
         });
     }
 
@@ -46,9 +46,10 @@ class CreateMenuTable extends Migration
      */
     public function down()
     {
+        /*
         Schema::table('menus', function($table) {
             $table->dropForeign('menus_role_id_foreign');
-        });
+        }); */
         Schema::dropIfExists('menus');
     }
 }

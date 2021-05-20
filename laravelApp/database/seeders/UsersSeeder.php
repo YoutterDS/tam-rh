@@ -16,17 +16,30 @@ class UsersSeeder extends Seeder
     public function run()
     {
         $user           = new User;
-        $user->name     = 'Test';
-        $user->email    = 'test@youtterds.es';
+        $user->name     = 'Administrador';
+        $user->email    = 'admin@youtterds.es';
         $user->password = bcrypt('123');
         $user->touch();
         $user->save();
 
         $user->assignRole('admin');
-        // $role           = Role::where('type', 'A')->get()->first();
-        // $user->roles()->save($role);
 
-        // $permission     = Permission::find(1);
-        // $user->permissions()->save($permission);
+        $user           = new User;
+        $user->name     = 'Responsable';
+        $user->email    = 'manager@youtterds.es';
+        $user->password = bcrypt('123');
+        $user->touch();
+        $user->save();
+
+        $user->assignRole('manager');
+
+        $user           = new User;
+        $user->name     = 'Trabajador';
+        $user->email    = 'employee@youtterds.es';
+        $user->password = bcrypt('123');
+        $user->touch();
+        $user->save();
+
+        $user->assignRole('employee');
     }
 }

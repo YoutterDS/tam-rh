@@ -28,5 +28,6 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(125);
         setLocale(LC_TIME, $this->app->getLocale());
+        date_default_timezone_set('Europe/Madrid');
     }
 }

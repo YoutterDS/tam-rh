@@ -11,6 +11,7 @@ return [
     'login'                         => 'ENTRAR',
 
     'remember-me'                   => 'Recuérdame',
+    'not-client-yet'                => '¡Aún no soy cliente!',
 
     'forgot-password'               => 'Contraseña olvidada',
     'create-an-account'             => 'Crear una cuenta',

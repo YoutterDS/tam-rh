@@ -25,7 +25,6 @@
             </div>
             <img class="topbar-user_img rounded-circle" src="{{ asset('img/icons/user-default.svg') }}">
         </li>
-
     </ul>
 </nav>
 @if( request()->route()->getName() === 'dashboard.index' )

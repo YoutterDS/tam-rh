@@ -42,9 +42,8 @@
         </button>
 
     </form>
-    <div class="d-flex justify-content-center mt-4">
-        <div class="text-center">
+    <div class="d-flex justify-content-between mt-4">
             <a href="{{ route('password.request') }}">@lang('login.forgot-password')</a>
-        </div>
+            <a href="{{ route('password.request') }}">@lang('login.not-client-yet')</a>
     </div>
 </div>

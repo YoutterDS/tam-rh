@@ -71,8 +71,12 @@ Route::group(['prefix'=>"dashboard/{locale?}/", 'middleware' => 'auth'], static 
 });
 
 Route::group(['prefix'=>"register/{locale?}/"], static function() {
-    Route::get('', [PreregisterController::class, 'index'])->name('register.index');
-    Route::post('send-form', [PreregisterController::class, 'registerSave'])->name('register.send-form');
-    Route::get('legal', [PreregisterController::class, 'legal'])->name('register.legal');
-    Route::get('cookies', [PreregisterController::class, 'cookies'])->name('register.cookies');
+    Route::get('', [UserController::class, 'register'])->name('user.register');
+});
+
+Route::group(['prefix'=>"pre-register/{locale?}/"], static function() {
+    Route::get('', [PreregisterController::class, 'index'])->name('preregister.index');
+    Route::post('send-form', [PreregisterController::class, 'registerSave'])->name('preregister.send-form');
+    Route::get('legal', [PreregisterController::class, 'legal'])->name('preregister.legal');
+    Route::get('cookies', [PreregisterController::class, 'cookies'])->name('preregister.cookies');
 });

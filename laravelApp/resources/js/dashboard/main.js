@@ -19,7 +19,6 @@ $(document).ready(function(){
         var target = $('.custom-file-label[for="' + objFileId + '"]')
             target.text(fileSelected)
     })
-
 });
 
 $(window).on("scroll", function() {

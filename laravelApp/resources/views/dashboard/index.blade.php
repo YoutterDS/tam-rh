@@ -181,5 +181,14 @@
     } else {
         console.log("Sorry, your browser does not support Web Workers...");
     }
+
+    @if (Session::has('emailVerified'))
+        Swal.fire({
+            title: '¡Genial!',
+            html: 'Tu email ha sido validado.<br />Puedes empezar a utilizar tu herramienta',
+            icon: 'success',
+            confirmButtonText: 'Cerrar'
+        })
+    @endif
 </script>
 @endsection

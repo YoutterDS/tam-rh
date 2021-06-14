@@ -36,6 +36,7 @@
             'locale'             => app()->getLocale(),
         ]); ?>
       </script>
+      <script src="{{ asset('js/dashboard.js') }}"></script>
       @yield('js')
 </body>
 </html>

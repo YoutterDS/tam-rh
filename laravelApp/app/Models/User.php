@@ -2,15 +2,19 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasFactory, Notifiable, HasRoles;
+
+    protected $maxAttempts = 1; // Default is 5
+    protected $decayMinutes = 1; // Default is 1
 
     /**
      * The attributes that are mass assignable.
@@ -19,6 +23,11 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'surname',
+        'nif_nie',
+        'birthdate',
+        'phone_number',
+        'postal_code',
         'email',
         'password',
         'last_login_at',
@@ -42,11 +51,28 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'birthdate'         => 'datetime',
         'weekdais'          => 'array',
         'last_login_at'     => 'datetime',
     ];
 
+    // Relationships
+    public function company()
+    {
+        return $this->belongsTo(Company::class);
+    }
+
     // Mutators
+    public function setPasswordAttribute($password)
+    {
+        $this->attributes['password'] = bcrypt($password);
+    }
+
+    public function setBirthdateAttribute($birthdate)
+    {
+        $this->attributes['birthdate'] = Carbon::parse(str_replace('/', '-', $birthdate))->format('Y-m-d');
+    }
+
     public function getFullNameAttribute()
     {
         return $this->name . ' ' . $this->surname;

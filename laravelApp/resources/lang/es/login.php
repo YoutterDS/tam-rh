@@ -26,4 +26,7 @@ return [
     'reset-password'                => 'Restablecer la contraseña',
     'confirm-password-placeholder'  => 'Confirmar la contraseña',
     'update-password'               => 'RESTABLECER',
+
+    // Register
+    'register'                      => 'Registro',
 ];

@@ -1,21 +1,29 @@
 <?php
 
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Route;
 
 // Controllers
-use \App\Http\Controllers\DashboardController;
-use \App\Http\Controllers\EmployerController;
-use \App\Http\Controllers\EventsController;
+use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\TaskController;
-use \App\Http\Controllers\CalendarController;
-use \App\Http\Controllers\SubscriptionController;
-use \App\Http\Controllers\PreregisterController;
 use \App\Http\Controllers\UserController;
+use \App\Http\Controllers\EventsController;
+use \App\Http\Controllers\CalendarController;
+use \App\Http\Controllers\EmployerController;
+use \App\Http\Controllers\DashboardController;
+use \App\Http\Controllers\PreregisterController;
+use \App\Http\Controllers\SubscriptionController;
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
-Route::group(['prefix'=>"dashboard/{locale?}/", 'middleware' => 'auth'], static function() {
+Route::get('/', function(){
+    return "...";
+});
+
+// Email Verification
+Route::get('/email/verify/{id}/{hash}', [UserController::class, 'emailVerificationRequest'])->middleware(['auth', 'signed'])->name('verification.verify');
+Route::get('/email/verify', [UserController::class, 'emailVerification'])->middleware('auth')->name('verification.notice');
+
+Route::group(['prefix'=>"dashboard/{locale?}/", 'middleware' => ['auth','verified']], static function() {
 
     /* HOME */
     Route::get('', [DashboardController::class, 'index'])->name('dashboard.index');
@@ -70,7 +78,7 @@ Route::group(['prefix'=>"dashboard/{locale?}/", 'middleware' => 'auth'], static 
     });
 });
 
-Route::group(['prefix'=>"register/{locale?}/"], static function() {
+Route::group(['prefix'=>"register/{package}/{locale?}/"], static function() {
     Route::get('', [UserController::class, 'register'])->name('user.register');
 });
 

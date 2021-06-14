@@ -44,6 +44,31 @@
     </form>
     <div class="d-flex justify-content-between mt-4">
             <a href="{{ route('password.request') }}">@lang('login.forgot-password')</a>
-            <a href="{{ route('password.request') }}">@lang('login.not-client-yet')</a>
+            <a href="{{ route('user.register', ['locale'=>app()->getLocale(), 'package'=>'basic']) }}">@lang('login.not-client-yet')</a>
     </div>
+    @error('throttle')
+        {{ $message }}
+    @enderror
+
+    <script>
+        document.addEventListener('livewire:load', function () {
+            @if( Session::has('userInactive') )
+                Swal.fire({
+                    title: '¡Uuups!',
+                    html: 'Parece que no tienes permisos para acceder.',
+                    icon: 'error',
+                    confirmButtonText: 'Cerrar'
+                });
+            @endif
+            @if( Session::has('throttle') )
+                Swal.fire({
+                    title: '¡Uuups!',
+                    html: "{{ session('throttle') }}",
+                    icon: 'error',
+                    confirmButtonText: 'Cerrar'
+                });
+            @endif
+        });
+
+    </script>
 </div>

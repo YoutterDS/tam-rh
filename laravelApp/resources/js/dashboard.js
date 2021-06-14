@@ -24,7 +24,10 @@ window.moment = require('moment');
 require('./daterangepicker.js');
 
 // Chart
-require('chart.js');
+// require('chart.js');
+
+// Alerts
+window.Swal = require('./../../node_modules/sweetalert2/dist/sweetalert2.js');
 
 // Init
 require('./dashboard/main.js');

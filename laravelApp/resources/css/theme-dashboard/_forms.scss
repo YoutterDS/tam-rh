@@ -276,3 +276,20 @@ input[type=color] {
     }
 }
 
+.is-invalid {
+    &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: red;
+        opacity: 1; /* Firefox */
+        font-weight: 100;
+    }
+
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: red;
+        font-weight: 100;
+    }
+
+    &::-ms-input-placeholder { /* Microsoft Edge */
+        color: red;
+        font-weight: 100;
+    }
+}

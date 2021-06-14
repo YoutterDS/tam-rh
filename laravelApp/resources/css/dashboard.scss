@@ -11,6 +11,8 @@
 
 @import 'daterangepicker.css';
 
+@import '~sweetalert2/src/sweetalert2.scss';
+
 @import 'theme-dashboard/main';
 @import 'theme-dashboard/loading';
 @import 'theme-dashboard/dividers';
@@ -37,3 +39,4 @@
 @import 'theme-dashboard/timetable';
 @import 'theme-dashboard/daterangepicker';
 @import 'theme-dashboard/calendar';
+@import 'theme-dashboard/accordion';

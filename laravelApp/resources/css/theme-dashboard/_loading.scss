@@ -24,12 +24,12 @@
     background-color: inherit;
     top: 0;
     bottom: 0;
-    background-color: $color-primary !important;
+    background-color: $green !important;
     transition: width 0.3s linear;
 }
 
 .progress.axios .indeterminate {
-    background-color: $color-primary;
+    background-color: $green;
 }
 
 .progress.axios .indeterminate:before {

@@ -1,10 +1,10 @@
 /* ProgressBar Indeterminate like Materialize */
 .progress.axios {
     position: fixed;
-    height: 4px;
+    height: 6px;
     display: none;
     width: 100%;
-    background-color: rgba(#d1d9f1, .7);
+    background-color: rgba(white, .5);
     border-radius: 2px;
     background-clip: padding-box;
     margin: 0;
@@ -17,12 +17,12 @@
     background-color: inherit;
     top: 0;
     bottom: 0;
-    background-color: #4e73df;
+    background-color: $green-soft;
     transition: width 0.3s linear;
 }
 
 .progress.axios .indeterminate {
-    background-color: #4e73df;
+    background-color: $green-soft;
 }
 
 .progress.axios .indeterminate:before {

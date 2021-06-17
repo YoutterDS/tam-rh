@@ -18,7 +18,7 @@
                 </p>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cerrar</button>
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">@lang('main.close')</button>
             </div>
         </div>
     </div>

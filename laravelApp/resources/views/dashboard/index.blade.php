@@ -184,10 +184,10 @@
 
     @if (Session::has('emailVerified'))
         Swal.fire({
-            title: '¡Genial!',
+            title: "@lang('main.excelence')",
             html: 'Tu email ha sido validado.<br />Puedes empezar a utilizar tu herramienta',
             icon: 'success',
-            confirmButtonText: 'Cerrar'
+            confirmButtonText: "@lang('main.close')"
         })
     @endif
 </script>

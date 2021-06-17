@@ -63,10 +63,12 @@ class User extends Authenticatable implements MustVerifyEmail
     }
 
     // Mutators
+    /*
     public function setPasswordAttribute($password)
     {
         $this->attributes['password'] = bcrypt($password);
     }
+    */
 
     public function setBirthdateAttribute($birthdate)
     {

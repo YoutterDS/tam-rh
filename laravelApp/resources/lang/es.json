@@ -17,5 +17,10 @@
     "If you did not receive the email" : "Si no recibió el correo electrónico",
     "click here to request another" : "haga clic aquí para solicitar otro",
     "All rights reserved." : "Todos los derechos reservados.",
-    "I have already verified the email" : "Ya he verificado el email"
+    "I have already verified the email" : "Ya he verificado el email",
+    "Reset Password Notification" : "Notificación de reseteo de contraseña",
+    "You are receiving this email because we received a password reset request for your account." : "Recibió este correo electrónico porque recibimos una solicitud de reseteo de contraseña para su cuenta.",
+    "Reset Password" : "Restablecer contraseña",
+    "This password reset link will expire in :count minutes.": "Este enlace expirará en :count minutos.",
+    "If you did not request a password reset, no further action is required." : "Si no solicitó un reseteo de contraseña, no es necesario realizar ninguna acción."
 }

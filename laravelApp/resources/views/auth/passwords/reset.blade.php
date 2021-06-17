@@ -8,10 +8,11 @@
             <h4 class="text-welcome">@lang('login.reset-password')</h4>
 
             <form method="POST" action="{{ route('password.update') }}" class="text-center">
+                @csrf
+                <input type="hidden" name="token" value="{{ $token }}">
 
                 <img src="{{ asset('img/logos/tam-rh.svg') }}" alt="Logo TAM-RH" class="box-login_logo img-fluid">
 
-                @csrf
                 <div class="form-group mb-1">
                     <label for="email">@lang('login.email')</label>
                     <input type="email" class="form-control @error('email') is-invalid @enderror"
@@ -28,7 +29,7 @@
                 <div class="form-group">
                     <label for="email">@lang('login.confirm-password-placeholder')</label>
                     <input type="password" class="form-control  @error('password') is-invalid @enderror"
-                            id="password-confirm" name="password-confirm" required>
+                            id="password_confirmation" name="password_confirmation" required>
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-block">

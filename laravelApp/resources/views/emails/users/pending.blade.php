@@ -7,7 +7,7 @@ Hemos visto que no has terminado el registro, ¿has tenido algún problema?
 @break
 
 @case(2)
-¿Continuar sin decidirte? Vamos, animate!
+¿Continuas sin decidirte? Vamos, animate!
 @break
 
 @default

@@ -6,19 +6,13 @@ use App\Models\User;
 use App\Models\Company;
 use Livewire\Component;
 use App\Models\PendingUser;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Validation\Rules\Password;
 
 
 class UserRegister extends Component
 {
-    /*
-        TODO:
-        1.- enviar un email a les 24h de no finalitzar el registre
-        2.- enviar un email a la setmana
-        3.- enviar un email al mes
-        4.- esborrar totes les dades, excepte las de la taula de registres pendents, a les 48h de l'ultim email.
-    */
     public $step, $user, $roles, $company, $cookie_caducity, $locale, $package;
     public $name, $surname, $nif_nie, $birthdate, $email, $phone_number, $politics;
     public $business_name, $company_cif, $company_city, $company_postal_code, $company_email, $company_phone_number;
@@ -75,7 +69,7 @@ class UserRegister extends Component
 
     public function render()
     {
-        return view('livewire.user-register');
+        return view('livewire.user.register');
     }
 
     public function updatedPackage()
@@ -182,7 +176,7 @@ class UserRegister extends Component
                                                                                     ],
         ]);
 
-        $this->user->password = $this->password;
+        $this->user->password = Hash::make($this->password);
         $this->user->save();
 
         $this->step = 4;

@@ -104,10 +104,12 @@ class PendingUsers extends Command
                 $thirdEmailSendAt   = $pendingUser->third_email_send_at;
                 $diffInDays         = $thirdEmailSendAt->diffInMonths($actualDate);
                 if( $diffInDays >= 1 ){
+                    /*
                     Mail::to($pendingUser->email)
                         ->locale($pendingUser->locale)
                         ->send(new PendingUserEmails($pendingUser, '', 100 ));
-                    if ( !Mail::failures() ) {
+                        */
+                    // if ( !Mail::failures() ) {
                         $pendingUser->deleted_at = Carbon::now();
                         $pendingUser->save();
 
@@ -115,7 +117,7 @@ class PendingUsers extends Command
                         if( $user ) {
                             $user->delete();
                         }
-                    }
+                    // }
                 }
             }
          }

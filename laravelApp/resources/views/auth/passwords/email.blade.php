@@ -39,3 +39,24 @@
 
 </div>
 @endsection
+
+@section('js')
+<script>
+    $(document).ready(function(){
+        @if (Session::has('status'))
+            Swal.fire({
+                title: "@lang('main.excelence')",
+                html: "{{ Session::get('status') }}",
+                icon: 'success',
+                showCancelButton: true,
+                cancelButtonText: "@lang('main.close')",
+                confirmButtonText: "@lang('main.got-login')",
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    document.location = "{{ route('login') }}"
+                }
+            })
+        @endif
+    })
+</script>
+@endsection

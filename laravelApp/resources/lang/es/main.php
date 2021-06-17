@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'excelence'                     => '¡Genial!',
     'save'                          => 'CUARDAR',
     'update'                        => 'ACTUALIZAR',
     'edit-profile'                  => 'Editar perfil',
@@ -43,4 +44,6 @@ return [
     'lang-catala'                   => '(Català)',
     'lang-english'                  => '(English)',
     'logout'                        => 'Cerrar Sesión',
+    'close'                         => 'Cerrar',
+    'got-login'                     => 'Volver al login',
 ];

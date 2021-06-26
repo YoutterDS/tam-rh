@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use Carbon\Carbon;
 use App\Models\User;
 use App\Models\Company;
 use Livewire\Component;
@@ -32,13 +33,13 @@ class UserRegister extends Component
         switch(request()->package) {
             case 'basic':
             case 'business':
-            case 'excellence':
+            case 'eexcellence':
             case 'premium':
                 $this->package          = (Cookie::get('package'))? Cookie::get('package') : request()->package;
             break;
 
             default:
-                $this->package          = 'basic';
+                $this->package          = 'BAS';
             break;
         }
 
@@ -63,12 +64,11 @@ class UserRegister extends Component
             $this->company_email        = $this->company->email;
             $this->company_phone_number = $this->company->phone_number;
         }
-
-
     }
 
     public function render()
     {
+        $this->birthdate = Carbon::parse(str_replace('/', '-', $this->birthdate))->format('d/m/Y');
         return view('livewire.user.register');
     }
 
@@ -95,7 +95,9 @@ class UserRegister extends Component
             $rules['email']             = 'required|string|email|max:50|unique:users,id,' . $this->user->id;
         }
 
+        $this->birthdate = Carbon::parse(str_replace('/', '-', $this->birthdate))->format('Y-m-d');
         $validatedData = $this->validate($rules);
+
 
         $user   = User::updateOrCreate(['email' => $this->email], $validatedData);
         $roles  = $user->getRoleNames();
@@ -103,6 +105,9 @@ class UserRegister extends Component
             $user->assignRole('admin');
         }
         $this->roles = count($user->getRoleNames());
+
+        // Save package
+
 
         $this->step = 2;
         $this->user = $user;

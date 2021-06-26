@@ -28,35 +28,35 @@
                         <input type="checkbox"
                                class="custom-control-input"
                                id="packageBasic"
-                               @if($package === 'basic') checked @endif
-                               wire:click="$set('package', 'basic')">
+                               @if($package === 'BAS') checked @endif
+                               wire:click="$set('package', 'BAS')">
                         <label class="custom-control-label" for="packageBasic" >Basic</label>
                     </div>
                     <div class="custom-control custom-switch custom-switch--validate mr-2">
                         <input type="checkbox"
                                class="custom-control-input"
                                id="packageBusiness"
-                               @if($package === 'business') checked @endif
-                               wire:click="$set('package', 'business')">
+                               @if($package === 'BUS') checked @endif
+                               wire:click="$set('package', 'BUS')">
                         <label class="custom-control-label" for="packageBusiness" >Business</label>
                     </div>
                     <div class="custom-control custom-switch custom-switch--validate mr-2">
                         <input type="checkbox"
                                class="custom-control-input"
                                id="packageExcellence"
-                               @if($package === 'excellence') checked @endif
-                               wire:click="$set('package', 'excellence')">
+                               @if($package === 'EXC') checked @endif
+                               wire:click="$set('package', 'EXC')">
                         <label class="custom-control-label" for="packageExcellence" >Excellence</label>
                     </div>
                     <div class="custom-control custom-switch custom-switch--validate">
                         <input type="checkbox"
                                class="custom-control-input"
                                id="packagePremium"
-                               @if($package === 'premium') checked @endif
-                               wire:click="$set('package', 'premium')">
+                               @if($package === 'PRE') checked @endif
+                               wire:click="$set('package', 'PRE')">
                         <label class="custom-control-label" for="packagePremium" >Premium</label>
                     </div>
-                    @include('dashboard.subscription.partials.' . $package, ['type'=>'register', 'extraclass'=>'text-blue shadow-none m-0 w-100'])
+                    @include('dashboard.subscription.partials.base', ['package'=>\App\Models\Package::where('code', $package)->get()->first() , 'type'=>'register', 'extraclass'=>'text-blue shadow-none m-0 w-100'])
                 </div>
             </div>
 
@@ -104,7 +104,7 @@
                                                         name="nif_nie"
                                                         value="{{ old('nif_nie') }}" >
                                             </div>
-                                            <div class="col-12 col-md-6 form-group">
+                                            <div class="col-12 col-md-6 form-group" >
                                                 <label for="birthdate">@lang('register.birthdate')</label>
                                                 <input type="text"
                                                         class="form-control datepicker @error('birthdate') is-invalid @enderror"
@@ -113,6 +113,9 @@
                                                         autocomplete="off"
                                                         readonly
                                                         value="{{ old('birthdate') }}" >
+                                                        @error('birthdate')
+                                                            <div class="text-warning">{{ $message }}</div>
+                                                        @enderror
                                             </div>
                                         </div>
 
@@ -279,7 +282,6 @@
                                                             <div class="text-warning">{{ $message }}</div>
                                                         @endif
                                                     @enderror
-
                                             </div>
                                         </div>
                                         <div class="row">
@@ -332,6 +334,14 @@
         .custom-switch .custom-control-label::after {
             top: 4px;
         }
+        .monthselect, .monthselect option, .yearselect, .yearselect option {
+            border: 0;
+            font-family: 'Segoe UI';
+            cursor: pointer !important;
+        }
+        .monthselect:focus, .yearselect:focus {
+            outline: 0;
+        }
     </style>
     <script>
         document.addEventListener('livewire:load', function () {
@@ -341,6 +351,7 @@
                 timePicker: false,
                 singleDatePicker: true,
                 autoUpdateInput: false,
+                showDropdowns: true,
                 locale: {
                     "format": "DD/MM/YYYY",
                     "separator": " - ",
@@ -353,10 +364,9 @@
                     "monthNames": ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
                     "firstDay": 1
                 },
-            });
+            })
 
             $('.datepicker').on('apply.daterangepicker', function (ev, picker) {
-                {{-- $(this).val(picker.startDate.format('DD/MM/YYYY')) --}}
                 @this.set('birthdate', picker.startDate.format('DD/MM/YYYY'))
             });
 

@@ -4,7 +4,7 @@
         @lang('subscription.pack-basic')
     </div>
     <div class="box-subscriptions--item_price">
-        3,99€<small>/@lang('subscription.per-user')</small>
+        3,99€<small>/@lang('subscription.per-user')/@lang('subscription.per-month')</small>
     </div>
     <div class="box-subscriptions--item_list">
         <div class="box-subscriptions--item_list--item">

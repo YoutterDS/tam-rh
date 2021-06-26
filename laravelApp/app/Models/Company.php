@@ -28,4 +28,9 @@ class Company extends Model
     {
         return $this->hasOne(Country::class);
     }
+
+    public function package()
+    {
+        return $this->belongsTo(Package::class);
+    }
 }

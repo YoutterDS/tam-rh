@@ -22,7 +22,8 @@ class CreatePackagesTable extends Migration
             $table->string('name_fr')->default('demo');
 
             $table->string('code')->nullable();
-            $table->decimal('price',9,3)->nullable();
+            $table->decimal('price',9,2)->nullable()->comment('Precio por usuario, por mes');
+            $table->enum('special', ['Y', 'N'])->default('N');
 
             $table->timestamps();
         });

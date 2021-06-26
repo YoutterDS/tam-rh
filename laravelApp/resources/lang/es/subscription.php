@@ -10,6 +10,7 @@ return [
     'pack-premium'                  => 'PREMIUM',
 
     'per-user'                      => 'usuario',
+    'per-month'                     => 'mes',
 
     // Features
     'time-control'                  => 'Control horario',

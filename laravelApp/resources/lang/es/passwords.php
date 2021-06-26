@@ -19,7 +19,7 @@ return [
     'user'      => 'No encontramos ningún usuario con ese correo electrónico.',
     'required-format' => '
         · Debe contener un mínimo de 8 caracteres.<br />
-        · Debe contener mínimo una letra mayúcula y una minúscula.<br />
+        · Debe contener mínimo una letra mayúscula y una minúscula.<br />
         · Debe contener un carácter especial (ej. $).
     ',
 ];

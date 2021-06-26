@@ -17,19 +17,23 @@
                     <label for="email">@lang('login.email')</label>
                     <input type="email" class="form-control @error('email') is-invalid @enderror"
                             id="email" name="email" aria-describedby="emailHelp" required
-                            value="{{ old('email') }}"
-                            autofocus>
+                            value="{{ request()->email ?? old('email') }}">
                 </div>
                 <div class="form-group mb-1">
                     <label for="email">@lang('login.password')</label>
                     <input type="password" class="form-control @error('password') is-invalid @enderror"
                             id="password" name="password" required
+                            autofocus
                             value="{{ old('password') }}">
                 </div>
                 <div class="form-group">
                     <label for="email">@lang('login.confirm-password-placeholder')</label>
                     <input type="password" class="form-control  @error('password') is-invalid @enderror"
                             id="password_confirmation" name="password_confirmation" required>
+                </div>
+
+                <div class="form-group">
+                    @lang('passwords.required-format')
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-block">

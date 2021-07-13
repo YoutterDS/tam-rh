@@ -16,9 +16,9 @@ class CreatePreregisterTable extends Migration
         Schema::create('preregisters', function (Blueprint $table) {
             $table->id();
             $table->ipAddress('ip_address');
-            $table->string('fullname', 251)->nullable();
-            $table->string('email', 251)->unique()->nullable();
-            $table->string('phone', 251)->nullable();
+            $table->string('fullname', 197)->nullable();
+            $table->string('email', 197)->unique()->nullable();
+            $table->string('phone', 197)->nullable();
             $table->enum('politics', ['Y', 'N'])->nullable();
             $table->timestamps();
         });

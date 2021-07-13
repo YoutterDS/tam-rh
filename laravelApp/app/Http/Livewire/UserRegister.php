@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use Carbon\Carbon;
 use App\Models\User;
 use App\Models\Company;
+use App\Models\Package;
 use Livewire\Component;
 use App\Models\PendingUser;
 use Illuminate\Support\Facades\Hash;
@@ -30,16 +31,19 @@ class UserRegister extends Component
 
         app()->setLocale($this->locale);
 
+        // $this->package = strtoupper(request()->package);
+
         switch(request()->package) {
+            case 'demo':
             case 'basic':
             case 'business':
-            case 'eexcellence':
+            case 'excellence':
             case 'premium':
-                $this->package          = (Cookie::get('package'))? Cookie::get('package') : request()->package;
+                $this->package          = (Cookie::get('package'))? intval(Cookie::get('package')) : app('rinvex.subscriptions.plan')->where('slug', strtoupper(request()->package))->get()->first()->id;
             break;
 
             default:
-                $this->package          = 'BAS';
+                $this->package          = 1;
             break;
         }
 
@@ -76,6 +80,17 @@ class UserRegister extends Component
     {
         Cookie::queue('package', $this->package, $this->cookie_caducity);
         $this->pending_user   = PendingUser::updateOrCreate(['email' => $this->email], ['package'=>$this->package]);
+        if( $this->company ){
+            // $this->company->package_id = Package::where('code', $this->package)->get()->first()->id;
+            $plan = app('rinvex.subscriptions.plan')->find($this->package);
+            if( $this->company->subscriptions()->get()->count() === 0 ) {
+                $this->company->newSubscription('main', $plan);
+            } else {
+                $subscription_plan = $this->company->subscriptions()->get()->first()->id;
+                $subscription = app('rinvex.subscriptions.plan_subscription')->find($subscription_plan);
+                $subscription->changePlan($plan);
+            }
+        }
     }
 
     public function personalDataSend()
@@ -105,9 +120,6 @@ class UserRegister extends Component
             $user->assignRole('admin');
         }
         $this->roles = count($user->getRoleNames());
-
-        // Save package
-
 
         $this->step = 2;
         $this->user = $user;
@@ -149,7 +161,15 @@ class UserRegister extends Component
 
         $this->step     = 3;
         $this->company  = $company;
-        // package_id =
+        // $this->company->package_id = Package::where('code', $this->package)->get()->first()->id;
+        $this->company->save();
+
+        $plan = app('rinvex.subscriptions.plan')->find($this->package);
+        if( $this->company->subscriptions()->get()->count() === 0 ) {
+            $this->company->newSubscription('main', $plan);
+        } else {
+            $this->company->changePlan($plan);
+        }
 
         Cookie::queue('ci', $company->id, $this->cookie_caducity);
         Cookie::queue('step', $this->step, $this->cookie_caducity);

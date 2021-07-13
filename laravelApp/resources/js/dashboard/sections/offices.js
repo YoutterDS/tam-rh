@@ -1,3 +1,4 @@
+/*
 window.subformOffice = function(action, type) {
     var obj         = $("#box-office-form");
     var form        = $(".box-subforms-form form");
@@ -26,3 +27,4 @@ window.subformOffice = function(action, type) {
 
     $('html, body').stop().animate({ scrollTop: 0}, 600);
 }
+*/

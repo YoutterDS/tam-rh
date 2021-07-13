@@ -2,11 +2,14 @@
     &t {
         &-negative {
             &-1 {
-                margin-top: -27px;
+                margin-top: -22px;
                 @media (max-width: 768px) {
                     margin-top: inherit;
                 }
             }
         }
     }
+}
+.pt-switch, .py-switch {
+    padding-top: 1.8rem !important;
 }

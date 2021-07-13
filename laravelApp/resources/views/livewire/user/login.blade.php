@@ -43,8 +43,8 @@
 
     </form>
     <div class="d-flex justify-content-between mt-4">
-            <a href="{{ route('password.request') }}">@lang('login.forgot-password')</a>
-            <a href="{{ route('user.register', ['locale'=>app()->getLocale(), 'package'=>'basic']) }}">@lang('login.not-client-yet')</a>
+        <a href="{{ route('password.request') }}">@lang('login.forgot-password')</a>
+        <a href="{{ route('user.register', ['locale'=>app()->getLocale(), 'package'=>'basic']) }}">@lang('login.not-client-yet')</a>
     </div>
     @error('throttle')
         {{ $message }}
@@ -57,7 +57,7 @@
                     title: '¡Uuups!',
                     html: 'Parece que no tienes permisos para acceder.',
                     icon: 'error',
-                    confirmButtonText: @lang('main.close')
+                    confirmButtonText: "@lang('main.close')"
                 });
             @endif
             @if( Session::has('throttle') )
@@ -65,10 +65,9 @@
                     title: '¡Uuups!',
                     html: "{{ session('throttle') }}",
                     icon: 'error',
-                    confirmButtonText: @lang('main.close')
+                    confirmButtonText: "@lang('main.close')"
                 });
             @endif
         });
-
     </script>
 </div>

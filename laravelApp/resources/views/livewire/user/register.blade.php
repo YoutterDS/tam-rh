@@ -17,46 +17,22 @@
             </div>
         </div>
     </div>
-
     <div class="row pb-4">
-        @if( $step < 4 )
-            <div class="col-sm-12 col-md-12 col-lg-4 pr-3 mt-2" {{-- wire:ignore --}}>
-                {{-- Subscription selected by user in previus page --}}
 
+        @if( $step < 4 )
+            <div class="col-sm-12 col-md-12 col-lg-4 pr-3 mt-2" >
                 <div class="box-subscriptions">
-                    <div class="custom-control custom-switch custom-switch--validate mr-2">
-                        <input type="checkbox"
-                               class="custom-control-input"
-                               id="packageBasic"
-                               @if($package === 'BAS') checked @endif
-                               wire:click="$set('package', 'BAS')">
-                        <label class="custom-control-label" for="packageBasic" >Basic</label>
-                    </div>
-                    <div class="custom-control custom-switch custom-switch--validate mr-2">
-                        <input type="checkbox"
-                               class="custom-control-input"
-                               id="packageBusiness"
-                               @if($package === 'BUS') checked @endif
-                               wire:click="$set('package', 'BUS')">
-                        <label class="custom-control-label" for="packageBusiness" >Business</label>
-                    </div>
-                    <div class="custom-control custom-switch custom-switch--validate mr-2">
-                        <input type="checkbox"
-                               class="custom-control-input"
-                               id="packageExcellence"
-                               @if($package === 'EXC') checked @endif
-                               wire:click="$set('package', 'EXC')">
-                        <label class="custom-control-label" for="packageExcellence" >Excellence</label>
-                    </div>
-                    <div class="custom-control custom-switch custom-switch--validate">
-                        <input type="checkbox"
-                               class="custom-control-input"
-                               id="packagePremium"
-                               @if($package === 'PRE') checked @endif
-                               wire:click="$set('package', 'PRE')">
-                        <label class="custom-control-label" for="packagePremium" >Premium</label>
-                    </div>
-                    @include('dashboard.subscription.partials.base', ['package'=>\App\Models\Package::where('code', $package)->get()->first() , 'type'=>'register', 'extraclass'=>'text-blue shadow-none m-0 w-100'])
+                    @foreach( app('rinvex.subscriptions.plan')->all() as $plan )
+                        <div class="custom-control custom-switch custom-switch--validate @if( !$loop->last ) mr-2 @endif">
+                            <input type="checkbox"
+                                    class="custom-control-input"
+                                    id="package_{{ $plan->id }}"
+                                    @if($package === $plan->id) checked @endif
+                                    wire:click="$set('package', {{ $plan->id }})">
+                            <label class="custom-control-label" for="package_{{ $plan->id }}" >{{ $plan->name }}</label>
+                        </div>
+                    @endforeach
+                    @include('dashboard.subscription.partials.plan-base', ['plan'=> app('rinvex.subscriptions.plan')->find($package), 'type'=>'register', 'extraclass'=>'text-blue shadow-none m-0 w-100 ' . env('SHOW_ANIMATION') ])
                 </div>
             </div>
 
@@ -313,6 +289,42 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-item--header" id="headingThree">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link @if($step !== 4) collapsed @endif" data-toggle="collapse" data-target="#billingData" aria-expanded="false" aria-controls="collapseThree" >
+                                4. @lang('register.billing-data')
+                                </button>
+                            </h5>
+                            </div>
+                            <div id="billingData" class="accordion-item--content collapse @if($step === 4) show @endif" aria-labelledby="headingThree" data-parent="#accordion">
+                                <div class="card-body">
+                                    <form name="billingDataForm" method="POST" wire:submit.prevent="submit" >
+                                        <div class="row">
+                                            <div class="col-12 col-md-6 form-group">
+                                                <label for="username">@lang('register.username')</label>
+                                                <input type="email" class="form-control @error('email') is-invalid @enderror"
+                                                    wire:model.defer="email"
+                                                    name="username"
+                                                    value="{{ old('username') }}"
+                                                    autocomplete="email"
+                                                    disabled >
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col d-flex justify-content-center mt-2">
+                                                <a class="btn btn-primary pl-4 pr-4"
+                                                    wire:click.prevent="accesDataSend">
+                                                    @lang('register.send-step-01')
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
             </div>
         @endif
@@ -328,21 +340,8 @@
         .box-subscriptions--item {
             pointer-events: none;
         }
-        .custom-switch .custom-control-label {
-            cursor: pointer;
-        }
-        .custom-switch .custom-control-label::after {
-            top: 4px;
-        }
-        .monthselect, .monthselect option, .yearselect, .yearselect option {
-            border: 0;
-            font-family: 'Segoe UI';
-            cursor: pointer !important;
-        }
-        .monthselect:focus, .yearselect:focus {
-            outline: 0;
-        }
     </style>
+
     <script>
         document.addEventListener('livewire:load', function () {
             $('.selectpicker').selectpicker();

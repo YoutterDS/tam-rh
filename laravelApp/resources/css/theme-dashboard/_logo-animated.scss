@@ -1,0 +1,51 @@
+.logo {
+
+    &-tamrh {
+        $size                   : 80px;
+
+        width                   : $size;
+        height                  : $size;
+
+        background-image        : url(./../img/logo-tamrh--circle.svg);
+        background-size         : 100% 100%;
+
+        &--bg {
+            background-color    : rgba($color-primary, .7);
+            position            : fixed;
+            top                 : 0;
+            left                : 0;
+            right               : 0;
+            bottom              : 0;
+
+            width               : 100vw;
+            height              : 100vh;
+
+            display             : flex;
+            align-items         : center;
+            justify-content     : center;
+
+            z-index             : 99999999;
+        }
+
+        &--minuteand {
+            width               : 100%;
+            height              : 100%;
+            position            : absolute;
+            animation           : rotation 1.5s infinite linear;
+            transform-origin    : center center;
+
+            display             : flex;
+            align-items         : center;
+            justify-content     : center;
+
+            img {
+                width           : 100%;
+                height          : 100%;
+            }
+        }
+    }
+}
+
+@keyframes rotation {
+    100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }
+}

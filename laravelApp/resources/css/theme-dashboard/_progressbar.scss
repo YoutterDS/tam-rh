@@ -1,15 +1,22 @@
 /* ProgressBar Indeterminate like Materialize */
 .progress.axios {
+    // display: none;
     position: fixed;
+    top: 0;
+    left: 0;
     height: 6px;
-    display: none;
     width: 100%;
     background-color: rgba(white, .5);
-    border-radius: 2px;
+    border-radius: 0px;
     background-clip: padding-box;
     margin: 0;
+    padding: 0;
     overflow: hidden;
     z-index: 999999;
+
+    &.loading {
+        display: block;
+    }
 }
 
 .progress.axios .determinate {

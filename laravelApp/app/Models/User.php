@@ -62,6 +62,11 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->belongsTo(Company::class);
     }
 
+    public function office()
+    {
+        return $this->belongsTo(Office::class);
+    }
+
     // Mutators
     /*
     public function setPasswordAttribute($password)

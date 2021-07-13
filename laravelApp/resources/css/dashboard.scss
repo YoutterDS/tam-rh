@@ -15,17 +15,19 @@
 
 @import 'theme-dashboard/main';
 @import 'theme-dashboard/text';
-@import 'theme-dashboard/loading';
+@import 'theme-dashboard/logo-animated';
+// @import 'theme-dashboard/loading';
+@import 'theme-dashboard/progressbar';
 @import 'theme-dashboard/dividers';
 @import 'theme-dashboard/spacing';
 @import 'theme-dashboard/colors';
 @import 'theme-dashboard/titles';
-@import 'theme-dashboard/progressbar';
 @import 'theme-dashboard/modals';
 @import 'theme-dashboard/box';
 @import 'theme-dashboard/forms';
 @import 'theme-dashboard/bootstrap-select';
 @import 'theme-dashboard/btns';
+@import 'theme-dashboard/swal2';
 @import 'theme-dashboard/cards';
 @import 'theme-dashboard/lists';
 @import 'theme-dashboard/filters';

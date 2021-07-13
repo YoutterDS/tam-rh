@@ -68,28 +68,8 @@
         &-label {
             border-color: $form-inputs-border-color;
             font-size: 12px;
+            overflow: inherit;
         }
-    }
-
-    &-group {
-        /*
-        &.row {
-            .form {
-                &-control {
-                    width: auto;
-                    flex: 1;
-                }
-
-                &-label {
-                    display: flex;
-                    align-items: center;
-                    padding-right: 4px;
-                    text-align: right;
-                }
-            }
-
-        }
-        */
     }
 
     &-grey {
@@ -149,6 +129,14 @@
         .form-section_title {
             color: #6BC46B;
         }
+
+        .box-subforms--thumb {
+            border-color: $form-green-inputs-border-color;
+        }
+
+        .btn-file {
+            border-color: $form-green-inputs-border-color !important;
+        }
     }
 
     &-100 {
@@ -157,8 +145,25 @@
 
 }
 
+.custom-switch .custom-control-label {
+    cursor: pointer;
+}
+.monthselect, .monthselect option, .yearselect, .yearselect option {
+    border: 0;
+    font-family: 'Segoe UI';
+    cursor: pointer !important;
+}
+.monthselect:focus, .yearselect:focus {
+    outline: 0;
+}
+
 button, .btn {
     border: none;
+
+    &:disabled,
+    &[disabled]{
+        cursor: no-drop;
+    }
 }
 
 label {
@@ -181,8 +186,11 @@ label {
 
 .custom-switch {
     .custom-control-label {
+        &:before {
+            height: 16px;
+        }
         &::after {
-            top: calc(0.22rem + 1px);
+            top: 4px;
         }
     }
 }

@@ -22,10 +22,11 @@
         &.active,
         &:link {
             background-color: white !important;
-            outline: 0 !important;
+            outline: none !important;
             box-shadow: none !important;
         }
     }
+
 
     .dropdown-toggle {
         position: relative;
@@ -74,3 +75,4 @@
         }
     }
 }
+

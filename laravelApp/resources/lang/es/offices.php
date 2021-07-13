@@ -38,7 +38,7 @@ return [
     'headquarters'                          => 'Oficina Principal',
     'only-one-headquarters'                 => 'Sólo puede haber una oficina central.',
     'edit'                                  => 'Editar',
-
+    'total-employees'                       => '{0}Sin empleados|{1}:total empleado|{2,*}:total empleados',
     // Modals
     'modal-delete-text'                     => 'Todos los datos asociados a esta oficina serán eliminados, incluidos trabajadores, historiales, registros de jornada, etc...',
 

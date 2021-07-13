@@ -69,12 +69,14 @@
     </li>
 
     <!-- Nav Item - Tables -->
-    <li class="nav-item">
-      <a class="nav-link @if( request()->route()->getName() === 'dashboard.subscription.index' ) active @endif"
+    @hasrole('admin')
+    <li class="nav-item  @if( request()->route()->getName() === 'dashboard.subscription.index' ) active @endif">
+      <a class="nav-link"
          href="{{ route('dashboard.subscription.index', ['locale'=>app()->getLocale()]) }}">
         <img src="{{ asset('img/icons/subscription.svg') }}" class="nav-link__icon" >
         <span>Subscripción</span></a>
     </li>
+    @endhasrole
 
     <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center mt-4">

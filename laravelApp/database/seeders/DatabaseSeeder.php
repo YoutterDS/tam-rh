@@ -18,8 +18,13 @@ class DatabaseSeeder extends Seeder
             // LocalesSeeder::class,
             // RolesSeeder::class,
             // UsersSeeder::class,
-            PackagesSeeder::class,
-            PackageOptionsSeeder::class,
+            // PackagesSeeder::class,
+            // PackageOptionsSeeder::class,
+            // CoinFormatTableSeeder::class,
+            // CoinTableSeeder::class,
+            // BillingTypesSeeder::class,
+            // BillingRecurrenciesSeeder::class,
+            // PlansSeederTable::class,
         ]);
     }
 }

@@ -1,0 +1,41 @@
+.swal2 {
+    &-styled {
+        @extend .btn;
+        font-weight: $font-semibold !important;
+        font-size: 12px !important;
+
+    }
+
+    &-confirm {
+        background-color: $color-primary !important;
+    }
+
+    &-input {
+        @extend .form-control;
+        border-radius: 5px;
+        border-color: $form-inputs-border-color;
+        font-size: 12px;
+        outline: 0 !important;
+        box-shadow: none !important;
+    }
+
+    &-validation-message {
+       // display: none !important;
+       max-height: 0 !important;
+       height: 0 !important;
+       overflow: hidden;
+       display: block !important;
+       padding: 0;
+       margin: 0;
+    }
+
+    &-inputerror, &inputerror:focus {
+        @extend .is-invalid;
+        box-shadow: none !important;
+    }
+
+    &-title {
+        @extend .form-section_title;
+        padding-top: 21px;
+    }
+}

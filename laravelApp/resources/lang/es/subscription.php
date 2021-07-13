@@ -2,8 +2,10 @@
 
 return [
     'title'                         => 'Planes disponibles',
+    'contracted-package'            => 'Plan contratado',
 
     // Plans
+    'pack-demo'                     => 'DEMO',
     'pack-basic'                    => 'BASIC',
     'pack-business'                 => 'BUSINESS',
     'pack-excellence'               => 'EXCELLENCE',
@@ -11,6 +13,19 @@ return [
 
     'per-user'                      => 'usuario',
     'per-month'                     => 'mes',
+
+    // Features
+    'free'                          => '¡Gratis!',
+    'office'                        => '{1}:number oficina|{2,*}Múltiples oficinas',
+    'settings'                      => 'Configuración',
+    'employees'                     => 'Hasta :to empleados',
+    'timetable'                     => 'Control horario',
+    'documents-lists-only-predefined' => 'Documentos <small>(sólo listas predefinidas)</small>',
+    'documents-lists'               => 'Documentos',
+    'notifications'                 => 'Notificaciones',
+    'calendar'                      => 'Calendario laboral',
+    'disc-space'                    => '{0,10000}:storage Gb de almacenamiento|Almacenamiento ilimitado',
+    'support'                       => 'Soporte personalizado 24/7',
 
     // Features
     'time-control'                  => 'Control horario',
@@ -31,4 +46,7 @@ return [
 
     'your-plan'                     => 'TU PLAN',
     'update-your-plan'              => 'ACTUALIZA TU PLAN',
+
+    'data-saved-successfully'       => '¡Tu plan ha sido actualizado!',
+    'update-ko'                     => '¡Uuups! Algo ha fallado al actualizar tu plan, por favor, inténtalo más tarde.',
 ];

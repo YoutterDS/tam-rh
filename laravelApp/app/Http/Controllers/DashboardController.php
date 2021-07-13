@@ -21,6 +21,7 @@ class DashboardController extends Controller
     {
         return view('dashboard.timetable.index');
     }
+
     public function timetableDetail(): View
     {
         return view('dashboard.timetable.detail');

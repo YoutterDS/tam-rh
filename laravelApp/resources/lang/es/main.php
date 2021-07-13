@@ -46,4 +46,12 @@ return [
     'logout'                        => 'Cerrar Sesión',
     'close'                         => 'Cerrar',
     'got-login'                     => 'Volver al login',
+    'perfect'                       => '¡Perfecto!',
+    'data-saved-successfully'       => '¡Datos guardados correctamente!',
+    'data-deleted-successfully'     => '¡Datos eliminados correctamente!',
+    'ups'                           => '¡Uuuups!',
+    'something-is-wrong'            => '¡Algo ha fallado!',
+    'nothing-was-changed'           => 'Para guardar, antes debes modificar algún dato.',
+    'data-wrong'                    => '¡Los datos no son correctos!',
+    'without-permissions-to-edit'   => 'No tienes permisos para editar',
 ];

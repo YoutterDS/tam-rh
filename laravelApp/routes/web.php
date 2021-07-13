@@ -1,8 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Auth;
+use App\Models\Bank;
 
 // Controllers
+use App\Models\Company;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\TaskController;
 use \App\Http\Controllers\UserController;
@@ -75,6 +77,14 @@ Route::group(['prefix'=>"dashboard/{locale?}/", 'middleware' => ['auth','verifie
     /* SUBSCRIPTIONS */
     Route::prefix("subscripcion/")->group(function() {
         Route::get('', [SubscriptionController::class, 'index'])->name('dashboard.subscription.index');
+        /*
+        Route::get('create', function(){
+            $user = Company::find(2);
+            $plan = app('rinvex.subscriptions.plan')->find(3);
+
+            $user->newSubscription('main', $plan);
+        });
+        */
     });
 });
 

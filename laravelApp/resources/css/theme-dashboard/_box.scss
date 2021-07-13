@@ -18,7 +18,7 @@
         border-top-right-radius: 5px;
 
         max-height: 50px;
-        transition: all $speed-animation;
+        transition: max-height $speed-animation, opacity $speed-animation;
 
         &-form {
             overflow: hidden;
@@ -51,7 +51,7 @@
             max-height: 50px !important;
             background-color: transparent;
 
-            transition: all $speed-animation-fast;
+            transition: max-height $speed-animation, opacity $speed-animation;
 
             #{$c}-form {
                 opacity: 0;

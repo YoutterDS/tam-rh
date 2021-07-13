@@ -21,12 +21,14 @@
     <meta name="msapplication-TileColor" content="#1D5FBF">
     <meta name="theme-color" content="#1D5FBF">
 
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
     <link rel="stylesheet" href="{{ asset('css/select2/select2.css') }}">
     @yield('css')
     @livewireStyles
-</head>
-
 <body id="page-top">
 
     <div class="progress axios" wire:loading >
@@ -52,26 +54,7 @@
     <a class="scroll-to-top" href="#page-top">
         <img src="{{ asset('img/icons/white/arrow-down.svg') }}" alt="">
     </a>
-{{--
-    <!-- Logout Modal -->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">¿Tan pronto?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Seleccione "Cerrar sessión" si está seguro de terminar la sesión actual.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                    <a class="btn btn-primary" href="{{ route('login', ['locale'=>app()->getLocale()]) }}">Cerrar sessión</a>
-                </div>
-            </div>
-        </div>
-    </div>
---}}
+
     @yield('modals-sections')
 
     <script>
@@ -82,6 +65,7 @@
         ]); ?>
     </script>
 
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="{{ asset('js/dashboard.js') }}"></script>
     @yield('js')
     @yield('js-sections')

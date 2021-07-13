@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg482"
+   sodipodi:docname="logo-tamrh--minuteand.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview484"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.77771465"
+     inkscape:cx="152.36951"
+     inkscape:cy="561.25984"
+     inkscape:window-width="3440"
+     inkscape:window-height="1377"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs479">
+    <clipPath
+       id="cp22">
+      <path
+         transform="matrix(1,0,0,-1,0,768)"
+         d="m 616.129,567.5 h 119 v 120 h -119 z"
+         id="path16" />
+    </clipPath>
+    <clipPath
+       id="cp20">
+      <path
+         transform="matrix(1,0,0,-1,0,768)"
+         d="M 0,0 H 1366 V 768 H 0 Z"
+         id="path2" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       d="m 10.585417,7.889107 1.403703,-0.900642 5.449005,8.491714 c 0.248709,0.387703 0.136172,0.903464 -0.25153,1.152172 -0.387703,0.248709 -0.903464,0.136525 -1.152173,-0.250825 0,-3.53e-4 0,-3.53e-4 -3.52e-4,-7.05e-4 z"
+       fill="#ffffff"
+       id="path27"
+       style="stroke-width:0.352778" />
+  </g>
+</svg>

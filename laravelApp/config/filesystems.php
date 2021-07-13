@@ -42,6 +42,12 @@ return [
             'visibility' => 'public',
         ],
 
+        'offices' => [
+            'driver' => 'local',
+            'root' => base_path('../www/app/uploads/offices'),
+            'url' => env('APP_URL').'/uploads/offices/',
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

@@ -57,13 +57,20 @@ pre {
     height: auto;
     max-height: 20000px;
     transition: all 0.2s ease-out;
+    // transform: translateY(1rem);
+}
+
+.tab-pane.fade form {
+    transition: all 0.2s ease-out;
     transform: translateY(1rem);
 }
 
 .tab-pane.fade.show {
+    // transform: translateY(0rem);
+}
+.tab-pane.fade.show form {
     transform: translateY(0rem);
 }
-
 /* Opacity */
 .opacity-40 {
     opacity: .40;
@@ -71,10 +78,10 @@ pre {
 
 /* Calendar */
 .datepicker table tr td span.active, .datepicker table tr td span.active:hover, .datepicker table tr td span.active.disabled, .datepicker table tr td span.active.disabled:hover {
-background-image: none;
+    background-image: none;
 }
 .datepicker table tr td span.active:hover, .datepicker table tr td span.active:hover:hover, .datepicker table tr td span.active.disabled:hover, .datepicker table tr td span.active.disabled:hover:hover, .datepicker table tr td span.active:active, .datepicker table tr td span.active:hover:active, .datepicker table tr td span.active.disabled:active, .datepicker table tr td span.active.disabled:hover:active, .datepicker table tr td span.active.active, .datepicker table tr td span.active:hover.active, .datepicker table tr td span.active.disabled.active, .datepicker table tr td span.active.disabled:hover.active, .datepicker table tr td span.active.disabled, .datepicker table tr td span.active:hover.disabled, .datepicker table tr td span.active.disabled.disabled, .datepicker table tr td span.active.disabled:hover.disabled, .datepicker table tr td span.active[disabled], .datepicker table tr td span.active:hover[disabled], .datepicker table tr td span.active.disabled[disabled], .datepicker table tr td span.active.disabled:hover[disabled] {
-background-color: #4e73df;
+    background-color: #4e73df;
 }
 
 
@@ -123,9 +130,13 @@ background-color: #4e73df;
 
 button {
     &:focus, &:active, &.active, &:link {
-        outline: 0 !important;
+        outline: none !important;
         box-shadow: none !important;
     }
+}
+.bootstrap-select > select.mobile-device:focus + .dropdown-toggle,
+.bootstrap-select .dropdown-toggle:focus {
+  outline: none !important;
 }
 
 .input-group > .input-group-append > .btn, .input-group > .input-group-append > .input-group-text, .input-group > .input-group-prepend:not(:first-child) > .btn, .input-group > .input-group-prepend:not(:first-child) > .input-group-text, .input-group > .input-group-prepend:first-child > .btn:not(:first-child), .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {

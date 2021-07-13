@@ -10,7 +10,7 @@
 <div class="row">
 
     <div class="col-xl-7 col-md-7 mb-1 mb-md-4">
-
+{{-- auth()->user()->company->package->name ?? '' --}}
         <!-- Next Event Today -->
         <div class="box box-secondary">
             <div class="box-title">

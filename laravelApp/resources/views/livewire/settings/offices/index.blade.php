@@ -6,30 +6,42 @@
 
     <section id="offices-list-page" class="">
         <div class="row box-subforms @if($edit) active {{ env('SHOW_ANIMATION') }} @endif  {{ $action }}" id="box-office-form">
+            @hasrole('admin')
             <div class="col-12 p-0">
                 <div class="list-offices reverse">
                     <div class="item-right">
-                        <button type="button" id="officeFormBtn" class="btn btn-success btn-with-icon w-100"
-                                {{--
-                                    data-create="@lang('offices.create--btn-text')"
-                                    data-edit="@lang('offices.edit--btn-text')"
-                                    onclick="window.subformOffice('open', 'create')"
-                                --}}
-                                wire:click="showForm(null,'create')"
-                                >
+                        @if( $maxOffices === 'Y' )
+                            <button type="button" id="officeFormBtn" class="btn btn-success btn-with-icon w-100 "
+                                    wire:click="showForm(null,'create')" >
+                                <span>
+                                    @if( $action === 'edit' )
+                                        @lang('offices.edit--btn-text')
+                                    @else
+                                        @lang('offices.create--btn-text')
+                                    @endif
+                                </span>
+
+                                <img class="icon" src="{{ asset('img/icons/white/office.svg') }}" alt="">
+                            </button>
+                        @endif
+                        @if( $maxOffices !== 'Y' && $offices->count() < $maxOffices )
+                        <button type="button" id="officeFormBtn" class="btn btn-success btn-with-icon w-100 "
+                                wire:click="showForm(null,'create')" >
                             <span>
                                 @if( $action === 'edit' )
-                                    @lang('offices.edit--btn-text')
+                                    @lang('offices.edit--btn-text') @if( $maxOffices !== 'Y' )({{ $offices->count() }} de {{ $maxOffices }}) @endif
                                 @else
-                                    @lang('offices.create--btn-text')
+                                    @lang('offices.create--btn-text') @if( $maxOffices !== 'Y' )({{ $offices->count() }} de {{ $maxOffices }}) @endif
                                 @endif
                             </span>
 
                             <img class="icon" src="{{ asset('img/icons/white/office.svg') }}" alt="">
                         </button>
+                        @endif
                     </div>
                 </div>
             </div>
+            @endhasrole
             <div class="col-12 box-subforms-form">
                 @include('dashboard.settings.partials.offices.edit')
             </div>
@@ -151,8 +163,20 @@
             })
 
             // keep alive Livewire session!
-            setInterval(function(){ window.livewire.emit('alive'); }, 1800);
+            // setInterval(function(){ window.livewire.emit('alive'); console.log('emit alive!') }, 18000);
 
+            window.fetch = (fetch => function() {
+                return new Promise((resolve) => {
+                    return fetch.apply(this, arguments).then(response => {
+                        if (new URL(response.url).pathname.startsWith('/livewire/message') && response.status === 419) {
+                            alert('Your session has expired.');
+                            return window.location = '/login';
+                        }
+
+                        resolve(response);
+                    });
+                });
+            })(window.fetch);
         });
     </script>
 </div>

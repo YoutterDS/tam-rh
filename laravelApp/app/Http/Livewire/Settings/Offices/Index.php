@@ -20,6 +20,7 @@ class Index extends Component
     public $isSaved = false;
     public $edit = false;
     public $action;
+    public $plan, $maxOffices;
 
     public $office, $office_country_id, $image, $upload_image = 'N', $dir = '../www/app/uploads/offices/';
 
@@ -38,6 +39,9 @@ class Index extends Component
         $this->company                  = Company::find(auth()->user()->company->id);
 
         $this->offices                  = $this->company->offices()->get();
+
+        $this->plan                     = app('rinvex.subscriptions.plan')->find( $this->company->subscription('main')->plan_id );
+        $this->maxOffices               = $this->plan->features->where('name', 'office')->first()->value;
     }
 
     public function formHasChanged()
@@ -54,16 +58,18 @@ class Index extends Component
 
     public function showForm($id, $action = null)
     {
+        if( $this->userCanEdit ) {
+            $this->office = [];
+            $this->edit                 = true;
+            $this->action               = $action ?? 'edit';
 
-        $this->office = [];
-        $this->edit                 = true;
-        $this->action               = $action ?? 'edit';
+            $this->office               = ($id)? Office::find($id)->toArray() : (new Office())->toArray();
+            $this->office_country_id    = $this->office? $this->office['country_id'] : null;
 
-        $this->office               = ($id)? Office::find($id)->toArray() : (new Office())->toArray();
-        $this->office_country_id    = $this->office? $this->office['country_id'] : null;
-//        $this->image                = null;
-
-        $this->emit('scroll-to-top', $this->office);
+            $this->emit('scroll-to-top', $this->office);
+        } else {
+            $this->emit('user-cannot-edit');
+        }
     }
 
     public function hideForm()
@@ -116,18 +122,21 @@ class Index extends Component
             $office->company_id                 = $this->company->id;
 
             if( $this->image ) {
-                // $this->image->storeAs('/temporal/', $this->image->getClientOriginalName(), $disk = 'offices');
                 $office->image                  = $this->image->getClientOriginalName();
             }
 
             if ( $office->isDirty() ) {
                 // Get old image...
                 $oldImage                       = $office->getOriginal('image');
+                $idsHeadquarters            = $this->company->offices()->where('offices.headquarters', 1)->get()->pluck('id')->toArray();
 
                 if( $this->action === 'edit' && $this->office['headquarters'] ) {
-                    $idsHeadquarters            = $this->company->offices()->where('offices.headquarters', 1)->get()->pluck('id')->toArray();
                     $officesHeadquarters        = Office::whereIn('id', $idsHeadquarters);
                     $officesHeadquarters->update(['headquarters' => 0]);
+                }
+
+                if( $this->action === 'create' && count($idsHeadquarters) === 0 ) {
+                    $office->headquarters = 1;
                 }
 
                 $office->save();
@@ -172,6 +181,10 @@ class Index extends Component
 
         $imageToDelete                          = $office->image;
         $this->deleteResource($id, $imageToDelete);
+
+        // Desvinculate employees from office
+        $linkedEmployees                        =  $office->users();
+        $linkedEmployees->update(['users.office_id'=>null]);
 
         if( $office->delete() ) {
             $this->emit('ok-deleted');

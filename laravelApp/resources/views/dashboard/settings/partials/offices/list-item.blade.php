@@ -1,4 +1,4 @@
-<div class="box-office @if( in_array(auth()->user()->office->id, $office->users()->get()->pluck('id')->toArray() ) ) box-office--youroffice @endif">
+<div class="box-office @if( auth()->user()->office && in_array(auth()->user()->office->id, $office->users()->get()->pluck('id')->toArray() ) ) box-office--youroffice @endif">
     <img class="box-office_img"
          @if( $office['image'] )
             src="{{ asset('uploads/offices/' . $office->id . '/' . $office->image) }}"
@@ -44,6 +44,7 @@
         </div>
     </div>
 
+    @hasrole('admin')
     <div class="box-office_body-btns">
         <a type="button" class="btn btn-primary btn-forms"
             wire:click.prevent="showForm({{ $office->id }})">
@@ -54,7 +55,7 @@
             <img src="{{ asset('img/icons/white/delete.svg') }}" class="icon" alt="">
         </a>
     </div>
-
+    @endhasrole
 </div>
 {{--
     <div class="box-office">

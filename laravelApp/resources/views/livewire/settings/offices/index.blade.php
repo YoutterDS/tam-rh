@@ -45,8 +45,21 @@
             <div class="col-12 box-subforms-form">
                 @include('dashboard.settings.partials.offices.edit')
             </div>
+
         </div>
+
         <div class="row mt-1">
+            @if( $maxOffices !== 'Y' && $offices->count() > $maxOffices )
+            <div class="col-12">
+                <div class="alert alert-danger font-weight-bold" role="alert">
+                    Actualmente superas el máximo de oficinas permitidas en tu subscripción. Por favor, elimina hasta que sólo quede {{ $maxOffices }}, o amplia tu plan para disfrutar de más funcionalidades.
+                    <br/>
+                    <b>
+                        <u></u>
+                    </b>
+                </div>
+            </div>
+            @endif
             <div class="col-12">
                 <div class="list-offices">
                     @foreach ( $offices as $office )
@@ -161,6 +174,18 @@
                     showCancelButton: false,
                 });
             })
+
+            @if( $maxOffices !== 'Y' && $offices->count() > $maxOffices )
+                Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    title: "¡Has sobrepasado el límite de oficinas!",
+                    html: `<p class='text-danger'>Si no regularizas el número total de oficinas antes de 15 días, éstas serán eliminadas automáticamente y perderás todo aquello que esté vinculado a las mismas como por ejemplo los trabajadores asociados.</p>`,
+                    showConfirmButton: true,
+                    confirmButtonText: "<a href=\"{{ route('dashboard.subscription.index', ['locale' => app()->getLocale() ]) }}\" class='text-white'>¡Ampliar plan!",
+                    showCancelButton: false,
+                });
+            @endif
 
             // keep alive Livewire session!
             // setInterval(function(){ window.livewire.emit('alive'); console.log('emit alive!') }, 18000);
